@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <Pane prefHeight="124.0" prefWidth="800.0" style="-fx-background-color: LIGHTGREY;">
+               <children>
+                  <Text layoutX="298.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Your Name" textAlignment="CENTER">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <TextField alignment="CENTER" layoutX="314.0" layoutY="48.0" promptText="Something Cool">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button focusTraversable="false" layoutX="379.0" layoutY="84.0" mnemonicParsing="false" mouseTransparent="true" text="Play" />
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;Skill Set&gt;" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </center>
+         <top>
+            <Pane prefHeight="99.0" prefWidth="800.0" style="-fx-background-color: LIGHTGREY;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="549.0" layoutY="66.0" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Game" underline="true">
+                     <font>
+                        <Font size="46.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Back">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
