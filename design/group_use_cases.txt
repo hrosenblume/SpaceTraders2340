@@ -1,0 +1,15 @@
+M3 - Feature Slice and Design 1
+CodeBunnies
+
+USE CASES
+
+1) Start Game
+2) Create Character
+3) Land on Planet
+4) Sell On-Board Goods
+5) Buy New Goods
+6) Upgrade/Repair Ship
+7) Equip Weapons/Shields
+8) Refuel Ship
+9) Leave Planet
+10) Defend Against Pirates
