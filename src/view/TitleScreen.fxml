@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TitleController">
    <children>
       <GridPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -28,7 +28,7 @@
             <Button mnemonicParsing="false" text="Credits" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Button mnemonicParsing="false" text="Settings" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
             <Button mnemonicParsing="false" text="Load Game" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="New Game" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="newGame" mnemonicParsing="false" onAction="#startNewGame" text="New Game" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;SpaceTraders Title Graphic&gt;" GridPane.halignment="CENTER" />
          </children>
       </GridPane>
