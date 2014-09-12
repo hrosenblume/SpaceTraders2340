@@ -9,6 +9,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+/**
+ * Runs the game.
+ * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil Vora
+ */
 public class Main extends Application {
 
 	private Stage primaryStage;
@@ -23,6 +27,9 @@ public class Main extends Application {
 		showTitleScreen();
 	}
 	
+	/**
+	 * Creates the root layout for other windows to be displayed in.
+	 */
 	private void initRootLayout() {
 		try {
             FXMLLoader loader = new FXMLLoader();
@@ -37,6 +44,9 @@ public class Main extends Application {
         }
 	}
 
+	/**
+	 * Display the title screen.
+	 */
 	public void showTitleScreen() {
 		try {
             FXMLLoader loader = new FXMLLoader();
@@ -48,11 +58,10 @@ public class Main extends Application {
         }
 	}
 
-	
-	public Stage getPrimaryStage() {
-        return primaryStage;
-    }
-	
+	/**
+	 * Runs the program.
+	 * @param args command line arguments (unused)
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
