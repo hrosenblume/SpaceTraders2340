@@ -13,18 +13,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class NewGameController implements Initializable {
-    private BorderPane rootLayout;	
-	private Stage primaryStage;
 	@FXML
-	private Button pilotUp, pilotDown, fighterUp, fighterDown, traderUp, traderDown, engineerUp, engineerDown, investorUp, investorDown;
+	private Button pilotUp, pilotDown, fighterUp, fighterDown, traderUp, traderDown, engineerUp, engineerDown, investorUp, investorDown, cancelButton, playButton;
 	@FXML
 	private Text totalPoints, pilotSkillLabel, fighterSkillLabel, traderSkillLabel, engineerSkillLabel, investorSkillLabel;
+	@FXML
+	private TextField nameTextField;
 	private int counter = 30;
 
 	@FXML
@@ -87,6 +88,39 @@ public class NewGameController implements Initializable {
 			totalPoints.setText("" + counter);
 		}
 	}
+	
+	@FXML
+	private void onPressCancel(ActionEvent event) throws IOException {
+		Stage stage = (Stage) cancelButton.getScene().getWindow();
+		stage.close();
+	}
+	
+	@FXML
+	private void onPressPlay(ActionEvent event) throws IOException {
+		Player player = createPlayer();
+//		will do other stuff
+	}
+	
+	@FXML
+	private Player createPlayer() {
+		String name = nameTextField.getText();
+		int pilot = Integer.parseInt(pilotSkillLabel.getText());
+		int fighter = Integer.parseInt(fighterSkillLabel.getText());
+		int trader = Integer.parseInt(traderSkillLabel.getText());
+		int engineer = Integer.parseInt(engineerSkillLabel.getText());
+		int investor = Integer.parseInt(investorSkillLabel.getText());
+		Player player = new Player(name, pilot, fighter, trader, engineer, investor);
+//		----testing purposes----
+		System.out.println("name: " + name);
+		System.out.println("pilot skill: " + pilot);
+		System.out.println("fighter skill: " + fighter);
+		System.out.println("trader skill: " + trader);
+		System.out.println("engineer skill: " + engineer);
+		System.out.println("investor skill: " + investor);
+//		--------
+		return player;
+	}
+	
 	public NewGameController() {
 		
 	}

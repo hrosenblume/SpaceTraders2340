@@ -25,7 +25,7 @@
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <Button fx:id="playButton" focusTraversable="false" layoutX="379.0" layoutY="84.0" mnemonicParsing="false" mouseTransparent="true" text="Play" />
+                  <Button fx:id="playButton" layoutX="366.0" layoutY="85.0" mnemonicParsing="false" onAction="#onPressPlay" text="Play" />
                </children>
             </Pane>
          </bottom>
@@ -37,7 +37,7 @@
                         <Font size="46.0" />
                      </font>
                   </Text>
-                  <Button fx:id="cancelButton" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Cancel">
+                  <Button fx:id="cancelButton" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#onPressCancel" text="Cancel">
                      <font>
                         <Font size="26.0" />
                      </font>

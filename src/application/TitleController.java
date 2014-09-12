@@ -20,9 +20,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class TitleController implements Initializable {
-    private BorderPane rootLayout;	
-	@FXML
-	private Button newGame;
 
 	@FXML
 	private void startNewGame(ActionEvent event) throws IOException {
