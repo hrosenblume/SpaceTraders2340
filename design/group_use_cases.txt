@@ -3,7 +3,7 @@ CodeBunnies
 
 USE CASES
 
-1) Start Game
+1) Load Game
 2) Create Character
 3) Land on Planet
 4) Sell On-Board Goods
