@@ -1,0 +1,39 @@
+Naman Shah
+nshah310
+Individual Use Case
+
+Use Case 5: Buy New Goods
+Primary Actor: Player
+Stakeholders and Interests: The player wants to purchase goods from the planet he/she is docked in.
+
+Precondition: 
+The player must have successfully landed on the planet.
+The player must have space in the cargo bay.
+The player must have enough money for the lowest costing good on the planet.
+
+Postcondition: 
+The player's ship has a reduced cargo bay capacity.
+The player has less money.
+
+Main Success Scenario:
+	1. The player successfully lands on the planet.
+	2. The player clicks on the "Buy Goods" option from the planet options.
+	3. A new window pops up with all the available goods(and indicates the specialty goods based on the type of planet),
+	   the available space on the cargo bay, and the player's money amount.
+	4. The player selects the goods and their quantities that he/she wants.
+	5. The player clicks the "OK" button.
+	6. A dialog window pops up indicating the price of the total purchase, the player's remaining money after the purchase, 
+	   and the remaining cargo space after the purchase.
+	7. The player confirms the purchase.
+	8. The screen goes back to the planet options window.
+
+Alternate Flows:
+	4a. The player tries to select a good but adding that good to the cart would exceed cargo space or money.
+		1. A dialog window pops up informing the player of insufficient space/money.
+		2. The screen goes back to the purchase goods window.
+	5a. The player clicks the "Cancel" button.
+		1. A dialog window pops up confirming the cancellation of all items selected.
+		2. The player confirms.
+		3. The screen goes back to the planet options window.
+	7a. The player does not confirm the purchase.
+		1. The screen goes back to the purchase goods window.

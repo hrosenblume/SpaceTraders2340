@@ -1,0 +1,36 @@
+Name: Bhavesh Suhagia
+
+Use Case: Leave Planet
+
+Primary Actor:
+	 1. Player
+
+Stakeholder and interest
+	1. Other players who are grouped with the main player.
+	2. Players with whom the main actor is trading.
+
+Preconditions:
+	1. Player's ship is on a planet.
+	3. Player clicks on the designated planet of his choice.
+
+
+Post conditions
+	1. Player is at a different location.
+	2. Player is able to interact with the traders on the new location.
+
+
+Main Success Scenario
+	1. Player clicks on the stellar map.
+	2. System opens stellar map window.
+	3. Player can either enter the name of the location in or just click on location of his choice.
+	4. System moves the player from his current planet and moves to inputted location.
+	5. System outputs a dialog "You are now on location XYZ".
+
+Extensions
+	3.1 User enters an invalid name in the textfield.
+		a) System outputs a dialog "Invalid location name".
+		b) Return to the stellar map and allow user to input again
+	3.2 User clicks on planet where he/she is already present
+		a) System outputs a dialog "You are already there."
+		b) Return to the stellar map and allow user to input again
+

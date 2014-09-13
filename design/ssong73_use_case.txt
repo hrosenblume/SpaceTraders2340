@@ -1,0 +1,23 @@
+Individual Use Case By Stephen Song (ssong73)
+
+Use Case Name: Load Game
+Primary Actor: The player
+Stakeholders and Interests:
+    - The player wants to continue and play a saved game.
+Precondition:
+    - If a game is to be loaded, there must be saved data.
+Postcondition:
+    - If a game is loaded, the player should return to the game state he left off at.
+Main Success Scenario
+    1. Player views the title screen
+    2. Player selects "Load Game"
+    3. System displays a dialog showing the directory where save files are kept
+    4. Player selects a save file to load
+    5. System initializes the game with data from the save file
+    6. System opens up the game at the point where the player saved
+Alternate Flows
+    4a. User exits the save file dialog without selecting anything
+        1. Return back to the title screen, show no indication of error
+    5a. User selected a file that is not the same type as the save files
+        1. Return an error message stating that the file selected must be of a certain saved file extension
+        2. Return back to the file dialog and let the user choose again

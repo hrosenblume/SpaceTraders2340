@@ -1,0 +1,37 @@
+Pranil Vora
+pvora7
+Individual Use Case
+
+Use Case: 
+Refuel Ship
+
+Primary Actor: 
+Player
+
+Stakeholders and Interests: 
+Player that is using a ship wants to continue using it as its fuel is low.
+
+Precondition: 
+There must be a ship owned by a player with between 0-99% fuel left.
+
+Postcondition: 
+The player’s ship now has 100% fuel. The player can now use the ship if it previously had 0% fuel.
+
+Main Success Scenario: 
+1. Player checks fuel indicator for their ship and sees value <100%.
+2. System asks player if they would like to go to refueling area.
+3. Player says yes and moves ship to refueling area.
+4. System displays dialog asking if player wants to refuel ship.
+5. Player selects yes
+6. System sets fuel for player’s ship to 100% and ship leaves refueling area.
+
+Extensions/Alternate Flows
+3a. Player does not have enough fuel (<10%) to move to refueling area.
+	1. System displays message informing user of inadequate fuel and tells player to 	  abandon ship
+	2. Player abandons ship
+5a. Player selects no (Does not refuel)
+	1. System alerts player of low fuel if <10% and asks if they would like to abandon 	  ship. If >10%, player and ship leave refueling station.
+	2. Player will either abandon ship or leave refueling station.
+
+
+
