@@ -1,0 +1,18 @@
+Hunter Rosenblume
+hrosenblume3
+Individual Use Case
+
+Use Case 2: Create a Character
+Primary Actor: Player
+Stakeholders and Interests: The player wants to create a character to add customizability.
+
+Precondition: 
+The player must have moved through the "Get Started" page.
+
+Postcondition: 
+The player now has a character to continue the game with.
+
+Main Success Scenario:
+	1. The player types in a name
+	2. The player types in the planet the character is from
+	3. The player selects the icon to represent their characters
