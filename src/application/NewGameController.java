@@ -92,8 +92,11 @@ public class NewGameController implements Initializable {
         if(counter < 30) {
             String currentSkill = thisLabel.getText();
             int currentSkillNum = Integer.parseInt(currentSkill);
-            int newSkillNum = currentSkillNum - 1;
-            counter++;
+            int newSkillNum = currentSkillNum;
+            if (currentSkillNum > 0) {
+            	newSkillNum = currentSkillNum - 1;
+                counter++;
+            }
             String newSkill = "" + newSkillNum;
             thisLabel.setText(newSkill);
             totalPoints.setText("" + counter);
