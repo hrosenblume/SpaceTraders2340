@@ -14,7 +14,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
 /**
  * Manages the character creation dialog.
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil Vora
@@ -151,6 +150,10 @@ public class NewGameController implements Initializable {
         return player;
     }
     
+    /**
+     * Generates the playable Universe.
+     * @return the created Universe.
+     */
     private Universe createUniverse() {
     	Universe universe = new Universe();
     	

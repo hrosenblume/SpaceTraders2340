@@ -22,6 +22,7 @@ public class Planet {
 	final String[] techLevels = {"PREAGRICULTURE", "AGRICULTURE", "MEDIEVAL",
 			"RENNAISSANCE", "EARLYINDUSTRIAL", "INDUSTRIAL", "POSTINDUSTRIAL",
 			"HITECH"};
+	
 	final String[] resources = {"NOSPECIALRESOURCES", "NOSPECIALRESOURCES",
 			"NOSPECIALRESOURCES", "NOSPECIALRESOURCES", "NOSPECIALRESOURCES",
 			"MINERALRICH", "MINERALRICH", "MINERALPOOR", "MINERALPOOR", "DESERT",
@@ -69,8 +70,9 @@ public class Planet {
 	 */
 	public String toString() {
 		return ("The name of the planet is " + name
-				+ ". It is located at "+ planetLocation
-				+ ". The tech level is " + planetTechLevel
+				+ ". It is located at ("
+				+ (int)planetLocation.getX() + ", " + (int)planetLocation.getY()
+				+ "). The tech level is " + planetTechLevel
 				+ ". The resource is " + planetResource
 				+ ". The police intensity is " + policeIntensity
 				+ ". The piracy level is " + piracyLevel + ".\n");	
