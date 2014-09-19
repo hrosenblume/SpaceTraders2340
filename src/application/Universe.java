@@ -8,4 +8,12 @@ public class Universe {
 			universe[x] = p;
 		}		
 	}
+	
+	public String toString() {
+		String s = "";
+		for (int x = 0; x < universe.length; x++) {
+			s += universe[x];
+		}
+		return s;
+	}
 }

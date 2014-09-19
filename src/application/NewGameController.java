@@ -5,7 +5,10 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -112,6 +115,15 @@ public class NewGameController implements Initializable {
     @FXML
     private void onPressPlay(ActionEvent event) throws IOException {
         Player player = createPlayer(); // creates player in model
+        Universe universe = createUniverse();
+        
+        Parent root = FXMLLoader.load(getClass().getResource("../view/UniverseDisplay.fxml"));
+		Stage newStage = new Stage();
+		newStage.setScene(new Scene(root, 750, 500));
+		newStage.show();
+		
+		Stage oldStage = (Stage) playButton.getScene().getWindow();
+        oldStage.close();
     }
     
     @FXML
@@ -137,6 +149,15 @@ public class NewGameController implements Initializable {
         System.out.println("investor skill: " + investor);
 
         return player;
+    }
+    
+    private Universe createUniverse() {
+    	Universe universe = new Universe();
+    	
+    	// for testing
+    	System.out.println(universe);
+    	
+    	return universe;
     }
     
     @Override

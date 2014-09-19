@@ -24,7 +24,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Quit" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Button fx:id="quitButton" mnemonicParsing="false" onAction="#onPressQuit" text="Quit" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
             <Button mnemonicParsing="false" text="Credits" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Button mnemonicParsing="false" text="Settings" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
             <Button mnemonicParsing="false" text="Load Game" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
