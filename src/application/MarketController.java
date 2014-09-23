@@ -75,7 +75,7 @@ public class MarketController {
 			price *= 0.5; // this resource is cheap
 		}
 		if (currentPlanet.planetResource.equals(r.highDemandResource)) {
-			price *= 1.5; // this resource is cheap
+			price *= 1.5; // this resource is expensive
 		}
 		return price;
 	}
@@ -92,7 +92,7 @@ public class MarketController {
 			price *= 0.5; // this resource is cheap
 		}
 		if (currentPlanet.planetResource.equals(r.highDemandResource)) {
-			price *= 1.5; // this resource is cheap
+			price *= 1.5; // this resource is expensive
 		}
 		return price;
 	}
