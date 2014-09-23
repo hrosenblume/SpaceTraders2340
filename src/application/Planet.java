@@ -34,6 +34,7 @@ public class Planet {
 	private Random myGen = new Random();
 	
 	int policeIntensity, piracyLevel;
+	int planetTechInteger;
 	Point planetLocation;
 	String name, planetResource, planetTechLevel;
 	
@@ -43,7 +44,8 @@ public class Planet {
 	 */
 	public Planet() {
 		this.name = planetNames[planetCount];
-		planetTechLevel = techLevels[myGen.nextInt(8)];
+		planetTechInteger = myGen.nextInt(8);
+		planetTechLevel = techLevels[planetTechInteger];
 		planetResource = resources[myGen.nextInt(19)];
 		policeIntensity = myGen.nextInt(6);
 		piracyLevel = 5 - policeIntensity;

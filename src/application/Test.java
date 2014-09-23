@@ -12,7 +12,11 @@ public class Test {
 	 * @param args command line arguments (unused)
 	 */
 	public static void main(String[] args) {
-		// currently not implemented. If anything needs to be tested, put it here.
+		Universe u = new Universe();
+		MarketController mc = new MarketController();
+		mc.setPlanet(Universe.universe[0]);
+		mc.displayBuyPrices();
+		mc.displaySellPrices();
 	}
 
 }
