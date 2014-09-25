@@ -121,6 +121,14 @@ public class NewGameController implements Initializable {
 		newStage.setScene(new Scene(root, 750, 500));
 		newStage.show();
 		
+		//for testing purposes, it puts you on a random planet when you start the game
+		PlanetController.setPlanet(Universe.universe[(new java.util.Random()).nextInt(50)]);
+		root = FXMLLoader.load(getClass().getResource("../view/PlanetDisplay.fxml"));
+		newStage = new Stage();
+		newStage.setScene(new Scene(root, 500, 500));
+		newStage.show();
+		//end of testing block
+		
 		Stage oldStage = (Stage) playButton.getScene().getWindow();
         oldStage.close();
     }

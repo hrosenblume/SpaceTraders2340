@@ -1,19 +1,127 @@
 package application;
-
+import java.io.IOException;
+import java.net.URL;
 import java.util.Random;
+import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * Manages trading algorithms and control.
  * @author Stephen
  */
-public class MarketController {
-	private Planet currentPlanet;
+public class MarketController implements Initializable {
+	static Planet currentPlanet;
+	
+	@FXML
+	private Text buyWaterPrice, buyFurPrice, buyFoodPrice, buyOrePrice,
+	buyGamesPrice, buyFirearmsPrice, buyMedicinePrice, buyMachinesPrice,
+	buyNarcoticsPrice, buyRobotsPrice;
+	private int ibuyWaterPrice, ibuyFurPrice, ibuyFoodPrice, ibuyOrePrice,
+	ibuyGamesPrice, ibuyFirearmsPrice, ibuyMedicinePrice, ibuyMachinesPrice,
+	ibuyNarcoticsPrice, ibuyRobotsPrice;
+	@FXML
+	private Text[] buyPriceArr;
+	private int[] ibuyPriceArr;
+	@FXML
+	private Text buyWaterAmt, buyFurAmt, buyFoodAmt, buyOreAmt,
+	buyGamesAmt, buyFirearmsAmt, buyMedicineAmt, buyMachinesAmt,
+	buyNarcoticsAmt, buyRobotsAmt;
+	private int ibuyWaterAmt, ibuyFurAmt, ibuyFoodAmt, ibuyOreAmt,
+	ibuyGamesAmt, ibuyFirearmsAmt, ibuyMedicineAmt, ibuyMachinesAmt,
+	ibuyNarcoticsAmt, ibuyRobotsAmt;
+	@FXML
+	private Text[] buyAmtArr;
+	private int[] ibuyAmtArr;
+	@FXML
+	private Button plusBuyWater, plusBuyFur, plusBuyFood, plusBuyOre,
+	plusBuyGames, plusBuyFirearms, plusBuyMedicine, plusBuyMachines,
+	plusBuyNarcotics, plusBuyRobots;
+	@FXML
+	private Button minusBuyWater, minusBuyFur, minusBuyFood, minusBuyOre,
+	minusBuyGames, minusBuyFirearms, minusBuyMedicine, minusBuyMachines,
+	minusBuyNarcotics, minusBuyRobots;
+	@FXML
+	private Text waterLoss, furLoss, foodLoss, oreLoss, gamesLoss,
+	firearmsLoss, medicineLoss, machinesLoss, narcoticsLoss, robotsLoss;
+	private int iwaterLoss, ifurLoss, ifoodLoss, ioreLoss, igamesLoss,
+	ifirearmsLoss, imedicineLoss, imachinesLoss, inarcoticsLoss, irobotsLoss;
+	@FXML
+	private Text[] lossArr;
+	private int[] ilossArr;
+	@FXML
+	private Text totalLoss;
+	private int itotalLoss;
+	
+	@FXML
+	private Text sellWaterPrice, sellFurPrice, sellFoodPrice, sellOrePrice,
+	sellGamesPrice, sellFirearmsPrice, sellMedicinePrice, sellMachinesPrice,
+	sellNarcoticsPrice, sellRobotsPrice;
+	private int isellWaterPrice, isellFurPrice, isellFoodPrice, isellOrePrice,
+	isellGamesPrice, isellFirearmsPrice, isellMedicinePrice, isellMachinesPrice,
+	isellNarcoticsPrice, isellRobotsPrice;
+	@FXML
+	private Text[] sellPriceArr;
+	private int[] isellPriceArr;
+	@FXML
+	private Text sellWaterAmt, sellFurAmt, sellFoodAmt, sellOreAmt,
+	sellGamesAmt, sellFirearmsAmt, sellMedicineAmt, sellMachinesAmt,
+	sellNarcoticsAmt, sellRobotsAmt;
+	private int isellWaterAmt, isellFurAmt, isellFoodAmt, isellOreAmt,
+	isellGamesAmt, isellFirearmsAmt, isellMedicineAmt, isellMachinesAmt,
+	isellNarcoticsAmt, isellRobotsAmt;
+	@FXML
+	private Text[] sellAmtArr;
+	private int[] isellAmtArr;
+	@FXML
+	private Button plusSellWater, plusSellFur, plusSellFood, plusSellOre,
+	plusSellGames, plusSellFirearms, plusSellMedicine, plusSellMachines,
+	plusSellNarcotics, plusSellRobots;
+	@FXML
+	private Button minusSellWater, minusSellFur, minusSellFood, minusSellOre,
+	minusSellGames, minusSellFirearms, minusSellMedicine, minusSellMachines,
+	minusSellNarcotics, minusSellRobots;
+	@FXML
+	private Text waterGain, furGain, foodGain, oreGain, gamesGain,
+	firearmsGain, medicineGain, machinesGain, narcoticsGain, robotsGain;
+	private int iwaterGain, ifurGain, ifoodGain, ioreGain, igamesGain,
+	ifirearmsGain, imedicineGain, imachinesGain, inarcoticsGain, irobotsGain;
+	@FXML
+	private Text[] gainArr;
+	private int[] igainArr;
+	@FXML
+	private Text totalGain;
+	private int itotalGain;
+	
+	@FXML
+	private Text waterCargo, furCargo, foodCargo, oreCargo, gamesCargo,
+	firearmsCargo, medicineCargo, machinesCargo, narcoticsCargo, robotsCargo;
+	private int iwaterCargo, ifurCargo, ifoodCargo, ioreCargo, igamesCargo,
+	ifirearmsCargo, imedicineCargo, imachinesCargo, inarcoticsCargo, irobotsCargo;
+	@FXML
+	private Text[] cargoArr;
+	private int[] icargoArr;
+	
+	@FXML
+	private Text totalCargo, maxCargo, netGainLoss, playerMoney;
+	private int itotalCargo, imaxCargo, inetGainLoss, iplayerMoney;
+	
+	@FXML
+	private Text mpTitle;
+	
+	@FXML
+	private Button cancelButton, checkoutButton;
 	
 	/**
 	 * Sets the current planet to trade on.
 	 * @param p the planet to trade on.
 	 */
-	public void setPlanet(Planet p) {
+	public static void setPlanet(Planet p) {
 		currentPlanet = p;
 	}
 	
@@ -21,10 +129,9 @@ public class MarketController {
 	 * Displays all of the buyable resources on this planet
 	 */
 	public void displayBuyPrices() {
-		System.out.println("Buying Prices:");
 		for (int i = 0; i < Universe.resources.length; i++) {
-			// replace print statement with some buttons of some sort
-			System.out.println(displayBuyPrice(Universe.resources[i]));
+			ibuyPriceArr[i] = computeBuyPrice(Universe.resources[i]);
+			buyPriceArr[i].setText(displayBuyPrice(Universe.resources[i]));
 		}
 	}
 	
@@ -32,10 +139,9 @@ public class MarketController {
 	 * Displays all of the sellable resources on this planet
 	 */
 	public void displaySellPrices() {
-		System.out.println("Selling Prices:");
 		for (int i = 0; i < Universe.resources.length; i++) {
-			// replace print statement with some buttons of some sort
-			System.out.println(displaySellPrice(Universe.resources[i]));
+			isellPriceArr[i] = computeSellPrice(Universe.resources[i]);
+			sellPriceArr[i].setText(displaySellPrice(Universe.resources[i]));
 		}
 	}
 	
@@ -46,9 +152,9 @@ public class MarketController {
 	 */
 	private String displayBuyPrice(Resource r) {
 		if (!isBuyable(r)) {
-			return r.name + ": Not Buyable";
+			return "Not Buyable";
 		}
-		return r.name + ": " + computeBuyPrice(r);
+		return "" + computeBuyPrice(r);
 	}
 	
 	/**
@@ -58,9 +164,9 @@ public class MarketController {
 	 */
 	private String displaySellPrice(Resource r) {
 		if (!isSellable(r)) {
-			return r.name + ": Not Sellable";
+			return "Not Sellable";
 		}
-		return r.name + ": " + computeSellPrice(r);
+		return "" + computeSellPrice(r);
 	}
 	
 	private int computeBuyPrice(Resource r) {
@@ -115,4 +221,122 @@ public class MarketController {
 		return r.minTechUseLevel <= currentPlanet.planetTechInteger;
 	}
 	
+	private void buildArrays() {
+		buyPriceArr = new Text[]{buyWaterPrice, buyFurPrice, buyFoodPrice,
+				buyOrePrice, buyGamesPrice, buyFirearmsPrice, buyMedicinePrice,
+				buyMachinesPrice, buyNarcoticsPrice, buyRobotsPrice};
+		sellPriceArr = new Text[]{sellWaterPrice, sellFurPrice,
+				sellFoodPrice, sellOrePrice, sellGamesPrice,
+				sellFirearmsPrice, sellMedicinePrice, sellMachinesPrice, 
+				sellNarcoticsPrice, sellRobotsPrice};
+		buyAmtArr = new Text[]{buyWaterAmt, buyFurAmt, buyFoodAmt, buyOreAmt,
+				buyGamesAmt, buyFirearmsAmt, buyMedicineAmt, buyMachinesAmt,
+				buyNarcoticsAmt, buyRobotsAmt};
+		sellAmtArr = new Text[]{sellWaterAmt, sellFurAmt, sellFoodAmt,
+				sellOreAmt, sellGamesAmt, sellFirearmsAmt, sellMedicineAmt,
+				sellMachinesAmt, sellNarcoticsAmt, sellRobotsAmt};
+		lossArr = new Text[]{waterLoss, furLoss, foodLoss, oreLoss,
+				gamesLoss, firearmsLoss, medicineLoss, machinesLoss,
+				narcoticsLoss, robotsLoss};
+		gainArr = new Text[]{waterGain, furGain, foodGain, oreGain, 
+				gamesGain, firearmsGain, medicineGain, machinesGain,
+				narcoticsGain, robotsGain};
+		cargoArr = new Text[]{waterCargo, furCargo, foodCargo, oreCargo,
+				gamesCargo, firearmsCargo, medicineCargo, machinesCargo,
+				narcoticsCargo, robotsCargo};
+		
+		ibuyPriceArr = new int[]{ibuyWaterPrice, ibuyFurPrice, ibuyFoodPrice,
+				ibuyOrePrice, ibuyGamesPrice, ibuyFirearmsPrice, ibuyMedicinePrice,
+				ibuyMachinesPrice, ibuyNarcoticsPrice, ibuyRobotsPrice};
+		isellPriceArr = new int[]{isellWaterPrice, isellFurPrice,
+				isellFoodPrice, isellOrePrice, isellGamesPrice,
+				isellFirearmsPrice, isellMedicinePrice, isellMachinesPrice, 
+				isellNarcoticsPrice, isellRobotsPrice};
+		ibuyAmtArr = new int[]{ibuyWaterAmt, ibuyFurAmt, ibuyFoodAmt, ibuyOreAmt,
+				ibuyGamesAmt, ibuyFirearmsAmt, ibuyMedicineAmt, ibuyMachinesAmt,
+				ibuyNarcoticsAmt, ibuyRobotsAmt};
+		isellAmtArr = new int[]{isellWaterAmt, isellFurAmt, isellFoodAmt,
+				isellOreAmt, isellGamesAmt, isellFirearmsAmt, isellMedicineAmt,
+				isellMachinesAmt, isellNarcoticsAmt, isellRobotsAmt};
+		ilossArr = new int[]{iwaterLoss, ifurLoss, ifoodLoss, ioreLoss,
+				igamesLoss, ifirearmsLoss, imedicineLoss, imachinesLoss,
+				inarcoticsLoss, irobotsLoss};
+		igainArr = new int[]{iwaterGain, ifurGain, ifoodGain, ioreGain, 
+				igamesGain, ifirearmsGain, imedicineGain, imachinesGain,
+				inarcoticsGain, irobotsGain};
+		icargoArr = new int[]{iwaterCargo, ifurCargo, ifoodCargo, ioreCargo,
+				igamesCargo, ifirearmsCargo, imedicineCargo, imachinesCargo,
+				inarcoticsCargo, irobotsCargo};
+	}
+	
+	private void setScreen() {
+		mpTitle.setText(currentPlanet.name + " MarketPlace");
+		displayBuyPrices();
+		displaySellPrices();
+		setInitialCargo();
+		//initialize imaxCargo from Cargo class
+		maxCargo.setText("" + imaxCargo);
+		//initialize iplayerMoney from Player class
+		playerMoney.setText("" + iplayerMoney);
+	}
+	
+	private void setInitialCargo() {
+		//initialize icargoArr in for-loop from Cargo class
+	}
+	
+	private void update() {
+		for (int i = 0; i < Universe.resources.length; i++) {
+			ilossArr[i] = ibuyPriceArr[i] * ibuyAmtArr[i];
+			igainArr[i] = isellPriceArr[i] * isellAmtArr[i];
+		}
+		itotalLoss = sum(ilossArr);
+		itotalGain = sum(igainArr);
+		inetGainLoss = itotalGain - itotalLoss;
+		itotalCargo = sum(icargoArr);
+		intToDisplay();
+	}
+	
+	private int sum(int[] arr) {
+		int sum = 0;
+		for (int i = 0; i < arr.length; i++) {
+			sum += arr[i];
+		}
+		return sum;
+	}
+	
+	private void intToDisplay() {
+		for (int i = 0; i < Universe.resources.length; i++) {
+			buyAmtArr[i].setText("" + ibuyAmtArr[i]);
+			sellAmtArr[i].setText("" + isellAmtArr[i]);
+			lossArr[i].setText("" + ilossArr[i]);
+			gainArr[i].setText("" + igainArr[i]);
+			cargoArr[i].setText("" + icargoArr[i]);
+		}
+		totalLoss.setText("" + itotalLoss);
+		totalGain.setText("" + itotalGain);
+		netGainLoss.setText("" + inetGainLoss);
+		totalCargo.setText("" + itotalCargo);
+	}
+	
+	@FXML
+    private void onPressCancel(ActionEvent event) throws IOException {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
+    }
+	
+	@FXML
+	private void onPressCheckout(ActionEvent event) throws IOException {
+		//add inetGainLoss to Player's money variable
+		//set cargoArr to Cargo's individual amt variables with a for-loop
+		Stage stage = (Stage) checkoutButton.getScene().getWindow();
+        stage.close();
+	}
+	
+	@Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+		buildArrays();
+		setScreen();
+		update();
+    }  
 }

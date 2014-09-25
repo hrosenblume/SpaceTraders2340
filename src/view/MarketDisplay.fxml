@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MarketController">
+   <children>
+      <GridPane prefHeight="700.0" prefWidth="700.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="527.0" minHeight="0.0" prefHeight="49.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="695.0" minHeight="10.0" prefHeight="616.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="135.0" minHeight="0.0" prefHeight="31.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="65.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="579.0" minWidth="10.0" prefWidth="535.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="363.0" minHeight="10.0" prefHeight="347.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="96.0" minHeight="0.0" prefHeight="8.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="131.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="82.0" minHeight="0.0" prefHeight="7.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Water" GridPane.halignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fur" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Food" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ore" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Games" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Firearms" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Machines" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Narcotics" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Robots" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Buy" GridPane.halignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sell" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="68.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="51.0" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="66.0" minWidth="10.0" prefWidth="53.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="10.0" prefWidth="52.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="16.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="86.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                              <Text fx:id="buyWaterPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <GridPane GridPane.columnIndex="3">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="plusBuyWater" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyWater" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text fx:id="buyFurPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text fx:id="buyFoodPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text fx:id="buyOrePrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text fx:id="buyGamesPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text fx:id="buyFirearmsPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text fx:id="buyMedicinePrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text fx:id="buyMachinesPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text fx:id="buyNarcoticsPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text fx:id="buyRobotsPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text fx:id="buyWaterAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                              <Text fx:id="buyFurAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text fx:id="buyFoodAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text fx:id="buyOreAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text fx:id="buyGamesAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text fx:id="buyFirearmsAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text fx:id="buyMedicineAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text fx:id="buyMachinesAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text fx:id="buyNarcoticsAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text fx:id="buyRobotsAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text fx:id="waterLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+                              <Text fx:id="furLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text fx:id="foodLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text fx:id="oreLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text fx:id="gamesLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text fx:id="firearmsLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text fx:id="medicineLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text fx:id="machinesLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text fx:id="narcoticsLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text fx:id="robotsLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button fx:id="plusBuyFur" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyFur" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <children>
+                                    <Button fx:id="plusBuyFood" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyFood" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button fx:id="plusBuyOre" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyOre" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <children>
+                                    <Button fx:id="plusBuyGames" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyGames" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <children>
+                                    <Button fx:id="plusBuyFirearms" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyFirearms" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <children>
+                                    <Button fx:id="plusBuyMedicine" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyMedicine" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                 <children>
+                                    <Button fx:id="plusBuyMachines" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyMachines" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                 <children>
+                                    <Button fx:id="plusBuyNarcotics" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyNarcotics" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                 <children>
+                                    <Button fx:id="plusBuyRobots" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyRobots" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Text fx:id="totalLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                              <Text fx:id="sellWaterPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <GridPane GridPane.columnIndex="3">
+                                 <children>
+                                    <Button fx:id="plusSellWater" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellWater" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text fx:id="sellFurPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text fx:id="sellFoodPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text fx:id="sellOrePrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text fx:id="sellGamesPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text fx:id="sellFirearmsPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text fx:id="sellMedicinePrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text fx:id="sellMachinesPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text fx:id="sellNarcoticsPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text fx:id="sellRobotsPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text fx:id="sellWaterAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+                              <Text fx:id="sellFurAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text fx:id="sellFoodAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text fx:id="sellOreAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text fx:id="sellGamesAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text fx:id="sellFirearmsAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text fx:id="sellMedicineAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text fx:id="sellMachinesAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text fx:id="sellNarcoticsAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text fx:id="sellRobotsAmt" strokeType="OUTSIDE" strokeWidth="0.0" text="Amt" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <Text fx:id="waterGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" />
+                              <Text fx:id="furGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Text fx:id="foodGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                              <Text fx:id="oreGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                              <Text fx:id="gamesGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                              <Text fx:id="firearmsGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                              <Text fx:id="medicineGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                              <Text fx:id="machinesGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                              <Text fx:id="narcoticsGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                              <Text fx:id="robotsGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button fx:id="plusSellFur" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellFur" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <children>
+                                    <Button fx:id="plusSellFood" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellFood" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <children>
+                                    <Button fx:id="plusSellOre" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellOre" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                 <children>
+                                    <Button fx:id="plusSellGames" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellGames" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                 <children>
+                                    <Button fx:id="plusSellFirearms" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellFirearms" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                 <children>
+                                    <Button fx:id="plusSellMedicine" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellMedicine" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="7">
+                                 <children>
+                                    <Button fx:id="plusSellMachines" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellMachines" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="8">
+                                 <children>
+                                    <Button fx:id="plusSellNarcotics" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyNarcotics1" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <GridPane GridPane.columnIndex="3" GridPane.rowIndex="9">
+                                 <children>
+                                    <Button fx:id="plusSellRobots" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellRobots" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Text fx:id="totalGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="68.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="51.0" minWidth="10.0" prefWidth="20.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="66.0" minWidth="10.0" prefWidth="53.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="10.0" prefWidth="52.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="69.0" minWidth="10.0" prefWidth="16.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="86.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo Space" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Money" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Cargo :" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max Cargo Space :" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <Text fx:id="totalCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Cargo" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                        <Text fx:id="maxCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Max Cargo" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Water :" GridPane.halignment="CENTER" />
+                              <Text fx:id="waterCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="2">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Food :" GridPane.halignment="CENTER" />
+                              <Text fx:id="foodCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fur :" GridPane.halignment="CENTER" />
+                              <Text fx:id="furCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="3">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ore :" GridPane.halignment="CENTER" />
+                              <Text fx:id="oreCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="4">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Games :" GridPane.halignment="CENTER" />
+                              <Text fx:id="gamesCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.rowIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Firearms :" GridPane.halignment="CENTER" />
+                              <Text fx:id="firearmsCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine :" GridPane.halignment="CENTER" />
+                              <Text fx:id="medicineCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Machines :" GridPane.halignment="CENTER" />
+                              <Text fx:id="machinesCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Narcotics :" GridPane.halignment="CENTER" />
+                              <Text fx:id="narcoticsCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Robots :" GridPane.halignment="CENTER" />
+                              <Text fx:id="robotsCargo" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Net Gain/Loss :" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current Money :" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                        <Text fx:id="netGainLoss" strokeType="OUTSIDE" strokeWidth="0.0" text="Net Gain/Loss" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
+                        <Text fx:id="playerMoney" strokeType="OUTSIDE" strokeWidth="0.0" text="Player's Money" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Text fx:id="mpTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet's Marketplace" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <GridPane GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="checkoutButton" mnemonicParsing="false" onAction="#onPressCheckout" text="Checkout" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#onPressCancel" text="Cancel" GridPane.halignment="CENTER" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

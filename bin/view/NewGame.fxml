@@ -92,7 +92,7 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button fx:id="pilotUp" mnemonicParsing="false" onAction="#increasePilot" text="+" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                    <Button fx:id="pilotUp" mnemonicParsing="false" onAction="#increasePilot" styleClass="plusButton" text="+" textAlignment="CENTER" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
                                        <GridPane.margin>
                                           <Insets />
                                        </GridPane.margin>
@@ -100,7 +100,7 @@
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
                                     </Button>
-                                    <Button fx:id="pilotDown" mnemonicParsing="false" onAction="#decreasePilot" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                    <Button fx:id="pilotDown" mnemonicParsing="false" onAction="#decreasePilot" styleClass="minusButton" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
@@ -114,12 +114,12 @@
                            <children>
                               <GridPane GridPane.columnIndex="1">
                                  <children>
-                                    <Button fx:id="fighterUp" mnemonicParsing="false" onAction="#increaseFighter" text="+" GridPane.halignment="LEFT">
+                                    <Button fx:id="fighterUp" mnemonicParsing="false" onAction="#increaseFighter" styleClass="plusButton" text="+" GridPane.halignment="LEFT">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
                                     </Button>
-                                    <Button fx:id="fighterDown" mnemonicParsing="false" onAction="#decreaseFighter" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                    <Button fx:id="fighterDown" mnemonicParsing="false" onAction="#decreaseFighter" styleClass="minusButton" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
@@ -147,12 +147,12 @@
                            <children>
                               <GridPane GridPane.columnIndex="1">
                                  <children>
-                                    <Button fx:id="traderUp" mnemonicParsing="false" onAction="#increaseTrader" text="+" GridPane.halignment="LEFT">
+                                    <Button fx:id="traderUp" mnemonicParsing="false" onAction="#increaseTrader" styleClass="plusButton" text="+" GridPane.halignment="LEFT">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
                                     </Button>
-                                    <Button fx:id="traderDown" mnemonicParsing="false" onAction="#decreaseTrader" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                    <Button fx:id="traderDown" mnemonicParsing="false" onAction="#decreaseTrader" styleClass="minusButton" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
@@ -180,12 +180,12 @@
                            <children>
                               <GridPane GridPane.columnIndex="1">
                                  <children>
-                                    <Button fx:id="engineerUp" mnemonicParsing="false" onAction="#increaseEngineer" text="+" GridPane.halignment="LEFT">
+                                    <Button fx:id="engineerUp" mnemonicParsing="false" onAction="#increaseEngineer" styleClass="plusButton" text="+" GridPane.halignment="LEFT">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
                                     </Button>
-                                    <Button fx:id="engineerDown" mnemonicParsing="false" onAction="#decreaseEngineer" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                    <Button fx:id="engineerDown" mnemonicParsing="false" onAction="#decreaseEngineer" styleClass="minusButton" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
@@ -213,12 +213,12 @@
                            <children>
                               <GridPane GridPane.columnIndex="1">
                                  <children>
-                                    <Button fx:id="investorUp" mnemonicParsing="false" onAction="#increaseInvestor" text="+" GridPane.halignment="LEFT">
+                                    <Button fx:id="investorUp" mnemonicParsing="false" onAction="#increaseInvestor" styleClass="plusButton" text="+" GridPane.halignment="LEFT">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
                                     </Button>
-                                    <Button fx:id="investorDown" mnemonicParsing="false" onAction="#decreaseInvestor" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                    <Button fx:id="investorDown" mnemonicParsing="false" onAction="#decreaseInvestor" styleClass="minusButton" text="-" GridPane.halignment="LEFT" GridPane.rowIndex="1">
                                        <padding>
                                           <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                                        </padding>
