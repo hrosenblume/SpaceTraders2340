@@ -14,9 +14,9 @@ public class Test {
 	public static void main(String[] args) {
 		Universe u = new Universe();
 		MarketController mc = new MarketController();
-		mc.setPlanet(Universe.universe[0]);
-		mc.displayBuyPrices();
-		mc.displaySellPrices();
+//		mc.setPlanet(Universe.universe[0]);
+//		mc.displayBuyPrices();
+//		mc.displaySellPrices();
 	}
 
 }

@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Random;
+
 /**
  * Represents a resource and its properties.
  * @author Stephen
@@ -17,6 +19,10 @@ public class Resource {
 	String highDemandResource;
 	int minRandomTraderPrice;
 	int maxRandomTraderPrice;
+	int currentBuyPrice;
+	int currentSellPrice;
+	boolean isBuyable;
+	boolean isSellable;
 
 	/**
 	 * Constructs a resource.
@@ -47,6 +53,10 @@ public class Resource {
 		highDemandResource = ER;
 		minRandomTraderPrice = MTL;
 		maxRandomTraderPrice = MTH;
+		currentBuyPrice = base;
+		currentSellPrice = base;
+		isBuyable = false;
+		isSellable = false;
 	}
 	
 	/**
@@ -65,6 +75,60 @@ public class Resource {
 		+ "highDemandResource: " + highDemandResource + "\n"
 		+ "minRandomTraderPrice: " + minRandomTraderPrice + "\n"
 		+ "maxRandomTraderPrice: " +  maxRandomTraderPrice + "\n";
+	}
+	
+	public int getCurrentBuyPrice(Planet planet) {
+		currentBuyPrice = computeBuyPrice(planet);
+		return currentBuyPrice;
+	}
+	
+	public int getCurrentSellPrice(Planet planet) {
+		currentSellPrice = computeSellPrice(planet);
+		return currentSellPrice;
+	}
+	
+	public boolean isBuyable(Planet planet) {
+		isBuyable = this.minTechProduceLevel <= planet.planetTechInteger;
+		return isBuyable;
+	}
+	
+	public boolean isSellable(Planet planet) {
+		isSellable = this.minTechUseLevel <= planet.planetTechInteger;
+		return isSellable;
+	}
+	
+	private int computeBuyPrice(Planet planet) {
+		int price = this.basePrice;
+		price += ((planet.planetTechInteger - this.minTechProduceLevel)
+				* this.techLevelRampUp);
+		Random rand = new Random();
+		price += rand.nextInt(this.variance);
+		// events like war, drought, boredom, lack of workers not implemented yet
+		// if (currentPlanet.event.equals(r.highDemandEvent)) price *= 1.5;
+		if (planet.planetResource.equals(this.highProduceResource)) {
+			price *= 0.5; // this resource is cheap
+		}
+		if (planet.planetResource.equals(this.highDemandResource)) {
+			price *= 1.5; // this resource is expensive
+		}
+		return price;
+	}
+	
+	private int computeSellPrice(Planet planet) {
+		int price = this.basePrice;
+		price += ((planet.planetTechInteger - this.minTechUseLevel)
+				* this.techLevelRampUp);
+		Random rand = new Random();
+		price += rand.nextInt(this.variance);
+		// events like war, drought, boredom, lack of workers not implemented yet
+		// if (currentPlanet.event.equals(r.highDemandEvent)) price *= 1.5;
+		if (planet.planetResource.equals(this.highProduceResource)) {
+			price *= 0.5; // this resource is cheap
+		}
+		if (planet.planetResource.equals(this.highDemandResource)) {
+			price *= 1.5; // this resource is expensive
+		}
+		return price;
 	}
 
 }

@@ -173,7 +173,7 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button fx:id="plusBuyWater" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="plusBuyWater" mnemonicParsing="false" onAction="#increaseBuyWater" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
                                     <Button fx:id="minusBuyWater" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>

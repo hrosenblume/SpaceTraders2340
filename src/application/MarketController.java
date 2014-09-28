@@ -128,23 +128,23 @@ public class MarketController implements Initializable {
 	/**
 	 * Displays all of the buyable resources on this planet
 	 */
-	public void displayBuyPrices() {
-		for (int i = 0; i < Universe.resources.length; i++) {
-			ibuyPriceArr[i] = computeBuyPrice(Universe.resources[i]);
-			buyPriceArr[i].setText(displayBuyPrice(Universe.resources[i]));
-		}
-	}
-	
-	/**
-	 * Displays all of the sellable resources on this planet
-	 */
-	public void displaySellPrices() {
-		for (int i = 0; i < Universe.resources.length; i++) {
-			isellPriceArr[i] = computeSellPrice(Universe.resources[i]);
-			sellPriceArr[i].setText(displaySellPrice(Universe.resources[i]));
-		}
-	}
-	
+//	public void displayBuyPrices() {
+//		for (int i = 0; i < Universe.resources.length; i++) {
+//			ibuyPriceArr[i] = computeBuyPrice(Universe.resources[i]);
+//			buyPriceArr[i].setText(displayBuyPrice(Universe.resources[i]));
+//		}
+//	}
+//	
+//	/**
+//	 * Displays all of the sellable resources on this planet
+//	 */
+//	public void displaySellPrices() {
+//		for (int i = 0; i < Universe.resources.length; i++) {
+//			isellPriceArr[i] = computeSellPrice(Universe.resources[i]);
+//			sellPriceArr[i].setText(displaySellPrice(Universe.resources[i]));
+//		}
+//	}
+//	
 	/**
 	 * Returns the buying price in the form of a String
 	 * @param r the resource to be bought
@@ -271,8 +271,8 @@ public class MarketController implements Initializable {
 	
 	private void setScreen() {
 		mpTitle.setText(currentPlanet.name + " MarketPlace");
-		displayBuyPrices();
-		displaySellPrices();
+//		displayBuyPrices();
+//		displaySellPrices();
 		setInitialCargo();
 		//initialize imaxCargo from Cargo class
 		maxCargo.setText("" + imaxCargo);
@@ -285,10 +285,12 @@ public class MarketController implements Initializable {
 	}
 	
 	private void update() {
-		for (int i = 0; i < Universe.resources.length; i++) {
-			ilossArr[i] = ibuyPriceArr[i] * ibuyAmtArr[i];
-			igainArr[i] = isellPriceArr[i] * isellAmtArr[i];
-		}
+		buildArrays();
+//		for (int i = 0; i < Universe.resources.length; i++) {
+//			ilossArr[i] = ibuyPriceArr[i] * ibuyAmtArr[i];
+//			igainArr[i] = isellPriceArr[i] * isellAmtArr[i];
+//		}
+		buildArrays();
 		itotalLoss = sum(ilossArr);
 		itotalGain = sum(igainArr);
 		inetGainLoss = itotalGain - itotalLoss;
@@ -305,17 +307,17 @@ public class MarketController implements Initializable {
 	}
 	
 	private void intToDisplay() {
-		for (int i = 0; i < Universe.resources.length; i++) {
-			buyAmtArr[i].setText("" + ibuyAmtArr[i]);
-			sellAmtArr[i].setText("" + isellAmtArr[i]);
-			lossArr[i].setText("" + ilossArr[i]);
-			gainArr[i].setText("" + igainArr[i]);
-			cargoArr[i].setText("" + icargoArr[i]);
-		}
-		totalLoss.setText("" + itotalLoss);
-		totalGain.setText("" + itotalGain);
-		netGainLoss.setText("" + inetGainLoss);
-		totalCargo.setText("" + itotalCargo);
+//		for (int i = 0; i < Universe.resources.length; i++) {
+//			buyAmtArr[i].setText("" + ibuyAmtArr[i]);
+//			sellAmtArr[i].setText("" + isellAmtArr[i]);
+//			lossArr[i].setText("" + ilossArr[i]);
+//			gainArr[i].setText("" + igainArr[i]);
+//			cargoArr[i].setText("" + icargoArr[i]);
+//		}
+//		totalLoss.setText("" + itotalLoss);
+//		totalGain.setText("" + itotalGain);
+//		netGainLoss.setText("" + inetGainLoss);
+//		totalCargo.setText("" + itotalCargo);
 	}
 	
 	@FXML
@@ -338,5 +340,46 @@ public class MarketController implements Initializable {
 		buildArrays();
 		setScreen();
 		update();
-    }  
+    }
+	
+	@FXML
+	private void increaseBuyWater(ActionEvent event) throws IOException {
+		incrementBuy("water",1);
+	}
+	
+	private void incrementBuy(String item, int val) {
+		if (item.equals("water")) {
+			ibuyWaterAmt += val;
+		}
+		update();
+	}
+	
+//    private void incrementBuy(Text thisLabel) {
+//        String currentItem = thisLabel.getText();
+//        int currentItemNum = Integer.parseInt(currentItem);
+//        int newSkillNum = currentSkillNum + 1;
+//        counter--;
+//        String newSkill = "" + newSkillNum;
+//        thisLabel.setText(newSkill);
+//        totalPoints.setText("" + counter);
+//    }
+//    
+//    private void incrementBuy(Text thisLabel) {
+//        String currentSkill = thisLabel.getText();
+//        int currentSkillNum = Integer.parseInt(currentSkill);
+//        int newSkillNum = currentSkillNum + 1;
+//        counter--;
+//        String newSkill = "" + newSkillNum;
+//        thisLabel.setText(newSkill);
+//        totalPoints.setText("" + counter);
+//    }
+//	
+//	@FXML
+//    private void increasePilot(ActionEvent event) throws IOException {
+//        incrementSkill(pilotSkillLabel);
+//    }
+//    @FXML
+//    private void decreasePilot(ActionEvent event) throws IOException {
+//        decrementSkill(pilotSkillLabel);
+//    }
 }
