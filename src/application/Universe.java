@@ -25,7 +25,7 @@ public class Universe {
 	 * Generates all the possible resources in this universe.
 	 */
 	private static HashMap<String, Resource> generateResources() {
-		HashMap<String, Resource> internalResources = new HashMap<String, Resource>();;
+		HashMap<String, Resource> internalResources = new HashMap<String, Resource>();
 		internalResources.put("Water", new Resource("Water", 0, 0, 2, 30, 3, 4,
 				"DROUGHT", "LOTSOFWATER", "DESERT", 30, 50));
 		internalResources.put("Fur", new Resource("Furs", 0, 0, 0, 250, 10, 10,
@@ -46,7 +46,7 @@ public class Universe {
 				"BOREDOM", "WEIRDMUSHROOMS", "", 2000, 3000));
 		internalResources.put("Robots", new Resource("Robots", 6, 4, 7, 5000, -150, 100,
 				"LACKOFWORKERS", "", "", 3500, 5000));
-		return resources;
+		return internalResources;
 	}
 	
 	/**

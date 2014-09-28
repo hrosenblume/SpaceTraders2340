@@ -55,7 +55,7 @@ public class PlanetController implements Initializable {
 	
 	@FXML
 	private void onPressMarketPlace(ActionEvent event) throws IOException {
-		MarketController.setPlanet(currentPlanet);
+		NewMarketController.setPlanet(currentPlanet);
 		Parent root = FXMLLoader.load(getClass().getResource("../view/MarketDisplay.fxml"));
 		Stage newStage = new Stage();
 		newStage.setScene(new Scene(root, 700, 700));
