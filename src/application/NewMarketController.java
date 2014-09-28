@@ -17,7 +17,7 @@ public class NewMarketController implements Initializable {
 	
 	private HashMap<String, Integer> buyMap = new HashMap<String, Integer>();
 	private HashMap<String, Integer> sellMap = new HashMap<String, Integer>();
-	private HashMap<String, Resource> resources = Universe.resources;
+	private HashMap<String, Resource> resources = Resource.resources;
 	//no need for a cargo map because the player will have a map
 	//that can be editted and updated
 	
@@ -172,16 +172,18 @@ public class NewMarketController implements Initializable {
 	}
 	
 	private void setGains() {
-		waterTotalGain.setText("" + resources.get("Water").getCurrentBuyPrice(currentPlanet)*sellMap.get("Water"));
-		furTotalGain.setText("" + resources.get("Fur").getCurrentBuyPrice(currentPlanet)*sellMap.get("Fur"));
-		foodTotalGain.setText("" + resources.get("Food").getCurrentBuyPrice(currentPlanet)*sellMap.get("Food"));
-		oreTotalGain.setText("" + resources.get("Ore").getCurrentBuyPrice(currentPlanet)*sellMap.get("Ore"));
-		gamesTotalGain.setText("" + resources.get("Games").getCurrentBuyPrice(currentPlanet)*sellMap.get("Games"));
-		firearmsTotalGain.setText("" + resources.get("Firearms").getCurrentBuyPrice(currentPlanet)*sellMap.get("Firearms"));
-		medicineTotalGain.setText("" + resources.get("Medicine").getCurrentBuyPrice(currentPlanet)*sellMap.get("Medicine"));
-		machinesTotalGain.setText("" + resources.get("Machines").getCurrentBuyPrice(currentPlanet)*sellMap.get("Machines"));
-		narcoticsTotalGain.setText("" + resources.get("Narcotics").getCurrentBuyPrice(currentPlanet)*sellMap.get("Narcotics"));
-		robotsTotalGain.setText("" + resources.get("Robots").getCurrentBuyPrice(currentPlanet)*sellMap.get("Robots"));
+		waterTotalGain.setText("" + resources.get("Water").getCurrentSellPrice(currentPlanet)*sellMap.get("Water"));
+		System.out.println("Test1: " + resources.get("Water").getCurrentSellPrice(currentPlanet));
+		System.out.println("Test2: 0" + sellMap.get("Water"));
+		furTotalGain.setText("" + resources.get("Fur").getCurrentSellPrice(currentPlanet)*sellMap.get("Fur"));
+		foodTotalGain.setText("" + resources.get("Food").getCurrentSellPrice(currentPlanet)*sellMap.get("Food"));
+		oreTotalGain.setText("" + resources.get("Ore").getCurrentSellPrice(currentPlanet)*sellMap.get("Ore"));
+		gamesTotalGain.setText("" + resources.get("Games").getCurrentSellPrice(currentPlanet)*sellMap.get("Games"));
+		firearmsTotalGain.setText("" + resources.get("Firearms").getCurrentSellPrice(currentPlanet)*sellMap.get("Firearms"));
+		medicineTotalGain.setText("" + resources.get("Medicine").getCurrentSellPrice(currentPlanet)*sellMap.get("Medicine"));
+		machinesTotalGain.setText("" + resources.get("Machines").getCurrentSellPrice(currentPlanet)*sellMap.get("Machines"));
+		narcoticsTotalGain.setText("" + resources.get("Narcotics").getCurrentSellPrice(currentPlanet)*sellMap.get("Narcotics"));
+		robotsTotalGain.setText("" + resources.get("Robots").getCurrentSellPrice(currentPlanet)*sellMap.get("Robots"));
 	}
 	
 	private void setTotalCostGain() {

@@ -1,6 +1,7 @@
 package application;
 import java.awt.Point;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 /**
@@ -8,6 +9,7 @@ import java.util.Random;
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil Vora
  */
 public class Planet {
+
 	
 	String[] planetNames = {"Adipose 3", "Arcadia", "Balhoon", "Brus", "Boeshane",
 			"Calufrax Minor", "Chronos", "Demon's Run", "Daemos", "Earth",
