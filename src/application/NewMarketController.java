@@ -15,11 +15,9 @@ import javafx.stage.Stage;
 public class NewMarketController implements Initializable {
 	private static Planet currentPlanet;
 	
+	// a "shopping cart" for the resources to buy
 	private HashMap<String, Integer> buyMap = new HashMap<String, Integer>();
 	private HashMap<String, Integer> sellMap = new HashMap<String, Integer>();
-	private HashMap<String, Resource> resources = Resource.resources;
-	//no need for a cargo map because the player will have a map
-	//that can be editted and updated
 	
 	//Setup
 	@FXML
@@ -87,6 +85,9 @@ public class NewMarketController implements Initializable {
 		currentPlanet = p;
 	}
 	
+	/**
+	 * Initializes the shopping cart with the resources and their amounts.
+	 */
 	private void fillMaps() {
 		String[] resources = {"Water", "Fur", "Food", "Ore", "Games",
 				  "Firearms", "Medicine", "Machines",
@@ -97,6 +98,9 @@ public class NewMarketController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Sets the labels for each resource.
+	 */
 	private void setLabels() {
 		water.setText("Water");
 		fur.setText("Fur");
@@ -110,30 +114,36 @@ public class NewMarketController implements Initializable {
 		robots.setText("Robots");
 	}
 	
+	/**
+	 * Sets the displayed buy and sell prices.
+	 */
 	private void setPrices() {
-		buyWaterPrice.setText("" + resources.get("Water").getCurrentBuyPrice(currentPlanet));
-		buyFurPrice.setText("" + resources.get("Fur").getCurrentBuyPrice(currentPlanet));
-		buyFoodPrice.setText("" + resources.get("Food").getCurrentBuyPrice(currentPlanet));
-		buyOrePrice.setText("" + resources.get("Ore").getCurrentBuyPrice(currentPlanet));
-		buyGamesPrice.setText("" + resources.get("Games").getCurrentBuyPrice(currentPlanet));
-		buyFirearmsPrice.setText("" + resources.get("Firearms").getCurrentBuyPrice(currentPlanet));
-		buyMedicinePrice.setText("" + resources.get("Medicine").getCurrentBuyPrice(currentPlanet));
-		buyMachinesPrice.setText("" + resources.get("Machines").getCurrentBuyPrice(currentPlanet));
-		buyNarcoticsPrice.setText("" + resources.get("Narcotics").getCurrentBuyPrice(currentPlanet));
-		buyRobotsPrice.setText("" + resources.get("Robots").getCurrentBuyPrice(currentPlanet));
+		buyWaterPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Water"));
+		buyFurPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Fur"));
+		buyFoodPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Food"));
+		buyOrePrice.setText("" + currentPlanet.marketplace.getBuyPrice("Ore"));
+		buyGamesPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Games"));
+		buyFirearmsPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Firearms"));
+		buyMedicinePrice.setText("" + currentPlanet.marketplace.getBuyPrice("Medicine"));
+		buyMachinesPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Machines"));
+		buyNarcoticsPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Narcotics"));
+		buyRobotsPrice.setText("" + currentPlanet.marketplace.getBuyPrice("Robots"));
 		
-		sellWaterPrice.setText("" + resources.get("Water").getCurrentSellPrice(currentPlanet));
-		sellFurPrice.setText("" + resources.get("Fur").getCurrentSellPrice(currentPlanet));
-		sellFoodPrice.setText("" + resources.get("Food").getCurrentSellPrice(currentPlanet));
-		sellOrePrice.setText("" + resources.get("Ore").getCurrentSellPrice(currentPlanet));
-		sellGamesPrice.setText("" + resources.get("Games").getCurrentSellPrice(currentPlanet));
-		sellFirearmsPrice.setText("" + resources.get("Firearms").getCurrentSellPrice(currentPlanet));
-		sellMedicinePrice.setText("" + resources.get("Medicine").getCurrentSellPrice(currentPlanet));
-		sellMachinesPrice.setText("" + resources.get("Machines").getCurrentSellPrice(currentPlanet));
-		sellNarcoticsPrice.setText("" + resources.get("Narcotics").getCurrentSellPrice(currentPlanet));
-		sellRobotsPrice.setText("" + resources.get("Robots").getCurrentSellPrice(currentPlanet));
+		sellWaterPrice.setText("" + currentPlanet.marketplace.getSellPrice("Water"));
+		sellFurPrice.setText("" + currentPlanet.marketplace.getSellPrice("Fur"));
+		sellFoodPrice.setText("" + currentPlanet.marketplace.getSellPrice("Food"));
+		sellOrePrice.setText("" + currentPlanet.marketplace.getSellPrice("Ore"));
+		sellGamesPrice.setText("" + currentPlanet.marketplace.getSellPrice("Games"));
+		sellFirearmsPrice.setText("" + currentPlanet.marketplace.getSellPrice("Firearms"));
+		sellMedicinePrice.setText("" + currentPlanet.marketplace.getSellPrice("Medicine"));
+		sellMachinesPrice.setText("" + currentPlanet.marketplace.getSellPrice("Machines"));
+		sellNarcoticsPrice.setText("" + currentPlanet.marketplace.getSellPrice("Narcotics"));
+		sellRobotsPrice.setText("" + currentPlanet.marketplace.getSellPrice("Robots"));
 	}
 	
+	/**
+	 * Sets the amount of resources in each shopping cart.
+	 */
 	private void setAmt() {
 		buyWaterAmt.setText("" + buyMap.get("Water"));
 		buyFurAmt.setText("" + buyMap.get("Fur"));
@@ -158,34 +168,41 @@ public class NewMarketController implements Initializable {
 		sellRobotsAmt.setText("" + sellMap.get("Robots"));
 	}
 	
+	/**
+	 * Sets the total buy price given the cost per resource.
+	 */
 	private void setCosts() {
-		waterTotalCost.setText("" + resources.get("Water").getCurrentBuyPrice(currentPlanet)*buyMap.get("Water"));
-		furTotalCost.setText("" + resources.get("Fur").getCurrentBuyPrice(currentPlanet)*buyMap.get("Fur"));
-		foodTotalCost.setText("" + resources.get("Food").getCurrentBuyPrice(currentPlanet)*buyMap.get("Food"));
-		oreTotalCost.setText("" + resources.get("Ore").getCurrentBuyPrice(currentPlanet)*buyMap.get("Ore"));
-		gamesTotalCost.setText("" + resources.get("Games").getCurrentBuyPrice(currentPlanet)*buyMap.get("Games"));
-		firearmsTotalCost.setText("" + resources.get("Firearms").getCurrentBuyPrice(currentPlanet)*buyMap.get("Firearms"));
-		medicineTotalCost.setText("" + resources.get("Medicine").getCurrentBuyPrice(currentPlanet)*buyMap.get("Medicine"));
-		machinesTotalCost.setText("" + resources.get("Machines").getCurrentBuyPrice(currentPlanet)*buyMap.get("Machines"));
-		narcoticsTotalCost.setText("" + resources.get("Narcotics").getCurrentBuyPrice(currentPlanet)*buyMap.get("Narcotics"));
-		robotsTotalCost.setText("" + resources.get("Robots").getCurrentBuyPrice(currentPlanet)*buyMap.get("Robots"));
+		waterTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Water") * buyMap.get("Water"));
+		furTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Fur") * buyMap.get("Fur"));
+		foodTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Food") * buyMap.get("Food"));
+		oreTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Ore") * buyMap.get("Ore"));
+		gamesTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Games") * buyMap.get("Games"));
+		firearmsTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Firearms") * buyMap.get("Firearms"));
+		medicineTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Medicine") * buyMap.get("Medicine"));
+		machinesTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Machines") * buyMap.get("Machines"));
+		narcoticsTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Narcotics") * buyMap.get("Narcotics"));
+		robotsTotalCost.setText("" + currentPlanet.marketplace.getBuyPrice("Robots") * buyMap.get("Robots"));
 	}
 	
+	/**
+	 * Sets the total sale price given the cost per resource.
+	 */
 	private void setGains() {
-		waterTotalGain.setText("" + resources.get("Water").getCurrentSellPrice(currentPlanet)*sellMap.get("Water"));
-		System.out.println("Test1: " + resources.get("Water").getCurrentSellPrice(currentPlanet));
-		System.out.println("Test2: 0" + sellMap.get("Water"));
-		furTotalGain.setText("" + resources.get("Fur").getCurrentSellPrice(currentPlanet)*sellMap.get("Fur"));
-		foodTotalGain.setText("" + resources.get("Food").getCurrentSellPrice(currentPlanet)*sellMap.get("Food"));
-		oreTotalGain.setText("" + resources.get("Ore").getCurrentSellPrice(currentPlanet)*sellMap.get("Ore"));
-		gamesTotalGain.setText("" + resources.get("Games").getCurrentSellPrice(currentPlanet)*sellMap.get("Games"));
-		firearmsTotalGain.setText("" + resources.get("Firearms").getCurrentSellPrice(currentPlanet)*sellMap.get("Firearms"));
-		medicineTotalGain.setText("" + resources.get("Medicine").getCurrentSellPrice(currentPlanet)*sellMap.get("Medicine"));
-		machinesTotalGain.setText("" + resources.get("Machines").getCurrentSellPrice(currentPlanet)*sellMap.get("Machines"));
-		narcoticsTotalGain.setText("" + resources.get("Narcotics").getCurrentSellPrice(currentPlanet)*sellMap.get("Narcotics"));
-		robotsTotalGain.setText("" + resources.get("Robots").getCurrentSellPrice(currentPlanet)*sellMap.get("Robots"));
+		waterTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Water") * sellMap.get("Water"));
+		furTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Fur") * sellMap.get("Fur"));
+		foodTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Food") * sellMap.get("Food"));
+		oreTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Ore") * sellMap.get("Ore"));
+		gamesTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Games") * sellMap.get("Games"));
+		firearmsTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Firearms") * sellMap.get("Firearms"));
+		medicineTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Medicine") * sellMap.get("Medicine"));
+		machinesTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Machines") * sellMap.get("Machines"));
+		narcoticsTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Narcotics") * sellMap.get("Narcotics"));
+		robotsTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Robots") * sellMap.get("Robots"));
 	}
 	
+	/**
+	 * Sets the total costs and gains from the transaction overall.
+	 */
 	private void setTotalCostGain() {
 		int waterCost = Integer.parseInt(waterTotalCost.getText());
 		int furCost = Integer.parseInt(furTotalCost.getText());
