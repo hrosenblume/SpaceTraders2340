@@ -1,7 +1,6 @@
 package application;
 import java.awt.Point;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Random;
 
 /**
@@ -9,7 +8,6 @@ import java.util.Random;
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil Vora
  */
 public class Planet {
-
 	
 	String[] planetNames = {"Adipose 3", "Arcadia", "Balhoon", "Brus", "Boeshane",
 			"Calufrax Minor", "Chronos", "Demon's Run", "Daemos", "Earth",
@@ -35,6 +33,8 @@ public class Planet {
 	static ArrayList<Point> usedPlanetLocations = new ArrayList<Point>();
 	private Random myGen = new Random();
 	
+	Marketplace marketplace;
+	
 	int policeIntensity, piracyLevel;
 	int planetTechInteger;
 	Point planetLocation;
@@ -45,12 +45,15 @@ public class Planet {
 	 * Tech levels, resources, police presence, and location are randomly picked.
 	 */
 	public Planet() {
+		// initialize base stats
 		this.name = planetNames[planetCount];
 		planetTechInteger = myGen.nextInt(8);
 		planetTechLevel = techLevels[planetTechInteger];
 		planetResource = resources[myGen.nextInt(19)];
 		policeIntensity = myGen.nextInt(6);
 		piracyLevel = 5 - policeIntensity;
+		marketplace = new Marketplace(this);
+		// generate unique location
 		boolean doAgain = false;
 		Point planetLoc;
 		do {
@@ -81,4 +84,5 @@ public class Planet {
 				+ ". The police intensity is " + policeIntensity
 				+ ". The piracy level is " + piracyLevel + ".\n");	
 	}
+	
 }
