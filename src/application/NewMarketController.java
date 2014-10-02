@@ -297,8 +297,11 @@ public class NewMarketController implements Initializable {
 	private void onPressCheckout(ActionEvent event) throws IOException {
 		//add inetGainLoss to Player's money variable
 		//set cargoArr to Cargo's individual amt variables with a for-loop
-		Stage stage = (Stage) checkoutButton.getScene().getWindow();
-	    stage.close();
+		if ((Integer.parseInt(totalGain.getText()) - Integer.parseInt(totalCost.getText())) + Universe.player.getMoney() >= 0) {
+			Universe.player.setMoney((Integer.parseInt(totalGain.getText()) - Integer.parseInt(totalCost.getText())) + Universe.player.getMoney());
+			Stage stage = (Stage) checkoutButton.getScene().getWindow();
+		    stage.close();			
+		}
 	}
 	
 	private void incrementBuyGood(Text item, Text amt, Text total, Text cargo) {
