@@ -50,52 +50,52 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Text fx:id="water" strokeType="OUTSIDE" strokeWidth="0.0" text="Water" GridPane.halignment="CENTER">
+                        <Text fx:id="Water" strokeType="OUTSIDE" strokeWidth="0.0" text="Water" GridPane.halignment="CENTER">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="fur" strokeType="OUTSIDE" strokeWidth="0.0" text="Fur" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                        <Text fx:id="Fur" strokeType="OUTSIDE" strokeWidth="0.0" text="Fur" GridPane.halignment="CENTER" GridPane.rowIndex="1">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="food" strokeType="OUTSIDE" strokeWidth="0.0" text="Food" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                        <Text fx:id="Food" strokeType="OUTSIDE" strokeWidth="0.0" text="Food" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="ore" strokeType="OUTSIDE" strokeWidth="0.0" text="Ore" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                        <Text fx:id="Ore" strokeType="OUTSIDE" strokeWidth="0.0" text="Ore" GridPane.halignment="CENTER" GridPane.rowIndex="3">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="games" strokeType="OUTSIDE" strokeWidth="0.0" text="Games" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                        <Text fx:id="Games" strokeType="OUTSIDE" strokeWidth="0.0" text="Games" GridPane.halignment="CENTER" GridPane.rowIndex="4">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="firearms" strokeType="OUTSIDE" strokeWidth="0.0" text="Firearms" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                        <Text fx:id="Firearms" strokeType="OUTSIDE" strokeWidth="0.0" text="Firearms" GridPane.halignment="CENTER" GridPane.rowIndex="5">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="medicine" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                        <Text fx:id="Medicine" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicine" GridPane.halignment="CENTER" GridPane.rowIndex="6">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="machines" strokeType="OUTSIDE" strokeWidth="0.0" text="Machines" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                        <Text fx:id="Machines" strokeType="OUTSIDE" strokeWidth="0.0" text="Machines" GridPane.halignment="CENTER" GridPane.rowIndex="7">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="narcotics" strokeType="OUTSIDE" strokeWidth="0.0" text="Narcotics" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                        <Text fx:id="Narcotics" strokeType="OUTSIDE" strokeWidth="0.0" text="Narcotics" GridPane.halignment="CENTER" GridPane.rowIndex="8">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="robots" strokeType="OUTSIDE" strokeWidth="0.0" text="Robots" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+                        <Text fx:id="Robots" strokeType="OUTSIDE" strokeWidth="0.0" text="Robots" GridPane.halignment="CENTER" GridPane.rowIndex="9">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -173,8 +173,8 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Button fx:id="plusBuyWater" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyWater" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyWater" mnemonicParsing="false" onAction="#plusBuyWater" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyWater" mnemonicParsing="false" onAction="#minusBuyWater" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
@@ -225,8 +225,8 @@
                               <Text fx:id="robotsTotalCost" strokeType="OUTSIDE" strokeWidth="0.0" text="Loss" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <children>
-                                    <Button fx:id="plusBuyFur" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyFur" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyFur" mnemonicParsing="false" onAction="#plusBuyFur" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyFur" mnemonicParsing="false" onAction="#minusBuyFur" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -238,8 +238,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <children>
-                                    <Button fx:id="plusBuyFood" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyFood" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyFood" mnemonicParsing="false" onAction="#plusBuyFood" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyFood" mnemonicParsing="false" onAction="#minusBuyFood" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -251,8 +251,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <children>
-                                    <Button fx:id="plusBuyOre" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyOre" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyOre" mnemonicParsing="false" onAction="#plusBuyOre" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyOre" mnemonicParsing="false" onAction="#minusBuyOre" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -264,8 +264,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <children>
-                                    <Button fx:id="plusBuyGames" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyGames" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyGames" mnemonicParsing="false" onAction="#plusBuyGames" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyGames" mnemonicParsing="false" onAction="#minusBuyGames" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -277,8 +277,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <children>
-                                    <Button fx:id="plusBuyFirearms" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyFirearms" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyFirearms" mnemonicParsing="false" onAction="#plusBuyFirearms" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyFirearms" mnemonicParsing="false" onAction="#minusBuyFirearms" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -290,8 +290,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="6">
                                  <children>
-                                    <Button fx:id="plusBuyMedicine" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyMedicine" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyMedicine" mnemonicParsing="false" onAction="#plusBuyMedicine" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyMedicine" mnemonicParsing="false" onAction="#minusBuyMedicine" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -303,8 +303,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="7">
                                  <children>
-                                    <Button fx:id="plusBuyMachines" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyMachines" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyMachines" mnemonicParsing="false" onAction="#plusBuyMachines" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyMachines" mnemonicParsing="false" onAction="#minusBuyMachines" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -316,8 +316,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="8">
                                  <children>
-                                    <Button fx:id="plusBuyNarcotics" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyNarcotics" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyNarcotics" mnemonicParsing="false" onAction="#plusBuyNarcotics" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyNarcotics" mnemonicParsing="false" onAction="#minusBuyNarcotics" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -329,8 +329,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="9">
                                  <children>
-                                    <Button fx:id="plusBuyRobots" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyRobots" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusBuyRobots" mnemonicParsing="false" onAction="#plusBuyRobots" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyRobots" mnemonicParsing="false" onAction="#minusBuyRobots" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -351,8 +351,8 @@
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
                               <GridPane GridPane.columnIndex="3">
                                  <children>
-                                    <Button fx:id="plusSellWater" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellWater" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellWater" mnemonicParsing="false" onAction="#plusSellWater" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellWater" mnemonicParsing="false" onAction="#minusSellWater" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -410,8 +410,8 @@
                               <Text fx:id="robotsTotalGain" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <children>
-                                    <Button fx:id="plusSellFur" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellFur" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellFur" mnemonicParsing="false" onAction="#plusSellFur" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellFur" mnemonicParsing="false" onAction="#minusSellFur" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -423,8 +423,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <children>
-                                    <Button fx:id="plusSellFood" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellFood" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellFood" mnemonicParsing="false" onAction="#plusSellFood" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellFood" mnemonicParsing="false" onAction="#minusSellFood" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -436,8 +436,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <children>
-                                    <Button fx:id="plusSellOre" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellOre" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellOre" mnemonicParsing="false" onAction="#plusSellOre" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellOre" mnemonicParsing="false" onAction="#minusSellOre" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -449,8 +449,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="4">
                                  <children>
-                                    <Button fx:id="plusSellGames" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellGames" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellGames" mnemonicParsing="false" onAction="#plusSellGames" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellGames" mnemonicParsing="false" onAction="#minusSellGames" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -462,8 +462,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="5">
                                  <children>
-                                    <Button fx:id="plusSellFirearms" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellFirearms" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellFirearms" mnemonicParsing="false" onAction="#plusSellFirearms" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellFirearms" mnemonicParsing="false" onAction="#minusSellFirearms" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -475,8 +475,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="6">
                                  <children>
-                                    <Button fx:id="plusSellMedicine" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellMedicine" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellMedicine" mnemonicParsing="false" onAction="#plusSellMedicine" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellMedicine" mnemonicParsing="false" onAction="#minusSellMedicine" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -488,8 +488,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="7">
                                  <children>
-                                    <Button fx:id="plusSellMachines" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellMachines" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellMachines" mnemonicParsing="false" onAction="#plusSellMachines" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellMachines" mnemonicParsing="false" onAction="#minusSellMachines" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -501,8 +501,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="8">
                                  <children>
-                                    <Button fx:id="plusSellNarcotics" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusBuyNarcotics1" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellNarcotics" mnemonicParsing="false" onAction="#plusSellNarcotics" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusBuyNarcotics" mnemonicParsing="false" onAction="#minusSellNarcotics" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -514,8 +514,8 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="3" GridPane.rowIndex="9">
                                  <children>
-                                    <Button fx:id="plusSellRobots" mnemonicParsing="false" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
-                                    <Button fx:id="minusSellRobots" mnemonicParsing="false" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                                    <Button fx:id="plusSellRobots" mnemonicParsing="false" onAction="#plusSellRobots" styleClass="plusButton" text="+" GridPane.halignment="CENTER" />
+                                    <Button fx:id="minusSellRobots" mnemonicParsing="false" onAction="#minusSellRobots" styleClass="minusButton" text="-" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

@@ -3,7 +3,6 @@ package application;
 import java.util.Random;
 
 public class Goods {
-	
 	private String name;
 	private int MLTP, MTLU, TTP, BasePrice, IPL, Var, MTL, MTH;
 	private static final int CARGOSIZE = 200;
