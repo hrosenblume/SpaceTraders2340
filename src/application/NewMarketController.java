@@ -18,6 +18,7 @@ public class NewMarketController implements Initializable {
 	// a "shopping cart" for the resources to buy
 	private HashMap<String, Integer> buyMap = new HashMap<String, Integer>();
 	private HashMap<String, Integer> sellMap = new HashMap<String, Integer>();
+	private HashMap<String, Integer> cargoMap;
 	
 	//Setup
 	@FXML
@@ -96,6 +97,7 @@ public class NewMarketController implements Initializable {
 			buyMap.put(resources[x], 0);
 			sellMap.put(resources[x], 0);
 		}
+		cargoMap = Universe.player.getCargo();
 	}
 	
 	/**
@@ -200,50 +202,81 @@ public class NewMarketController implements Initializable {
 		robotsTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Robots") * sellMap.get("Robots"));
 	}
 	
+	private void setCargos() {
+		waterCargo.setText("" + cargoMap.get("Water"));
+		furCargo.setText("" + cargoMap.get("Fur"));
+		foodCargo.setText("" + cargoMap.get("Food"));
+		oreCargo.setText("" + cargoMap.get("Ore"));
+		gamesCargo.setText("" + cargoMap.get("Games"));
+		firearmsCargo.setText("" + cargoMap.get("Firearms"));
+		medicineCargo.setText("" + cargoMap.get("Medicine"));
+		machinesCargo.setText("" + cargoMap.get("Machines"));
+		narcoticsCargo.setText("" + cargoMap.get("Narcotics"));
+		robotsCargo.setText("" + cargoMap.get("Robots"));
+	}
+	
 	/**
-	 * Sets the total costs and gains from the transaction overall.
+	 * Sets the total costs, gains, and cargo from the transaction overall.
 	 */
-	private void setTotalCostGain() {
-		int waterCost = Integer.parseInt(waterTotalCost.getText());
-		int furCost = Integer.parseInt(furTotalCost.getText());
-		int foodCost = Integer.parseInt(foodTotalCost.getText());
-		int oreCost = Integer.parseInt(oreTotalCost.getText());
-		int gamesCost = Integer.parseInt(gamesTotalCost.getText());
-		int firearmsCost = Integer.parseInt(firearmsTotalCost.getText());
-		int medicineCost = Integer.parseInt(medicineTotalCost.getText());
-		int machinesCost = Integer.parseInt(machinesTotalCost.getText());
-		int narcoticsCost = Integer.parseInt(narcoticsTotalCost.getText());
-		int robotsCost = Integer.parseInt(robotsTotalCost.getText());
-		int totalcost = waterCost + furCost + foodCost + oreCost + gamesCost
-				+ firearmsCost + medicineCost + machinesCost + narcoticsCost + robotsCost;
+	private void setTotals() {
+//		int waterCost = Integer.parseInt(waterTotalCost.getText());
+//		int furCost = Integer.parseInt(furTotalCost.getText());
+//		int foodCost = Integer.parseInt(foodTotalCost.getText());
+//		int oreCost = Integer.parseInt(oreTotalCost.getText());
+//		int gamesCost = Integer.parseInt(gamesTotalCost.getText());
+//		int firearmsCost = Integer.parseInt(firearmsTotalCost.getText());
+//		int medicineCost = Integer.parseInt(medicineTotalCost.getText());
+//		int machinesCost = Integer.parseInt(machinesTotalCost.getText());
+//		int narcoticsCost = Integer.parseInt(narcoticsTotalCost.getText());
+//		int robotsCost = Integer.parseInt(robotsTotalCost.getText());
+//		int totalcost = waterCost + furCost + foodCost + oreCost + gamesCost
+//				+ firearmsCost + medicineCost + machinesCost + narcoticsCost + robotsCost;
+//		totalCost.setText("" + totalcost);
+//		
+//		int waterGain = Integer.parseInt(waterTotalGain.getText());
+//		int furGain = Integer.parseInt(furTotalGain.getText());
+//		int foodGain = Integer.parseInt(foodTotalGain.getText());
+//		int oreGain = Integer.parseInt(oreTotalGain.getText());
+//		int gamesGain = Integer.parseInt(gamesTotalGain.getText());
+//		int firearmsGain = Integer.parseInt(firearmsTotalGain.getText());
+//		int medicineGain = Integer.parseInt(medicineTotalGain.getText());
+//		int machinesGain = Integer.parseInt(machinesTotalGain.getText());
+//		int narcoticsGain = Integer.parseInt(narcoticsTotalGain.getText());
+//		int robotsGain = Integer.parseInt(robotsTotalGain.getText());
+//		int totalgain = waterGain + furGain + foodGain + oreGain + gamesGain
+//				+ firearmsGain + medicineGain + machinesGain + narcoticsGain + robotsGain;
+//		totalGain.setText("" + totalgain);
+//		
+//		netGainLoss.setText("" + (totalgain - totalcost));
+		
+		String[] resources = {"Water", "Fur", "Food", "Ore", "Games",
+				  "Firearms", "Medicine", "Machines",
+				  "Narcotics", "Robots"};
+		int totalcost = 0;
+		int totalgain = 0;
+		int totalcargo = 0;
+		for (int i = 0; i < resources.length; i++) {
+			totalcost += buyMap.get(resources[i]) * currentPlanet.marketplace.getBuyPrice(resources[i]);
+			totalgain += sellMap.get(resources[i]) * currentPlanet.marketplace.getSellPrice(resources[i]);
+			totalcargo += cargoMap.get(resources[i]);
+		}
 		totalCost.setText("" + totalcost);
-		
-		int waterGain = Integer.parseInt(waterTotalGain.getText());
-		int furGain = Integer.parseInt(furTotalGain.getText());
-		int foodGain = Integer.parseInt(foodTotalGain.getText());
-		int oreGain = Integer.parseInt(oreTotalGain.getText());
-		int gamesGain = Integer.parseInt(gamesTotalGain.getText());
-		int firearmsGain = Integer.parseInt(firearmsTotalGain.getText());
-		int medicineGain = Integer.parseInt(medicineTotalGain.getText());
-		int machinesGain = Integer.parseInt(machinesTotalGain.getText());
-		int narcoticsGain = Integer.parseInt(narcoticsTotalGain.getText());
-		int robotsGain = Integer.parseInt(robotsTotalGain.getText());
-		int totalgain = waterGain + furGain + foodGain + oreGain + gamesGain
-				+ firearmsGain + medicineGain + machinesGain + narcoticsGain + robotsGain;
 		totalGain.setText("" + totalgain);
-		
 		netGainLoss.setText("" + (totalgain - totalcost));
+		totalCargo.setText("" + totalcargo);
 	}
 	
 	private void update() {
 		setAmt();
 		setCosts();
 		setGains();
-		setTotalCostGain();
+		setTotals();
+		setCargos();
 	}
 	
 	private void setScreen() {
 		mpTitle.setText(currentPlanet.name + " MarketPlace");
+		playerMoney.setText("" + Universe.player.getMoney());
 		setLabels();
 		setPrices();
 		update();
@@ -268,233 +301,247 @@ public class NewMarketController implements Initializable {
 	    stage.close();
 	}
 	
-	private void incrementBuyGood(Text item, Text amt, Text total) {
+	private void incrementBuyGood(Text item, Text amt, Text total, Text cargo) {
 		buyMap.put(item.getText(), buyMap.get(item.getText()) + 1);
 		amt.setText("" + buyMap.get(item.getText()));
 		total.setText("" + buyMap.get(item.getText())*currentPlanet.marketplace.getBuyPrice(item.getText()));
+		cargoMap.put(item.getText(), cargoMap.get(item.getText()) + 1);
+		cargo.setText("" + cargoMap.get(item.getText()));
+		setTotals();
     }
 	
-	private void decrementBuyGood(Text item, Text amt, Text total) {
-		if ((buyMap.get(item.getText()) - 1) >= 0) {
+	private void decrementBuyGood(Text item, Text amt, Text total, Text cargo) {
+		if ((buyMap.get(item.getText()) - 1) >= 0 || (cargoMap.get(item.getText()) - 1) >= 0) {
 			buyMap.put(item.getText(), buyMap.get(item.getText()) - 1);
 			amt.setText("" + buyMap.get(item.getText()));
 			total.setText("" + buyMap.get(item.getText())*currentPlanet.marketplace.getBuyPrice(item.getText()));
+			cargoMap.put(item.getText(), cargoMap.get(item.getText()) - 1);
+			cargo.setText("" + cargoMap.get(item.getText()));
+			setTotals();
 		}
 	}
 	
-	private void incrementSellGood(Text item, Text amt, Text total) {
-		sellMap.put(item.getText(), sellMap.get(item.getText()) + 1);
-		amt.setText("" + sellMap.get(item.getText()));
-		total.setText("" + sellMap.get(item.getText())*currentPlanet.marketplace.getBuyPrice(item.getText()));
+	private void incrementSellGood(Text item, Text amt, Text total, Text cargo) {
+		if ((cargoMap.get(item.getText()) - 1) >= 0) {
+			sellMap.put(item.getText(), sellMap.get(item.getText()) + 1);
+			amt.setText("" + sellMap.get(item.getText()));
+			total.setText("" + sellMap.get(item.getText())*currentPlanet.marketplace.getBuyPrice(item.getText()));
+			cargoMap.put(item.getText(), cargoMap.get(item.getText()) - 1);
+			cargo.setText("" + cargoMap.get(item.getText()));
+			setTotals();
+		}
     }
 	
-	private void decrementSellGood(Text item, Text amt, Text total) {
+	private void decrementSellGood(Text item, Text amt, Text total, Text cargo) {
 		if ((sellMap.get(item.getText()) - 1) >= 0) {
 			sellMap.put(item.getText(), sellMap.get(item.getText()) - 1);
 			amt.setText("" + sellMap.get(item.getText()));
 			total.setText("" + sellMap.get(item.getText())*currentPlanet.marketplace.getBuyPrice(item.getText()));
+			cargoMap.put(item.getText(), cargoMap.get(item.getText()) + 1);
+			cargo.setText("" + cargoMap.get(item.getText()));
+			setTotals();
 		}
 	}
 	
 	//Buy
     @FXML
     private void plusBuyWater(ActionEvent event) throws IOException {
-    	incrementBuyGood(Water, buyWaterAmt, waterTotalCost);
+    	incrementBuyGood(Water, buyWaterAmt, waterTotalCost, waterCargo);
     }
     
     @FXML
     private void minusBuyWater(ActionEvent event) throws IOException {
-    	decrementBuyGood(Water, buyWaterAmt, waterTotalCost);
+    	decrementBuyGood(Water, buyWaterAmt, waterTotalCost, waterCargo);
     }
     
     @FXML
     private void plusBuyFur(ActionEvent event) throws IOException {
-    	incrementBuyGood(Fur, buyFurAmt, furTotalCost);
+    	incrementBuyGood(Fur, buyFurAmt, furTotalCost, furCargo);
     }
     
     @FXML
     private void minusBuyFur(ActionEvent event) throws IOException {
-    	decrementBuyGood(Fur, buyFurAmt, furTotalCost);
+    	decrementBuyGood(Fur, buyFurAmt, furTotalCost, furCargo);
     }
     
     @FXML
     private void plusBuyFood(ActionEvent event) throws IOException {
-    	incrementBuyGood(Food, buyFoodAmt, foodTotalCost);
+    	incrementBuyGood(Food, buyFoodAmt, foodTotalCost, foodCargo);
     }
     
     @FXML
     private void minusBuyFood(ActionEvent event) throws IOException {
-    	decrementBuyGood(Food, buyFoodAmt, foodTotalCost);
+    	decrementBuyGood(Food, buyFoodAmt, foodTotalCost, foodCargo);
     }
     
     @FXML
     private void plusBuyOre(ActionEvent event) throws IOException {
-    	incrementBuyGood(Ore, buyOreAmt, oreTotalCost);
+    	incrementBuyGood(Ore, buyOreAmt, oreTotalCost, oreCargo);
     }
     
     @FXML
     private void minusBuyOre(ActionEvent event) throws IOException {
-    	decrementBuyGood(Ore, buyOreAmt, oreTotalCost);
+    	decrementBuyGood(Ore, buyOreAmt, oreTotalCost, oreCargo);
     }
     
     @FXML
     private void plusBuyGames(ActionEvent event) throws IOException {
-    	incrementBuyGood(Games, buyGamesAmt, gamesTotalCost);
+    	incrementBuyGood(Games, buyGamesAmt, gamesTotalCost, gamesCargo);
     }
     
     @FXML
     private void minusBuyGames(ActionEvent event) throws IOException {
-    	decrementBuyGood(Games, buyGamesAmt, gamesTotalCost);
+    	decrementBuyGood(Games, buyGamesAmt, gamesTotalCost, gamesCargo);
     }
     
     @FXML
     private void plusBuyFirearms(ActionEvent event) throws IOException {
-    	incrementBuyGood(Firearms, buyFirearmsAmt, firearmsTotalCost);
+    	incrementBuyGood(Firearms, buyFirearmsAmt, firearmsTotalCost, firearmsCargo);
     }
     
     @FXML
     private void minusBuyFirearms(ActionEvent event) throws IOException {
-    	decrementBuyGood(Firearms, buyFirearmsAmt, firearmsTotalCost);
+    	decrementBuyGood(Firearms, buyFirearmsAmt, firearmsTotalCost, firearmsCargo);
     }
     
     @FXML
     private void plusBuyMedicine(ActionEvent event) throws IOException {
-    	incrementBuyGood(Medicine, buyMedicineAmt, medicineTotalCost);
+    	incrementBuyGood(Medicine, buyMedicineAmt, medicineTotalCost, medicineCargo);
     }
     
     @FXML
     private void minusBuyMedicine(ActionEvent event) throws IOException {
-    	decrementBuyGood(Medicine, buyMedicineAmt, medicineTotalCost);
+    	decrementBuyGood(Medicine, buyMedicineAmt, medicineTotalCost, medicineCargo);
     }
     
     @FXML
     private void plusBuyMachines(ActionEvent event) throws IOException {
-    	incrementBuyGood(Machines, buyMachinesAmt, machinesTotalCost);
+    	incrementBuyGood(Machines, buyMachinesAmt, machinesTotalCost, machinesCargo);
     }
     
     @FXML
     private void minusBuyMachines(ActionEvent event) throws IOException {
-    	decrementBuyGood(Machines, buyMachinesAmt, machinesTotalCost);
+    	decrementBuyGood(Machines, buyMachinesAmt, machinesTotalCost, machinesCargo);
     }
     
     @FXML
     private void plusBuyNarcotics(ActionEvent event) throws IOException {
-    	incrementBuyGood(Narcotics, buyNarcoticsAmt, narcoticsTotalCost);
+    	incrementBuyGood(Narcotics, buyNarcoticsAmt, narcoticsTotalCost, narcoticsCargo);
     }
     
     @FXML
     private void minusBuyNarcotics(ActionEvent event) throws IOException {
-    	decrementBuyGood(Narcotics, buyNarcoticsAmt, narcoticsTotalCost);
+    	decrementBuyGood(Narcotics, buyNarcoticsAmt, narcoticsTotalCost, narcoticsCargo);
     }
     
     @FXML
     private void plusBuyRobots(ActionEvent event) throws IOException {
-    	incrementBuyGood(Robots, buyRobotsAmt, robotsTotalCost);
+    	incrementBuyGood(Robots, buyRobotsAmt, robotsTotalCost, robotsCargo);
     }
     
     @FXML
     private void minusBuyRobots(ActionEvent event) throws IOException {
-    	decrementBuyGood(Robots, buyRobotsAmt, robotsTotalCost);
+    	decrementBuyGood(Robots, buyRobotsAmt, robotsTotalCost, robotsCargo);
     }
     
     //Sell
     @FXML
     private void plusSellWater(ActionEvent event) throws IOException {
-    	incrementSellGood(Water, sellWaterAmt, waterTotalGain);
+    	incrementSellGood(Water, sellWaterAmt, waterTotalGain, waterCargo);
     }
     
     @FXML
     private void minusSellWater(ActionEvent event) throws IOException {
-    	decrementSellGood(Water, sellWaterAmt, waterTotalGain);
+    	decrementSellGood(Water, sellWaterAmt, waterTotalGain, waterCargo);
     }
     
     @FXML
     private void plusSellFur(ActionEvent event) throws IOException {
-    	incrementSellGood(Fur, sellFurAmt, furTotalGain);
+    	incrementSellGood(Fur, sellFurAmt, furTotalGain, furCargo);
     }
     
     @FXML
     private void minusSellFur(ActionEvent event) throws IOException {
-    	decrementSellGood(Fur, sellFurAmt, furTotalGain);
+    	decrementSellGood(Fur, sellFurAmt, furTotalGain, furCargo);
     }
     
     @FXML
     private void plusSellFood(ActionEvent event) throws IOException {
-    	incrementSellGood(Food, sellFoodAmt, foodTotalGain);
+    	incrementSellGood(Food, sellFoodAmt, foodTotalGain, foodCargo);
     }
     
     @FXML
     private void minusSellFood(ActionEvent event) throws IOException {
-    	decrementSellGood(Food, sellFoodAmt, foodTotalGain);
+    	decrementSellGood(Food, sellFoodAmt, foodTotalGain, foodCargo);
     }
     
     @FXML
     private void plusSellOre(ActionEvent event) throws IOException {
-    	incrementSellGood(Ore, sellOreAmt, oreTotalGain);
+    	incrementSellGood(Ore, sellOreAmt, oreTotalGain, oreCargo);
     }
     
     @FXML
     private void minusSellOre(ActionEvent event) throws IOException {
-    	decrementSellGood(Ore, sellOreAmt, oreTotalGain);
+    	decrementSellGood(Ore, sellOreAmt, oreTotalGain, oreCargo);
     }
     
     @FXML
     private void plusSellGames(ActionEvent event) throws IOException {
-    	incrementSellGood(Games, sellGamesAmt, gamesTotalGain);
+    	incrementSellGood(Games, sellGamesAmt, gamesTotalGain, gamesCargo);
     }
     
     @FXML
     private void minusSellGames(ActionEvent event) throws IOException {
-    	decrementSellGood(Games, sellGamesAmt, gamesTotalGain);
+    	decrementSellGood(Games, sellGamesAmt, gamesTotalGain, gamesCargo);
     }
     
     @FXML
     private void plusSellFirearms(ActionEvent event) throws IOException {
-    	incrementSellGood(Firearms, sellFirearmsAmt, firearmsTotalGain);
+    	incrementSellGood(Firearms, sellFirearmsAmt, firearmsTotalGain, firearmsCargo);
     }
     
     @FXML
     private void minusSellFirearms(ActionEvent event) throws IOException {
-    	decrementSellGood(Firearms, sellFirearmsAmt, firearmsTotalGain);
+    	decrementSellGood(Firearms, sellFirearmsAmt, firearmsTotalGain, firearmsCargo);
     }
     
     @FXML
     private void plusSellMedicine(ActionEvent event) throws IOException {
-    	incrementSellGood(Medicine, sellMedicineAmt, medicineTotalGain);
+    	incrementSellGood(Medicine, sellMedicineAmt, medicineTotalGain, medicineCargo);
     }
     
     @FXML
     private void minusSellMedicine(ActionEvent event) throws IOException {
-    	decrementSellGood(Medicine, buyMedicineAmt, medicineTotalGain);
+    	decrementSellGood(Medicine, buyMedicineAmt, medicineTotalGain, medicineCargo);
     }
     
     @FXML
     private void plusSellMachines(ActionEvent event) throws IOException {
-    	incrementSellGood(Machines, sellMachinesAmt, machinesTotalGain);
+    	incrementSellGood(Machines, sellMachinesAmt, machinesTotalGain, machinesCargo);
     }
     
     @FXML
     private void minusSellMachines(ActionEvent event) throws IOException {
-    	decrementSellGood(Machines, sellMachinesAmt, machinesTotalGain);
+    	decrementSellGood(Machines, sellMachinesAmt, machinesTotalGain, machinesCargo);
     }
     
     @FXML
     private void plusSellNarcotics(ActionEvent event) throws IOException {
-    	incrementSellGood(Narcotics, sellNarcoticsAmt, narcoticsTotalGain);
+    	incrementSellGood(Narcotics, sellNarcoticsAmt, narcoticsTotalGain, narcoticsCargo);
     }
     
     @FXML
     private void minusSellNarcotics(ActionEvent event) throws IOException {
-    	decrementSellGood(Narcotics, sellNarcoticsAmt, narcoticsTotalGain);
+    	decrementSellGood(Narcotics, sellNarcoticsAmt, narcoticsTotalGain, narcoticsCargo);
     }
     
     @FXML
     private void plusSellRobots(ActionEvent event) throws IOException {
-    	incrementSellGood(Robots, sellRobotsAmt, robotsTotalGain);
+    	incrementSellGood(Robots, sellRobotsAmt, robotsTotalGain, robotsCargo);
     }
     
     @FXML
     private void minusSellRobots(ActionEvent event) throws IOException {
-    	decrementSellGood(Robots, sellRobotsAmt, robotsTotalGain);
+    	decrementSellGood(Robots, sellRobotsAmt, robotsTotalGain, robotsCargo);
     }
 }

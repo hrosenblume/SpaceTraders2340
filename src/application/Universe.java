@@ -9,6 +9,7 @@ import java.util.HashMap;
  */
 public class Universe {
 	static Planet[] universe = new Planet[50];
+	static Player player;
 	
 	/**
 	 * Constructs and populates the Universe.
@@ -20,7 +21,9 @@ public class Universe {
 		}
 	}
 	
-
+	public void setPlayer(Player p) {
+		this.player = p;
+	}
 	
 	/**
 	 * Prints out every planet that the Universe contains.

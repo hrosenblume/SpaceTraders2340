@@ -115,6 +115,7 @@ public class NewGameController implements Initializable {
     private void onPressPlay(ActionEvent event) throws IOException {
         Player player = createPlayer(); // creates player in model
         Universe universe = createUniverse();
+        universe.setPlayer(player);
         
         Parent root = FXMLLoader.load(getClass().getResource("../view/UniverseDisplay.fxml"));
 		Stage newStage = new Stage();

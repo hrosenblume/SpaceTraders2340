@@ -32,16 +32,16 @@ public class Player {
 
         money = 10000;
         cargo = new HashMap<String, Integer>();
-        cargo.put("water", 0);
-        cargo.put("furs", 0);
-        cargo.put("food", 0);
-        cargo.put("ore", 0);
-        cargo.put("games", 0);
-        cargo.put("firearms", 0);
-        cargo.put("medicine", 0);
-        cargo.put("machines", 0);
-        cargo.put("narcotics", 0);
-        cargo.put("robots", 0);
+        cargo.put("Water", 0);
+        cargo.put("Fur", 0);
+        cargo.put("Food", 0);
+        cargo.put("Ore", 0);
+        cargo.put("Games", 0);
+        cargo.put("Firearms", 0);
+        cargo.put("Medicine", 0);
+        cargo.put("Machines", 0);
+        cargo.put("Narcotics", 0);
+        cargo.put("Robots", 0);
     }
     
     public void setMoney(int money) {
@@ -50,5 +50,9 @@ public class Player {
     
     public int getMoney() {
     	return money;
+    }
+    
+    public HashMap<String, Integer> getCargo() {
+    	return cargo;
     }
 }
