@@ -85,4 +85,15 @@ public class Planet {
 				+ ". The piracy level is " + piracyLevel + ".\n");	
 	}
 	
+	public String[] getNearbyPlanets() {
+		//Universe.getNearbyPlanets(this);
+		return null;
+	}
+	
+	public double calculateDistance(Planet other) {
+		double y = Math.pow((this.planetLocation.getY()-other.planetLocation.getY()), 2); 
+		double x = Math.pow((this.planetLocation.getX()-other.planetLocation.getX()), 2); 
+		return Math.sqrt(x+y);
+	}
+	
 }

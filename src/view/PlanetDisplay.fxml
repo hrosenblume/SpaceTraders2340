@@ -40,6 +40,7 @@
               </rowConstraints>
                <children>
                   <Button fx:id="mpButton" mnemonicParsing="false" onAction="#onPressMarketPlace" text="MarketPlace" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                  <Button fx:id="travelButton" mnemonicParsing="false" onAction="#onPressTravel" text="Travel" GridPane.halignment="CENTER" />
                </children>
             </GridPane>
          </children>

@@ -23,7 +23,7 @@ public class PlanetController implements Initializable {
     @FXML
     private Text planetName, planetInfo;
     @FXML
-    private Button mpButton;
+    private Button mpButton, travelButton;
     
     public static void setPlanet(Planet p) {
     	currentPlanet = p;
@@ -57,6 +57,14 @@ public class PlanetController implements Initializable {
 	private void onPressMarketPlace(ActionEvent event) throws IOException {
 		NewMarketController.setPlanet(currentPlanet);
 		Parent root = FXMLLoader.load(getClass().getResource("../view/MarketDisplay.fxml"));
+		Stage newStage = new Stage();
+		newStage.setScene(new Scene(root, 700, 700));
+		newStage.show();
+	}
+	
+	@FXML
+	private void onPressTravel(ActionEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("../view/NearbyPlanetScreen.fxml"));
 		Stage newStage = new Stage();
 		newStage.setScene(new Scene(root, 700, 700));
 		newStage.show();
