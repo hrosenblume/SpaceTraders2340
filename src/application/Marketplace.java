@@ -104,4 +104,8 @@ public class Marketplace {
 		return r.minTechUseLevel <= planet.planetTechInteger;
 	}
 	
+	public Planet getPlanet() {
+		return planet;
+	}
+	
 }
