@@ -6,8 +6,11 @@ import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.TextField;
@@ -35,7 +38,9 @@ public class NearbyPlanetController implements Initializable{
 		
 		// The XML's planetGrid's entries are not sorted correctly
 		
-		System.out.println(plans);
+		for (int i = 0; i < plans.length; i++) {
+			System.out.println(plans[i]);
+		}
 		
 		for (int i = 0; i < planetGrid.getChildren().size(); i++){
 			Node node = planetGrid.getChildren().get(i);
@@ -56,7 +61,16 @@ public class NearbyPlanetController implements Initializable{
 		 if (distance > Universe.player.getFuel()) {
 			 System.out.println("NO");
 		 } else {
-			 System.out.println(Universe.player.getFuel() - distance);
+			 Universe.player.removeFuel(distance);
+			 PlanetController.setPlanet(p);
+			 Stage stage = (Stage) clickedBtn.getScene().getWindow();
+		     stage.close();
+		   //for testing purposes, it puts you on a random planet when you start the game
+			Parent root = FXMLLoader.load(getClass().getResource("../view/PlanetDisplay.fxml"));
+			stage = new Stage();
+			stage.setScene(new Scene(root, 500, 500));
+			stage.show();
+			//end of testing block
 		 }
     }
 

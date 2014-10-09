@@ -66,7 +66,7 @@
                            <children>
                               <GridPane GridPane.rowIndex="1">
                                  <children>
-                                    <Text fx:id="pName3" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName1" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go1" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -85,7 +85,7 @@
                               </GridPane>
                               <GridPane>
                                  <children>
-                                    <Text fx:id="pName1" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName2" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go2" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -104,7 +104,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <children>
-                                    <Text fx:id="pName4" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName3" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go3" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -123,7 +123,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <children>
-                                    <Text fx:id="pName6" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName4" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go4" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -161,7 +161,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="3">
                                  <children>
-                                    <Text fx:id="pName7" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName6" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go6" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -180,7 +180,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="4">
                                  <children>
-                                    <Text fx:id="pName9" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName7" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go7" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -199,7 +199,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="5">
                                  <children>
-                                    <Text fx:id="pName11" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName8" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go8" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -218,7 +218,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="6">
                                  <children>
-                                    <Text fx:id="pName13" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName9" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go9" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -237,7 +237,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="7">
                                  <children>
-                                    <Text fx:id="pName15" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName10" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go10" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -256,7 +256,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="8">
                                  <children>
-                                    <Text fx:id="pName17" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName11" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go11" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -275,7 +275,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="9">
                                  <children>
-                                    <Text fx:id="pName19" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName12" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go12" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -294,7 +294,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="10">
                                  <children>
-                                    <Text fx:id="pName21" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName13" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go13" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -313,7 +313,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="11">
                                  <children>
-                                    <Text fx:id="pName23" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName14" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go14" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -332,7 +332,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="12">
                                  <children>
-                                    <Text fx:id="pName25" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName15" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go15" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -351,7 +351,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="13">
                                  <children>
-                                    <Text fx:id="pName27" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName16" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go16" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -370,7 +370,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="14">
                                  <children>
-                                    <Text fx:id="pName29" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName17" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go17" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -389,7 +389,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="15">
                                  <children>
-                                    <Text fx:id="pName31" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName18" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go18" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -408,7 +408,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="16">
                                  <children>
-                                    <Text fx:id="pName33" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName19" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go19" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -427,7 +427,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="17">
                                  <children>
-                                    <Text fx:id="pName35" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName20" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go20" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -446,7 +446,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="18">
                                  <children>
-                                    <Text fx:id="pName37" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName21" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go21" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -465,7 +465,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="19">
                                  <children>
-                                    <Text fx:id="pName39" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName22" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go22" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -484,7 +484,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="20">
                                  <children>
-                                    <Text fx:id="pName41" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName23" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go23" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -503,7 +503,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="21">
                                  <children>
-                                    <Text fx:id="pName43" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName24" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go24" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -522,7 +522,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="22">
                                  <children>
-                                    <Text fx:id="pName45" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName25" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go25" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -541,7 +541,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="23">
                                  <children>
-                                    <Text fx:id="pName47" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName26" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go26" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -560,7 +560,7 @@
                               </GridPane>
                               <GridPane GridPane.rowIndex="24">
                                  <children>
-                                    <Text fx:id="pName49" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName27" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go27" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -579,7 +579,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <children>
-                                    <Text fx:id="pName8" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName28" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go28" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -598,7 +598,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <children>
-                                    <Text fx:id="pName10" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName29" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go29" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -617,7 +617,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <children>
-                                    <Text fx:id="pName12" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName30" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go30" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -636,7 +636,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
                                  <children>
-                                    <Text fx:id="pName14" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName31" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go31" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -655,7 +655,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="7">
                                  <children>
-                                    <Text fx:id="pName16" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName32" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go32" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -674,7 +674,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="8">
                                  <children>
-                                    <Text fx:id="pName18" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName33" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go33" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -693,7 +693,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="9">
                                  <children>
-                                    <Text fx:id="pName20" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName34" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go34" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -712,7 +712,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="10">
                                  <children>
-                                    <Text fx:id="pName22" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName35" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go35" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -731,7 +731,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="11">
                                  <children>
-                                    <Text fx:id="pName24" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName36" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go36" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -750,7 +750,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="12">
                                  <children>
-                                    <Text fx:id="pName26" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName37" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go37" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -769,7 +769,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="13">
                                  <children>
-                                    <Text fx:id="pName28" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName38" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go38" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -788,7 +788,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="14">
                                  <children>
-                                    <Text fx:id="pName30" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName39" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go39" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -807,7 +807,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="15">
                                  <children>
-                                    <Text fx:id="pName32" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName40" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go40" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -826,7 +826,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="16">
                                  <children>
-                                    <Text fx:id="pName34" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName41" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go41" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -845,7 +845,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="17">
                                  <children>
-                                    <Text fx:id="pName36" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName42" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go42" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -864,7 +864,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="18">
                                  <children>
-                                    <Text fx:id="pName38" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName43" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go43" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -883,7 +883,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="19">
                                  <children>
-                                    <Text fx:id="pName40" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName44" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go44" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -902,7 +902,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="20">
                                  <children>
-                                    <Text fx:id="pName42" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName45" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go45" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -921,7 +921,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="21">
                                  <children>
-                                    <Text fx:id="pName44" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName46" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go46" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -940,7 +940,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="22">
                                  <children>
-                                    <Text fx:id="pName46" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName47" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go47" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -978,7 +978,7 @@
                               </GridPane>
                               <GridPane GridPane.columnIndex="1" GridPane.rowIndex="24">
                                  <children>
-                                    <Text fx:id="pName50" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName49" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go49" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
@@ -1005,7 +1005,7 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <Text fx:id="pName2" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
+                                    <Text fx:id="pName50" strokeType="OUTSIDE" strokeWidth="0.0" text="Planet Name" />
                                     <Button fx:id="go50" mnemonicParsing="false" onAction="#go" prefHeight="15.0" prefWidth="77.0" text="GO" GridPane.columnIndex="1">
                                        <font>
                                           <Font size="5.0" />
