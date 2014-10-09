@@ -30,7 +30,7 @@ public class Player {
         this.engineerSkillLevel = engineer;
         this.investorSkillLevel = investor;
 
-        fuel = 1000;
+        fuel = 100;
         money = 10000;
         cargo = new HashMap<String, Integer>();
         cargo.put("Water", 0);

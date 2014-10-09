@@ -38,11 +38,11 @@ public class Universe {
 		return s;
 	}
 
-	public Planet[] getNearbyPlanets(Planet p) {
+	public static Planet[] getNearbyPlanets(Planet p) {
 		return bubbleSort(universe, p);
 	}
 	
-	private Planet[] bubbleSort(Planet ar[], Planet p) {
+	private static Planet[] bubbleSort(Planet ar[], Planet p) {
 		for (int i = (ar.length - 1); i >= 0; i--) {
 			for (int j = 1; j <= i; j++) {
 				if (ar[j-1].calculateDistance(p) > ar[j].calculateDistance(p)) {
@@ -52,6 +52,12 @@ public class Universe {
 				} 
 			}
 		}
+/*		System.out.println("Bubble-Sorted Planets:");
+		for (Planet pl: ar) {
+			int dist = (int)pl.calculateDistance(p);
+			System.out.println("Dist: " + dist);
+			System.out.println(pl);
+		}*/
 		return ar;
 	}
 }

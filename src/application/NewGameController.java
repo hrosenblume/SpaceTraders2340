@@ -166,14 +166,15 @@ public class NewGameController implements Initializable {
     private Universe createUniverse() {
     	Universe universe = new Universe();
     	
-    	// for testing
+    	/*// for testing
     	System.out.println(universe);
     	System.out.println("------");
-    	for (Planet p: universe.getNearbyPlanets(universe.universe[2])) {
+    	System.out.println("Current uni: " + universe.universe[0]);
+    	for (Planet p: universe.getNearbyPlanets(universe.universe[0])) {
     		System.out.println(p);
     	}
     	//System.out.println(universe.getNearbyPlanets(universe.universe[2]));
-    	return universe;
+*/    	return universe;
     }
     
     @Override
