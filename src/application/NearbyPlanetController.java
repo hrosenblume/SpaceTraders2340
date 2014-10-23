@@ -30,6 +30,7 @@ public class NearbyPlanetController implements Initializable{
 	@FXML
 	private GridPane planetGrid;
 	
+	
 	Planet[] plans = Universe.getNearbyPlanets(PlanetController.currentPlanet);
 	
 	@Override
@@ -62,13 +63,21 @@ public class NearbyPlanetController implements Initializable{
 			 System.out.println("NO");
 		 } else {
 			 Universe.player.removeFuel(distance);
+			 Planet lastPlanet = PlanetController.currentPlanet;
 			 PlanetController.setPlanet(p);
+			 Planet nextPlanet = PlanetController.currentPlanet;
+			 EncounterController.setPlanets(lastPlanet, nextPlanet);
 			 Stage stage = (Stage) clickedBtn.getScene().getWindow();
 		     stage.close();
 		   //for testing purposes, it puts you on a random planet when you start the game
 			Parent root = FXMLLoader.load(getClass().getResource("../view/PlanetDisplay.fxml"));
 			stage = new Stage();
 			stage.setScene(new Scene(root, 500, 500));
+			stage.show();
+			
+			root = FXMLLoader.load(getClass().getResource("../view/EncounterDisplay.fxml"));
+			stage = new Stage();
+			stage.setScene(new Scene(root, 800, 500));
 			stage.show();
 			//end of testing block
 		 }

@@ -85,6 +85,14 @@ public class Planet {
 				+ ". The piracy level is " + piracyLevel + ".\n");	
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
+	public int policeIntensity() {
+		return policeIntensity;
+	}
+	
 	public String[] getNearbyPlanets() {
 		//Universe.getNearbyPlanets(this);
 		return null;
