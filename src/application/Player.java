@@ -45,7 +45,7 @@ public class Player {
         cargo.put("Robots", 0);
     }
     
-    public Player(String name, int pilot, int fighter, int trader, int engineer, int investor, int fuel, int money) {//, HashMap<String,Integer> incargo) {
+    public Player(String name, int pilot, int fighter, int trader, int engineer, int investor, int fuel, int money, HashMap<String,Integer> cargo) {
     	this.name = name;
         this.pilotSkillLevel = pilot;
         this.fighterSkillLevel = fighter;
@@ -54,17 +54,7 @@ public class Player {
         this.investorSkillLevel = investor;
         this.fuel = fuel;
         this.money = money;
-        cargo = new HashMap<String, Integer>();
-        cargo.put("Water", 0);
-        cargo.put("Fur", 0);
-        cargo.put("Food", 0);
-        cargo.put("Ore", 0);
-        cargo.put("Games", 0);
-        cargo.put("Firearms", 0);
-        cargo.put("Medicine", 0);
-        cargo.put("Machines", 0);
-        cargo.put("Narcotics", 0);
-        cargo.put("Robots", 0);
+        this.cargo = cargo;
         //this.cargo = cargo;
     }
     

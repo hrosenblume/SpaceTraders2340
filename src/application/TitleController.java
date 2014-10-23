@@ -6,6 +6,9 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -66,7 +69,9 @@ public class TitleController implements Initializable {
 		int pilotSkillLevel = 0, fighterSkillLevel=0, traderSkillLevel=0,
         engineerSkillLevel=0, investorSkillLevel=0, money=0, fuel=0;
 		String name = "";
+		HashMap<String, Integer> cargo = new HashMap<String, Integer>();
 		Player newPlayer;
+		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(file));
 			String line;
@@ -89,6 +94,8 @@ public class TitleController implements Initializable {
 					money = Integer.parseInt(line);
 				} else if (counter == 7) {
 					fuel = Integer.parseInt(line);
+				} else if (counter == 8) {
+					cargo = prepareCargoHelper(line);
 				}
 				counter++;
 			}
@@ -97,9 +104,26 @@ public class TitleController implements Initializable {
 			
 		} finally {
 			newPlayer = new Player(name, pilotSkillLevel, fighterSkillLevel, traderSkillLevel,
-			        engineerSkillLevel, investorSkillLevel, money, fuel);
+			        engineerSkillLevel, investorSkillLevel, money, fuel, cargo);
 		}
 		return newPlayer;
+	}
+	
+	private HashMap<String, Integer> prepareCargoHelper(String line) {
+		HashMap<String, Integer> cargo = new HashMap<String, Integer>();
+		List<String> items = Arrays.asList(line.split("\\s*,\\s*"));
+		
+        cargo.put("Water", Integer.parseInt(items.get(0)));
+        cargo.put("Fur", Integer.parseInt(items.get(1)));
+        cargo.put("Food", Integer.parseInt(items.get(2)));
+        cargo.put("Ore", Integer.parseInt(items.get(3)));
+        cargo.put("Games", Integer.parseInt(items.get(4)));
+        cargo.put("Firearms", Integer.parseInt(items.get(5)));
+        cargo.put("Medicine", Integer.parseInt(items.get(6)));
+        cargo.put("Machines", Integer.parseInt(items.get(7)));
+        cargo.put("Narcotics", Integer.parseInt(items.get(8)));
+        cargo.put("Robots", Integer.parseInt(items.get(9)));
+		return cargo;
 	}
 	
 	@FXML
@@ -152,6 +176,11 @@ public class TitleController implements Initializable {
 			writer.write(Integer.toString(toSavePlayer.getFuel()));
 			writer.newLine();
 			writer.write(Integer.toString(toSavePlayer.getMoney()));
+			writer.newLine();
+			HashMap<String, Integer> cargo = toSavePlayer.getCargo();
+			String cargoString = Arrays.toString(cargo.values().toArray());
+			cargoString = cargoString.substring(1,cargoString.length()-1);
+			writer.write(cargoString);
 		} catch (IOException ex) {
 			System.out.println(ex.getMessage());
 		}
