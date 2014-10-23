@@ -8,7 +8,7 @@ import java.util.Random;
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil Vora
  */
 public class Planet {
-	
+
 	String[] planetNames = {"Adipose 3", "Arcadia", "Balhoon", "Brus", "Boeshane",
 			"Calufrax Minor", "Chronos", "Demon's Run", "Daemos", "Earth",
 			"Eye of Orion", "Felspoon", "Flane", "Gallifrey", "Griophos", "House",
@@ -18,28 +18,28 @@ public class Planet {
 			"Ribos", "Rex Vox Jax", "Saturnyne", "Shan Shen", "Skaro", "Sontar",
 			"Sycorax", "Trenzalore", "Telos", "Terminus", "Utopia", "UX-4732",
 			"Voga", "Vulcan", "Void", "Xenon", "Xeros"};
-	
+
 	final String[] techLevels = {"PREAGRICULTURE", "AGRICULTURE", "MEDIEVAL",
 			"RENNAISSANCE", "EARLYINDUSTRIAL", "INDUSTRIAL", "POSTINDUSTRIAL",
-			"HITECH"};
-	
+	"HITECH"};
+
 	final String[] resources = {"NOSPECIALRESOURCES", "NOSPECIALRESOURCES",
 			"NOSPECIALRESOURCES", "NOSPECIALRESOURCES", "NOSPECIALRESOURCES",
 			"MINERALRICH", "MINERALRICH", "MINERALPOOR", "MINERALPOOR", "DESERT",
 			"LOTSOFWATER", "RICHSOIL", "POORSOIL", "RICHFAUNA", "LIFELESS",
 			"WEIRDMUSHROOMS", "LOTSOFHERBS", "ARTISTIC", "WARLIKE"};	
-	
+
 	static int planetCount = 0;
 	static ArrayList<Point> usedPlanetLocations = new ArrayList<Point>();
 	private Random myGen = new Random();
-	
+
 	Marketplace marketplace;
-	
+
 	int policeIntensity, piracyLevel;
 	int planetTechInteger;
 	Point planetLocation;
 	String name, planetResource, planetTechLevel;
-	
+
 	/**
 	 * Constructs a Planet.
 	 * Tech levels, resources, police presence, and location are randomly picked.
@@ -70,7 +70,7 @@ public class Planet {
 		planetLocation = planetLoc;
 		planetCount++;
 	}
-	
+
 	/**
 	 * Returns the String representation of this planet.
 	 * @return the information about the given planet.
@@ -84,16 +84,41 @@ public class Planet {
 				+ ". The police intensity is " + policeIntensity
 				+ ". The piracy level is " + piracyLevel + ".\n");	
 	}
-	
+
+	/**
+	 * Gets the name of the planet.
+	 * @return the name of the planet.
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * Returns the police intensity value of the planet.
+	 * @return the police intensity value of the planet.
+	 */
+	public int policeIntensity() {
+		return policeIntensity;
+	}
+
+	/**
+	 * CURRENTLY UNIMPLEMENTED
+	 * @return null for the moment
+	 */
 	public String[] getNearbyPlanets() {
 		//Universe.getNearbyPlanets(this);
 		return null;
 	}
-	
+
+	/**
+	 * Calculates the distance between this planet and another.
+	 * @param other the planet to calculate the distance to.
+	 * @return the distance between the two planets.
+	 */
 	public double calculateDistance(Planet other) {
 		double y = Math.pow((this.planetLocation.getY()-other.planetLocation.getY()), 2); 
 		double x = Math.pow((this.planetLocation.getX()-other.planetLocation.getX()), 2); 
 		return Math.sqrt(x+y);
 	}
-	
+
 }
