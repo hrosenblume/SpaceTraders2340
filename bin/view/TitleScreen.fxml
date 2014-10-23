@@ -30,7 +30,7 @@
             <Button mnemonicParsing="false" onAction="#onPressLoad" text="Load Game" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
             <Button fx:id="newGame" mnemonicParsing="false" onAction="#startNewGame" text="New Game" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;SpaceTraders Title Graphic&gt;" GridPane.halignment="CENTER" />
-            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onPressSave" text="Save Game" GridPane.rowIndex="2" />
+            <Button fx:id="saveButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onPressSave" text="Save Game" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>
