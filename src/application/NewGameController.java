@@ -28,6 +28,8 @@ public class NewGameController implements Initializable {
     @FXML
     private TextField nameTextField;
     private int counter = 30;
+    
+    private static Player player;
 
     @FXML
     private void increasePilot(ActionEvent event) throws IOException {
@@ -113,7 +115,10 @@ public class NewGameController implements Initializable {
     
     @FXML
     private void onPressPlay(ActionEvent event) throws IOException {
-        Player player = createPlayer(); // creates player in model
+//    	if (player != null) {
+//    		player = createPlayer(); // creates player in model
+//    	}
+    	player = createPlayer();
         Universe universe = createUniverse();
         universe.setPlayer(player);
         
@@ -178,9 +183,40 @@ public class NewGameController implements Initializable {
     }
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb)  {
         // TODO
+    	if (player != null) {
+    		Universe universe = createUniverse();
+            universe.setPlayer(player);
+            try {
+                Parent root = FXMLLoader.load(getClass().getResource("../view/UniverseDisplay.fxml"));
+        		Stage newStage = new Stage();
+        		newStage.setScene(new Scene(root, 750, 500));
+        		newStage.show();
+        		
+        		//for testing purposes, it puts you on a random planet when you start the game
+        		PlanetController.setPlanet(Universe.universe[(new java.util.Random()).nextInt(50)]);
+        		root = FXMLLoader.load(getClass().getResource("../view/PlanetDisplay.fxml"));
+        		newStage = new Stage();
+        		newStage.setScene(new Scene(root, 500, 500));
+        		newStage.show();
+        		
+        		System.out.println("You are now playing with: " + player.getName());
+            } catch (Exception e) {
+            	System.out.println(e);
+            }
+
+    		//end of testing block
+    	}
     }  
+    
+    public static Player getPlayer() {
+    	return player;
+    }
+    
+    public static void setPlayer(Player aPlayer) {
+    	player = aPlayer;
+    }
 }
     
 

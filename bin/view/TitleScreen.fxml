@@ -27,9 +27,10 @@
             <Button fx:id="quitButton" mnemonicParsing="false" onAction="#onPressQuit" text="Quit" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
             <Button mnemonicParsing="false" text="Credits" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
             <Button mnemonicParsing="false" text="Settings" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" text="Load Game" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-            <Button fx:id="newGame" mnemonicParsing="false" onAction="#startNewGame" text="New Game" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#onPressLoad" text="Load Game" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Button fx:id="newGame" mnemonicParsing="false" onAction="#startNewGame" text="New Game" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&lt;SpaceTraders Title Graphic&gt;" GridPane.halignment="CENTER" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#onPressSave" text="Save Game" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>
