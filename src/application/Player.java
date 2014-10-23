@@ -45,12 +45,21 @@ public class Player {
         cargo.put("Robots", 0);
     }
     
-    public void setMoney(int money) {
-    	this.money= money;
+    public Player(String name, int pilot, int fighter, int trader, int engineer, int investor, int fuel, int money, HashMap<String,Integer> cargo) {
+    	this.name = name;
+        this.pilotSkillLevel = pilot;
+        this.fighterSkillLevel = fighter;
+        this.traderSkillLevel = trader;
+        this.engineerSkillLevel = engineer;
+        this.investorSkillLevel = investor;
+        this.fuel = fuel;
+        this.money = money;
+        this.cargo = cargo;
+        //this.cargo = cargo;
     }
     
-    public int getMoney() {
-    	return money;
+    public void setMoney(int money) {
+    	this.money= money;
     }
     
     public void setFuel(int fuel) {
@@ -65,8 +74,36 @@ public class Player {
     	this.fuel += fuel;
     }
     
+    public String getName() {
+    	return name;
+    }
+    
+    public int getPilot() {
+    	return pilotSkillLevel;
+    }
+    
+    public int getFighter() {
+    	return fighterSkillLevel;
+    }
+    
+    public int getTrader() {
+    	return traderSkillLevel;
+    }
+    
+    public int getEngineer() {
+    	return engineerSkillLevel;
+    }
+    
+    public int getInvestor() {
+    	return investorSkillLevel;
+    }
+    
     public int getFuel() {
     	return fuel;
+    }
+    
+    public int getMoney() {
+    	return money;
     }
     
     public HashMap<String, Integer> getCargo() {
