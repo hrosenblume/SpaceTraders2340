@@ -18,6 +18,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * Manages the logic behind traveling to planets.
+ * @author Stephen
+ */
 public class NearbyPlanetController implements Initializable{
 	@FXML
 	private Text pName1, pName2, pName3, pName4, pName5, pName6, pName7, pName8, pName9,pName10, pName11, pName12, pName13,pName14, pName15, pName16, pName17,pName18, pName19, pName20, pName21,pName22, pName23, pName24, pName25,pName26, pName27, pName28, pName29, pName30, pName31, pName32, pName33, pName34,pName35, pName36, pName37, pName38,pName39, pName40, pName41, pName42,pName43, pName44, pName45, pName46,pName47, pName48, pName49, pName50;
@@ -29,49 +33,54 @@ public class NearbyPlanetController implements Initializable{
 	private Text fuelLeft;
 	@FXML
 	private GridPane planetGrid;
-	
+
+
 	Planet[] plans = Universe.getNearbyPlanets(PlanetController.currentPlanet);
-	
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		fuelLeft.setText("Fuel left: " + Universe.player.getFuel());
-		
-		// The XML's planetGrid's entries are not sorted correctly
-		
 		for (int i = 0; i < plans.length; i++) {
 			System.out.println(plans[i]);
 		}
-		
 		for (int i = 0; i < planetGrid.getChildren().size(); i++){
 			Node node = planetGrid.getChildren().get(i);
-	      ObservableList<Node> innerNode = ((GridPane) node).getChildren();
-	    	  ((Text) innerNode.get(0)).setText(plans[i].name);
-	    	  int fuel = (int)plans[i].calculateDistance(PlanetController.currentPlanet);
-	    	  ((Text) innerNode.get(2)).setText("Fuel Required: " + fuel);
+			ObservableList<Node> innerNode = ((GridPane) node).getChildren();
+			((Text) innerNode.get(0)).setText(plans[i].name);
+			int fuel = (int)plans[i].calculateDistance(PlanetController.currentPlanet);
+			((Text) innerNode.get(2)).setText("Fuel Required: " + fuel);
 		}
 	}
-	
-	
-	
-	 @FXML
-    private void go(ActionEvent event) throws IOException {
-		 Button clickedBtn = (Button) event.getSource(); // btn clicked
-		 Planet p = plans[Integer.parseInt(clickedBtn.getId().substring(2)) - 1];
-		 int distance = (int)p.calculateDistance(PlanetController.currentPlanet);
-		 if (distance > Universe.player.getFuel()) {
-			 System.out.println("NO");
-		 } else {
-			 Universe.player.removeFuel(distance);
-			 PlanetController.setPlanet(p);
-			 Stage stage = (Stage) clickedBtn.getScene().getWindow();
-		     stage.close();
-		   //for testing purposes, it puts you on a random planet when you start the game
+
+
+
+	@FXML
+	private void go(ActionEvent event) throws IOException {
+		Button clickedBtn = (Button) event.getSource(); // btn clicked
+		Planet p = plans[Integer.parseInt(clickedBtn.getId().substring(2)) - 1];
+		int distance = (int)p.calculateDistance(PlanetController.currentPlanet);
+		if (distance > Universe.player.getFuel()) {
+			System.out.println("NO");
+		} else {
+			Universe.player.removeFuel(distance);
+			Planet lastPlanet = PlanetController.currentPlanet;
+			PlanetController.setPlanet(p);
+			Planet nextPlanet = PlanetController.currentPlanet;
+			EncounterController.setPlanets(lastPlanet, nextPlanet);
+			Stage stage = (Stage) clickedBtn.getScene().getWindow();
+			stage.close();
+			//for testing purposes, it puts you on a random planet when you start the game
 			Parent root = FXMLLoader.load(getClass().getResource("../view/PlanetDisplay.fxml"));
 			stage = new Stage();
 			stage.setScene(new Scene(root, 500, 500));
 			stage.show();
+
+			root = FXMLLoader.load(getClass().getResource("../view/EncounterDisplay.fxml"));
+			stage = new Stage();
+			stage.setScene(new Scene(root, 800, 500));
+			stage.show();
 			//end of testing block
-		 }
-    }
+		}
+	}
 
 }
