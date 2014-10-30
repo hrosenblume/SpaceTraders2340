@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class Ship {
 	String name;
 	int cargoBay, weaponSlots, shieldSlots, gadgetSlots, crew, fuel, minTechLevel, fuelCost, price, hullStrength, repairCost;
+	static HashMap<String, Ship> ships = generateAllShips();
 
 	public Ship(String name, int cargoBay, int weaponSlots, int shieldSlots, int gadgetSlots, int crew, int fuel, int minTechLevel, int fuelCost, int price, int hullStrength, int repairCost) {
 		this.name = name;
@@ -28,7 +29,7 @@ public class Ship {
 		ships.put("gnat", new Ship("gnat", 15, 1, 0, 1, 1, 14, 5, 2, 10000, 100, 1));
 		ships.put("firefly", new Ship("firefly", 20, 1, 1, 1, 1, 17, 6, 3, 25000, 100, 1));
 		ships.put("mosquito", new Ship("mosquito", 15, 2, 1, 1, 1, 13, 6, 5, 30000, 100, 1));
-		ships.put("bulmblebee", new Ship("bumblebee", 25, 1, 2, 2, 2, 15, 7, 7, 60000, 100, 1));
+		ships.put("bumblebee", new Ship("bumblebee", 25, 1, 2, 2, 2, 15, 7, 7, 60000, 100, 1));
 		return ships;
 	}
 }

@@ -31,7 +31,7 @@ public class Player {
         this.engineerSkillLevel = engineer;
         this.investorSkillLevel = investor;
 
-        ship = Ship.generateAllShips().get("flea");
+        ship = Ship.ships.get("flea");
         fuel = ship.fuel;
         money = 10000;
         cargo = new HashMap<String, Integer>();
@@ -54,7 +54,7 @@ public class Player {
         this.traderSkillLevel = trader;
         this.engineerSkillLevel = engineer;
         this.investorSkillLevel = investor;
-        ship = Ship.generateAllShips().get("flea");
+        ship = Ship.ships.get("flea");
         this.fuel = fuel;
         this.money = money;
         this.cargo = cargo;
