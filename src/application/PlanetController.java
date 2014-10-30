@@ -23,7 +23,7 @@ public class PlanetController implements Initializable {
     @FXML
     private Text planetName, planetInfo;
     @FXML
-    private Button mpButton, travelButton;
+    private Button mpButton, travelButton, shipButton;
     
     public static void setPlanet(Planet p) {
     	currentPlanet = p;
@@ -70,6 +70,14 @@ public class PlanetController implements Initializable {
 		newStage.show();
 	}
 	
+	@FXML
+	private void onPressShipyard(ActionEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("../view/ShipyardDisplay.fxml"));
+		Stage newStage = new Stage();
+		newStage.setScene(new Scene(root, 600, 400));
+		newStage.show();
+	}
+	
 	//find method that happens when all fxml elements are loaded
     
     @Override
@@ -77,6 +85,9 @@ public class PlanetController implements Initializable {
         // TODO
     	planetName.setText(currentPlanet.name);
     	planetInfo.setText(this.getInfo());
+    	if (currentPlanet != null) {
+    		shipButton.setDisable(currentPlanet.getTechLevel() < 4);
+    	}
     }  
 }
     
