@@ -25,6 +25,10 @@ public class ShipyardController implements Initializable {
 	@FXML
 	private Text currShip;
 	
+	/**
+	 * Standard initialize method
+	 * that sets the players buy abilities
+	 */
 	@Override
     public void initialize(URL url, ResourceBundle rb) {
 		currShip.setText("Current Ship: " + player.getShip().name);
@@ -45,6 +49,11 @@ public class ShipyardController implements Initializable {
 		}
     }
 	
+	/**
+	 * Button click listener that buys ship
+	 * @param event button click
+	 * @throws IOException issues
+	 */
 	@FXML
 	private void buyShip(ActionEvent event) throws IOException {
 		Button clickedBtn = (Button) event.getSource(); // btn clicked
@@ -56,6 +65,11 @@ public class ShipyardController implements Initializable {
 	    stage.close();
 	}
 	
+	/**
+	 * Button click listener for exit
+	 * @param event button click
+	 * @throws IOException issues
+	 */
 	@FXML
 	private void onPressExit(ActionEvent event) throws IOException {
 	    Stage stage = (Stage) exitButton.getScene().getWindow();

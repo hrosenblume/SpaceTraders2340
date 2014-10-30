@@ -110,6 +110,10 @@ public class Planet {
 		return null;
 	}
 	
+	/**
+	 * Gets and passes back the tech level
+	 * @return the tech level
+	 */
 	public int getTechLevel() {
 		return planetTechInteger;
 	}

@@ -7,6 +7,21 @@ public class Ship {
 	int cargoBay, weaponSlots, shieldSlots, gadgetSlots, crew, fuel, minTechLevel, fuelCost, price, hullStrength, repairCost;
 	static HashMap<String, Ship> ships = generateAllShips();
 
+	/**
+	 * Constructor for a ship
+	 * @param name name of ship
+	 * @param cargoBay how much cargo it can hold
+	 * @param weaponSlots how many weapon slots
+	 * @param shieldSlots how many shield slots
+	 * @param gadgetSlots how many gadget slots
+	 * @param crew size of crew
+	 * @param fuel how much fuel it can hold
+	 * @param minTechLevel minimum tech level required to buy
+	 * @param fuelCost cost of fuel with this
+	 * @param price full price
+	 * @param hullStrength strength of hull
+	 * @param repairCost cost to repair
+	 */
 	public Ship(String name, int cargoBay, int weaponSlots, int shieldSlots, int gadgetSlots, int crew, int fuel, int minTechLevel, int fuelCost, int price, int hullStrength, int repairCost) {
 		this.name = name;
 		this.cargoBay = cargoBay;
@@ -22,7 +37,9 @@ public class Ship {
         this.repairCost = repairCost;
 	}
 	
-	
+	/**
+	 * Method to generate all ships possible to buy
+	 */
 	static HashMap<String, Ship> generateAllShips() {
 		HashMap<String, Ship> ships = new HashMap<>();
 		ships.put("flea", new Ship("flea", 10, 0, 0, 0, 1, 9999, 4, 1, 2000, 25, 1));

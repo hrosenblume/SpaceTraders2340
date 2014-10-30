@@ -113,10 +113,18 @@ public class Player {
     	return cargo;
     }
     
+    /**
+     * Gets the ship
+     * @return ship
+     */
     public Ship getShip() {
     	return ship;
     }
     
+    /**
+     * Sets the player ship
+     * @param ship is the ship to set the player's ship to
+     */
     public void setShip(Ship ship) {
     	this.ship = ship;
     }
