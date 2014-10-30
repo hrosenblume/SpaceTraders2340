@@ -109,6 +109,10 @@ public class Planet {
 		//Universe.getNearbyPlanets(this);
 		return null;
 	}
+	
+	public int getTechLevel() {
+		return planetTechInteger;
+	}
 
 	/**
 	 * Calculates the distance between this planet and another.

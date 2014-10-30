@@ -1,0 +1,10 @@
+Naman Shah
+nshah310
+Individual Method Contract
+
+Operation: checkout(Player: player, sales: HashMap<resource, int>)
+Cross References: Use Case 5: Buy Goods
+Preconditions: The player has enough money and cargo space for the goods he/she is about to purchase
+Postconditions: 
+	-sales is added to player.cargo
+	-for each resource in sales, resource.price * int is subtracted from player.money

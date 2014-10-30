@@ -9,6 +9,7 @@ import java.util.HashMap;
 public class Player {
     private int pilotSkillLevel, fighterSkillLevel, traderSkillLevel,
         engineerSkillLevel, investorSkillLevel, money, fuel;
+    Ship ship;
     private String name;
     private HashMap<String, Integer> cargo = new HashMap<String, Integer>();
 
@@ -30,7 +31,8 @@ public class Player {
         this.engineerSkillLevel = engineer;
         this.investorSkillLevel = investor;
 
-        fuel = 100;
+        ship = Ship.generateAllShips().get("flea");
+        fuel = ship.fuel;
         money = 10000;
         cargo = new HashMap<String, Integer>();
         cargo.put("Water", 0);
@@ -52,10 +54,11 @@ public class Player {
         this.traderSkillLevel = trader;
         this.engineerSkillLevel = engineer;
         this.investorSkillLevel = investor;
+        ship = Ship.generateAllShips().get("flea");
         this.fuel = fuel;
         this.money = money;
         this.cargo = cargo;
-        //this.cargo = cargo;
+        
     }
     
     public void setMoney(int money) {
@@ -108,5 +111,13 @@ public class Player {
     
     public HashMap<String, Integer> getCargo() {
     	return cargo;
+    }
+    
+    public Ship getShip() {
+    	return ship;
+    }
+    
+    public void setShip(Ship ship) {
+    	this.ship = ship;
     }
 }
