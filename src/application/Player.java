@@ -33,7 +33,7 @@ public class Player {
 
         ship = Ship.ships.get("flea");
         fuel = ship.fuel;
-        money = 10000;
+        money = 100000000;
         cargo = new HashMap<String, Integer>();
         cargo.put("Water", 0);
         cargo.put("Fur", 0);

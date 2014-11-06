@@ -72,6 +72,7 @@ public class PlanetController implements Initializable {
 	
 	@FXML
 	private void onPressShipyard(ActionEvent event) throws IOException {
+		ShipyardController.setPlanet(currentPlanet);
 		Parent root = FXMLLoader.load(getClass().getResource("../view/ShipyardDisplay.fxml"));
 		Stage newStage = new Stage();
 		newStage.setScene(new Scene(root, 600, 400));

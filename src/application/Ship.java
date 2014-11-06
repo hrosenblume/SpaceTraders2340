@@ -9,6 +9,7 @@ public class Ship {
 	private HashMap<String, Integer> weapons = new HashMap<>();
 	private HashMap<String, Integer> shields = new HashMap<>();
 	private HashMap<String, Integer> gadgets = new HashMap<>();
+	Player player = Universe.player;
 
 	/**
 	 * Constructor for a ship
@@ -63,24 +64,35 @@ public class Ship {
 	}
 	
 	public void addShield(String shield) {
-		Integer count = weapons.get(shield);
+		Integer count = shields.get(shield);
 		if (count == null) {
-			weapons.put(shield, 1);
+			shields.put(shield, 1);
 		} else {
-			weapons.put(shield, count + 1);
+			shields.put(shield, count + 1);
 		}
 	}
 	
 	public void addGadget(String gadget) {
 		if (gadget.equals("cargo")) {
 			cargoBay += 5;
-			return;
 		}
-		Integer count = weapons.get(gadget);
-		if (count == null) {
-			weapons.put(gadget, 1);
-		} else {
-			weapons.put(gadget, count + 1);
+		else {
+			Integer count = gadgets.get(gadget);
+			if (count == null) {
+				gadgets.put(gadget, 1);
+			} else {
+				gadgets.put(gadget, count + 1);
+			}
 		}
+	}
+	
+	public HashMap<String, Integer> getWeapons() {
+		return weapons;
+	}
+	public HashMap<String, Integer> getShields() {
+		return shields;
+	}
+	public HashMap<String, Integer> getGadgets() {
+		return gadgets;
 	}
 }
