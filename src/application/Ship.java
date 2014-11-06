@@ -6,6 +6,9 @@ public class Ship {
 	String name;
 	int cargoBay, weaponSlots, shieldSlots, gadgetSlots, crew, fuel, minTechLevel, fuelCost, price, hullStrength, repairCost;
 	static HashMap<String, Ship> ships = generateAllShips();
+	private HashMap<String, Integer> weapons = new HashMap<>();
+	private HashMap<String, Integer> shields = new HashMap<>();
+	private HashMap<String, Integer> gadgets = new HashMap<>();
 
 	/**
 	 * Constructor for a ship
@@ -48,5 +51,36 @@ public class Ship {
 		ships.put("mosquito", new Ship("mosquito", 15, 2, 1, 1, 1, 13, 6, 5, 30000, 100, 1));
 		ships.put("bumblebee", new Ship("bumblebee", 25, 1, 2, 2, 2, 15, 7, 7, 60000, 100, 1));
 		return ships;
+	}
+	
+	public void addWeapon(String weapon) {
+		Integer count = weapons.get(weapon);
+		if (count == null) {
+			weapons.put(weapon, 1);
+		} else {
+			weapons.put(weapon, count + 1);
+		}
+	}
+	
+	public void addShield(String shield) {
+		Integer count = weapons.get(shield);
+		if (count == null) {
+			weapons.put(shield, 1);
+		} else {
+			weapons.put(shield, count + 1);
+		}
+	}
+	
+	public void addGadget(String gadget) {
+		if (gadget.equals("cargo")) {
+			cargoBay += 5;
+			return;
+		}
+		Integer count = weapons.get(gadget);
+		if (count == null) {
+			weapons.put(gadget, 1);
+		} else {
+			weapons.put(gadget, count + 1);
+		}
 	}
 }

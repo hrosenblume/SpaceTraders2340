@@ -21,7 +21,9 @@ public class ShipyardController implements Initializable {
 	private Player player = Universe.player;
 	
 	@FXML
-	private Button buyFlea, buyGnat, buyFirefly, buyMosquito, buyBumblebee, exitButton;
+	private Button buyFlea, buyGnat, buyFirefly, buyMosquito, buyBumblebee,
+	buyPulse, buyBeam, buyMilitary, buyEnergy, buyReflective, buyCargo, buyNav,
+	buyRepair, buyTarget, buyCloak, exitButton;
 	@FXML
 	private Text currShip;
 	
@@ -48,6 +50,27 @@ public class ShipyardController implements Initializable {
 			buyBumblebee.setDisable(true);
 		}
     }
+	
+	@FXML
+	private void buyWeapon(ActionEvent event) throws IOException {
+		Button clickedBtn = (Button) event.getSource(); // btn clicked
+		String nameWeapon = clickedBtn.getId().substring(3).toLowerCase();
+		player.getShip().addWeapon(nameWeapon);
+	}
+	
+	@FXML
+	private void buyShield(ActionEvent event) throws IOException {
+		Button clickedBtn = (Button) event.getSource(); // btn clicked
+		String nameShield = clickedBtn.getId().substring(3).toLowerCase();
+		player.getShip().addShield(nameShield);
+	}
+	
+	@FXML
+	private void buyGadget(ActionEvent event) throws IOException {
+		Button clickedBtn = (Button) event.getSource(); // btn clicked
+		String nameGadget = clickedBtn.getId().substring(3).toLowerCase();
+		player.getShip().addGadget(nameGadget);
+	}
 	
 	/**
 	 * Button click listener that buys ship
