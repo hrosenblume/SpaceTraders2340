@@ -40,6 +40,9 @@ public class ShipyardController implements Initializable {
 		enforceSlots();
     }
 	
+	/**
+	 * Enables and disables buttons according to prices.
+	 */
 	private void enforcePrices() {
 		if (player.getMoney() < 2000) {
 			buyFlea.setDisable(true);
@@ -88,6 +91,10 @@ public class ShipyardController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Disables buttons based on tech level requirements.
+	 * @param techLevel the tech level of the planet.
+	 */
 	private void enforceTechLevel(int techLevel) {
 		if (techLevel < 7) {
 			buyBumblebee.setDisable(true);
@@ -108,6 +115,9 @@ public class ShipyardController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Disables buttons based on the ship's available slots.
+	 */
 	private void enforceSlots() {
 		int numWeapons = 0;
 		for (String name: player.getShip().getWeapons().keySet()) {
@@ -197,6 +207,10 @@ public class ShipyardController implements Initializable {
 	    stage.close();
 	}
 	
+	/**
+	 * Sets the planet.
+	 * @param p the planet to set.
+	 */
 	public static void setPlanet(Planet p) {
 		currentPlanet = p;
 	}

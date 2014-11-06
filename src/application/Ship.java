@@ -54,6 +54,10 @@ public class Ship {
 		return ships;
 	}
 	
+	/**
+	 * Adds a weapon to the ship.
+	 * @param weapon the weapon to add.
+	 */
 	public void addWeapon(String weapon) {
 		Integer count = weapons.get(weapon);
 		if (count == null) {
@@ -63,6 +67,10 @@ public class Ship {
 		}
 	}
 	
+	/**
+	 * Adds a shield to the ship.
+	 * @param shield the shield to add.
+	 */
 	public void addShield(String shield) {
 		Integer count = shields.get(shield);
 		if (count == null) {
@@ -72,6 +80,10 @@ public class Ship {
 		}
 	}
 	
+	/**
+	 * Adds a gadget to the ship.
+	 * @param gadget the gadget to add.
+	 */
 	public void addGadget(String gadget) {
 		if (gadget.equals("cargo")) {
 			cargoBay += 5;
@@ -86,12 +98,26 @@ public class Ship {
 		}
 	}
 	
+	/**
+	 * Gets the mappings of weapons and amounts.
+	 * @return the mappings of weapons and amounts.
+	 */
 	public HashMap<String, Integer> getWeapons() {
 		return weapons;
 	}
+	
+	/**
+	 * Gets the mappings of shields and amounts.
+	 * @return the mappings of shields and amounts.
+	 */
 	public HashMap<String, Integer> getShields() {
 		return shields;
 	}
+	
+	/**
+	 * Gets the mappings of gadgets and amounts.
+	 * @return the mappings of gadgets and amounts.
+	 */
 	public HashMap<String, Integer> getGadgets() {
 		return gadgets;
 	}
