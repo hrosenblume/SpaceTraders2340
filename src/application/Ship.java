@@ -6,6 +6,10 @@ public class Ship {
 	String name;
 	int cargoBay, weaponSlots, shieldSlots, gadgetSlots, crew, fuel, minTechLevel, fuelCost, price, hullStrength, repairCost;
 	static HashMap<String, Ship> ships = generateAllShips();
+	private HashMap<String, Integer> weapons = new HashMap<>();
+	private HashMap<String, Integer> shields = new HashMap<>();
+	private HashMap<String, Integer> gadgets = new HashMap<>();
+	Player player = Universe.player;
 
 	/**
 	 * Constructor for a ship
@@ -48,5 +52,73 @@ public class Ship {
 		ships.put("mosquito", new Ship("mosquito", 15, 2, 1, 1, 1, 13, 6, 5, 30000, 100, 1));
 		ships.put("bumblebee", new Ship("bumblebee", 25, 1, 2, 2, 2, 15, 7, 7, 60000, 100, 1));
 		return ships;
+	}
+	
+	/**
+	 * Adds a weapon to the ship.
+	 * @param weapon the weapon to add.
+	 */
+	public void addWeapon(String weapon) {
+		Integer count = weapons.get(weapon);
+		if (count == null) {
+			weapons.put(weapon, 1);
+		} else {
+			weapons.put(weapon, count + 1);
+		}
+	}
+	
+	/**
+	 * Adds a shield to the ship.
+	 * @param shield the shield to add.
+	 */
+	public void addShield(String shield) {
+		Integer count = shields.get(shield);
+		if (count == null) {
+			shields.put(shield, 1);
+		} else {
+			shields.put(shield, count + 1);
+		}
+	}
+	
+	/**
+	 * Adds a gadget to the ship.
+	 * @param gadget the gadget to add.
+	 */
+	public void addGadget(String gadget) {
+		if (gadget.equals("cargo")) {
+			cargoBay += 5;
+		}
+		else {
+			Integer count = gadgets.get(gadget);
+			if (count == null) {
+				gadgets.put(gadget, 1);
+			} else {
+				gadgets.put(gadget, count + 1);
+			}
+		}
+	}
+	
+	/**
+	 * Gets the mappings of weapons and amounts.
+	 * @return the mappings of weapons and amounts.
+	 */
+	public HashMap<String, Integer> getWeapons() {
+		return weapons;
+	}
+	
+	/**
+	 * Gets the mappings of shields and amounts.
+	 * @return the mappings of shields and amounts.
+	 */
+	public HashMap<String, Integer> getShields() {
+		return shields;
+	}
+	
+	/**
+	 * Gets the mappings of gadgets and amounts.
+	 * @return the mappings of gadgets and amounts.
+	 */
+	public HashMap<String, Integer> getGadgets() {
+		return gadgets;
 	}
 }
