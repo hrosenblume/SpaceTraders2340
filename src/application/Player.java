@@ -47,6 +47,18 @@ public class Player {
         cargo.put("Robots", 0);
     }
     
+    /**
+     * Constructs a new player
+     * @param name the player's name
+     * @param pilot the player's pilot points
+     * @param fighter the player's fighter points
+     * @param trader the player's trader points
+     * @param engineer the player's engineer points
+     * @param investor the player's investor points
+     * @param fuel the player's fuel initialized with a full tank
+     * @param money the player's money
+     * @param cargo the player's cargo initialized with an empty cargo bay 
+     */
     public Player(String name, int pilot, int fighter, int trader, int engineer, int investor, int fuel, int money, HashMap<String,Integer> cargo) {
     	this.name = name;
         this.pilotSkillLevel = pilot;
@@ -61,54 +73,105 @@ public class Player {
         
     }
     
+    /**
+     * Sets the player's money
+     * @param money
+     */
     public void setMoney(int money) {
     	this.money= money;
     }
-    
+     /**
+      * Sets the player's fuel
+      * @param fuel
+      */
     public void setFuel(int fuel) {
     	this.fuel = fuel;
     }
     
+    /**
+     * Removes fuel from the player's tank
+     * @param fuel amount to remove
+     */
     public void removeFuel(int fuel) {
     	this.fuel -= fuel;
     }
     
+    /**
+     * Adds fuel to the player's tank
+     * @param fuel amount to add
+     */
     public void addFuel(int fuel) {
     	this.fuel += fuel;
     }
     
+    /**
+     * Gets the player's name
+     * @return name
+     */
     public String getName() {
     	return name;
     }
     
+    /**
+     * Gets the player's pilot level
+     * @return pilot points
+     */
     public int getPilot() {
     	return pilotSkillLevel;
     }
     
+    /**
+     * Gets the player's fighter level
+     * @return fighter level
+     */
     public int getFighter() {
     	return fighterSkillLevel;
     }
     
+    /**
+     * Gets the player's trader level
+     * @return trader level
+     */
     public int getTrader() {
     	return traderSkillLevel;
     }
     
+    /**
+     * Gets the player's engineer level
+     * @return engineer level
+     */
     public int getEngineer() {
     	return engineerSkillLevel;
     }
     
+    /**
+     * Gets the player's investor level
+     * @return investor level
+     */
     public int getInvestor() {
     	return investorSkillLevel;
     }
     
+    /**
+     * Gets the player's fuel in the fuel tank
+     * @return fuel
+     */
     public int getFuel() {
     	return fuel;
     }
     
+    /**
+     * Gets the player's money
+     * @return amount of money the player has
+     */
     public int getMoney() {
     	return money;
     }
     
+    /**
+     * Gets the player's current cargo bay
+     * @return HashMap of cargo
+     */
     public HashMap<String, Integer> getCargo() {
     	return cargo;
     }

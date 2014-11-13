@@ -23,6 +23,10 @@ public class Universe {
 		}
 	}
 
+	/**
+	 * Sets the player
+	 * @param p Player
+	 */
 	public void setPlayer(Player p) {
 		this.player = p;
 	}
@@ -38,10 +42,21 @@ public class Universe {
 		return s;
 	}
 
+	/**
+	 * Sorts the universe based on distance from planet p
+	 * @param p current planet
+	 * @return sorted universe array
+	 */
 	public static Planet[] getNearbyPlanets(Planet p) {
 		return bubbleSort(universe, p);
 	}
 	
+	/**
+	 * Sorts array of planets based on distance from current planet
+	 * @param ar array of Planets
+	 * @param p current planet
+	 * @return sorted array
+	 */
 	private static Planet[] bubbleSort(Planet ar[], Planet p) {
 		for (int i = (ar.length - 1); i >= 0; i--) {
 			for (int j = 1; j <= i; j++) {

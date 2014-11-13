@@ -25,10 +25,18 @@ public class PlanetController implements Initializable {
     @FXML
     private Button mpButton, travelButton, shipButton;
     
+    /**
+     * Sets the current Planet
+     * @param p the current Planet
+     */
     public static void setPlanet(Planet p) {
     	currentPlanet = p;
     }
     
+    /**
+     * Retrieves all information about the current planet
+     * @return a String representation of all the info
+     */
     private String getInfo() {
 		String str = "";
 		str += "Location: (" + (int)currentPlanet.planetLocation.getX() + ", "
@@ -43,6 +51,11 @@ public class PlanetController implements Initializable {
 		return str;
 	}
 	
+    /**
+     * Helper method that puts a qualitative name on an integer level
+     * @param level an quantitative representation of police/pirate presence
+     * @return a String describing the level
+     */
 	private String infoHelper(int level) {
 		if (level < 2) {
 			return "Scarce";
@@ -53,6 +66,11 @@ public class PlanetController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Opens a MarketPlace window for the current planet
+	 * @param event mpButton click
+	 * @throws IOException
+	 */
 	@FXML
 	private void onPressMarketPlace(ActionEvent event) throws IOException {
 		NewMarketController.setPlanet(currentPlanet);
@@ -62,6 +80,11 @@ public class PlanetController implements Initializable {
 		newStage.show();
 	}
 	
+	/**
+	 * Opens a NearbyPlanet window for the current planet
+	 * @param event travelButton click
+	 * @throws IOException
+	 */
 	@FXML
 	private void onPressTravel(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("../view/NearbyPlanetScreen.fxml"));
@@ -70,6 +93,11 @@ public class PlanetController implements Initializable {
 		newStage.show();
 	}
 	
+	/**
+	 * Opens a Shipyard window for the current planet
+	 * @param event shipButton
+	 * @throws IOException
+	 */
 	@FXML
 	private void onPressShipyard(ActionEvent event) throws IOException {
 		ShipyardController.setPlanet(currentPlanet);

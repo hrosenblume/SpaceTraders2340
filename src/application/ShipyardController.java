@@ -150,6 +150,11 @@ public class ShipyardController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Adds appropriate weapon to player's ship
+	 * @param event weapon button click
+	 * @throws IOException
+	 */
 	@FXML
 	private void buyWeapon(ActionEvent event) throws IOException {
 		Button clickedBtn = (Button) event.getSource(); // btn clicked
@@ -160,6 +165,11 @@ public class ShipyardController implements Initializable {
 		enforcePrices();
 	}
 	
+	/**
+	 * Adds appropriate shield to player's ship
+	 * @param event shield button click
+	 * @throws IOException
+	 */
 	@FXML
 	private void buyShield(ActionEvent event) throws IOException {
 		Button clickedBtn = (Button) event.getSource(); // btn clicked
@@ -170,6 +180,11 @@ public class ShipyardController implements Initializable {
 		enforcePrices();
 	}
 	
+	/**
+	 * Adds appropriate gadget to player's ship
+	 * @param event gadget button click
+	 * @throws IOException
+	 */
 	@FXML
 	private void buyGadget(ActionEvent event) throws IOException {
 		Button clickedBtn = (Button) event.getSource(); // btn clicked

@@ -31,42 +31,101 @@ public class NewGameController implements Initializable {
     
     private static Player player;
 
+    /**
+     * Increases pilotSkillLabel
+     * @param event pilotUp click
+     * @throws IOException
+     */
     @FXML
     private void increasePilot(ActionEvent event) throws IOException {
         incrementSkill(pilotSkillLabel);
     }
+    
+    /**
+     * Decreases pilotSkillLabel
+     * @param event pilotDown click
+     * @throws IOException
+     */
     @FXML
     private void decreasePilot(ActionEvent event) throws IOException {
         decrementSkill(pilotSkillLabel);
     }
+    
+    /**
+     * Increases fighterSkillLabel
+     * @param event fighterUp click
+     * @throws IOException
+     */
     @FXML
     private void increaseFighter(ActionEvent event) throws IOException {
         incrementSkill(fighterSkillLabel);
     }
+    
+    /**
+     * Decreases fighterSkillLabel
+     * @param event fighterDown click
+     * @throws IOException
+     */
     @FXML
     private void decreaseFighter(ActionEvent event) throws IOException {
         decrementSkill(fighterSkillLabel);
     }
+    
+    /**
+     * Increases traderSkillLabel
+     * @param event traderUp click
+     * @throws IOException
+     */
     @FXML
     private void increaseTrader(ActionEvent event) throws IOException {
         incrementSkill(traderSkillLabel);
     }
+    
+    /**
+     * Decreases traderSkillLabel
+     * @param event traderDown click
+     * @throws IOException
+     */
     @FXML
     private void decreaseTrader(ActionEvent event) throws IOException {
         decrementSkill(traderSkillLabel);
     }
+    
+    /**
+     * Increases engineerSkillLabel
+     * @param event engineerUp click
+     * @throws IOException
+     */
     @FXML
     private void increaseEngineer(ActionEvent event) throws IOException {
         incrementSkill(engineerSkillLabel);
     }
+    
+    /**
+     * Decreases engineerSkillLabel
+     * @param event engineerDown click
+     * @throws IOException
+     */
     @FXML
     private void decreaseEngineer(ActionEvent event) throws IOException {
         decrementSkill(engineerSkillLabel);
     }
+    
+    /**
+     * Increases investorSkillLabel
+     * @param event investorUp click
+     * @throws IOException
+     */
     @FXML
     private void increaseInvestor(ActionEvent event) throws IOException {
         incrementSkill(investorSkillLabel);
     }
+    
+    /**
+     * Decreases investorSkillLabel
+     * @param event investorDown click
+     * @throws IOException
+     */
     @FXML
     private void decreaseInvestor(ActionEvent event) throws IOException {
         decrementSkill(investorSkillLabel);
@@ -107,12 +166,22 @@ public class NewGameController implements Initializable {
         }
     }
 
+    /**
+     * Closes New Game screen
+     * @param event cancelButton click
+     * @throws IOException
+     */
     @FXML
     private void onPressCancel(ActionEvent event) throws IOException {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
     
+    /**
+     * Opens window for first Planet display
+     * @param event playButton click
+     * @throws IOException
+     */
     @FXML
     private void onPressPlay(ActionEvent event) throws IOException {
 //    	if (player != null) {
@@ -210,10 +279,18 @@ public class NewGameController implements Initializable {
     	}
     }  
     
+    /**
+     * Returns the static player variable
+     * @return player 
+     */
     public static Player getPlayer() {
     	return player;
     }
     
+    /**
+     * Sets the player variable in the NewGameController
+     * @param aPlayer player variable
+     */
     public static void setPlayer(Player aPlayer) {
     	player = aPlayer;
     }

@@ -2,6 +2,11 @@ package application;
 
 import java.util.HashMap;
 
+/**
+ * Represents all purchasable ships and their appropriate items
+ * @author Naman
+ *
+ */
 public class Ship {
 	String name;
 	int cargoBay, weaponSlots, shieldSlots, gadgetSlots, crew, fuel, minTechLevel, fuelCost, price, hullStrength, repairCost;

@@ -169,6 +169,12 @@ public class MarketController implements Initializable {
 		return "" + computeSellPrice(r);
 	}
 	
+	/**
+	 * Calculates the amount of money needed to buy a Resource based on the
+	 * current planet's tech level and other such conditions
+	 * @param r the resource to be bought
+	 * @return the price of the resource as an int
+	 */
 	private int computeBuyPrice(Resource r) {
 		int price = r.basePrice;
 		price += ((currentPlanet.planetTechInteger - r.minTechProduceLevel)
@@ -186,6 +192,12 @@ public class MarketController implements Initializable {
 		return price;
 	}
 	
+	/**
+	 * Calculates the amount of money selling a Resource would produce based
+	 * on the current planet's tech level and other such conditions
+	 * @param r the resource to be sold
+	 * @return the price of the resource as an int
+	 */
 	private int computeSellPrice(Resource r) {
 		int price = r.basePrice;
 		price += ((currentPlanet.planetTechInteger - r.minTechUseLevel)

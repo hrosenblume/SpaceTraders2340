@@ -54,6 +54,11 @@ public class NearbyPlanetController implements Initializable{
 
 
 
+	/**
+	 * Opens the Planet window from the appropriate planet chosen
+	 * @param event go button for planet
+	 * @throws IOException
+	 */
 	@FXML
 	private void go(ActionEvent event) throws IOException {
 		Button clickedBtn = (Button) event.getSource(); // btn clicked

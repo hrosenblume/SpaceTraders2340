@@ -12,6 +12,11 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+/**
+ * Controls the logic behind the MarketPlace
+ * @author Naman
+ *
+ */
 public class NewMarketController implements Initializable {
 	private static Planet currentPlanet;
 	
@@ -202,6 +207,9 @@ public class NewMarketController implements Initializable {
 		robotsTotalGain.setText("" + currentPlanet.marketplace.getSellPrice("Robots") * sellMap.get("Robots"));
 	}
 	
+	/**
+	 * Sets the current cargo per resource
+	 */
 	private void setCargos() {
 		waterCargo.setText("" + cargoMap.get("Water"));
 		furCargo.setText("" + cargoMap.get("Fur"));
@@ -266,6 +274,9 @@ public class NewMarketController implements Initializable {
 		totalCargo.setText("" + totalcargo);
 	}
 	
+	/**
+	 * Updates all amounts, cargos, and totals
+	 */
 	private void update() {
 		setAmt();
 		setCosts();
@@ -274,6 +285,9 @@ public class NewMarketController implements Initializable {
 		setCargos();
 	}
 	
+	/**
+	 * Puts the title, player's money, and all other text fields on the display
+	 */
 	private void setScreen() {
 		mpTitle.setText(currentPlanet.name + " MarketPlace");
 		playerMoney.setText("" + Universe.player.getMoney());
@@ -287,12 +301,23 @@ public class NewMarketController implements Initializable {
 		fillMaps();
 		setScreen();
 	}
+	
+	/**
+	 * Closes the MarketPlace window
+	 * @param event cancelButton click
+	 * @throws IOException
+	 */
 	@FXML
 	private void onPressCancel(ActionEvent event) throws IOException {
 	    Stage stage = (Stage) cancelButton.getScene().getWindow();
 	    stage.close();
 	}
 	
+	/**
+	 * Updates player's money and cargo and closes MarketPlace window
+	 * @param event checkoutButton click
+	 * @throws IOException
+	 */
 	@FXML
 	private void onPressCheckout(ActionEvent event) throws IOException {
 		//add inetGainLoss to Player's money variable
@@ -304,6 +329,14 @@ public class NewMarketController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Increases the resource in its map and updates appropriate amount, total,
+	 * cargo text fields
+	 * @param item The text field representing the resource
+	 * @param amt The text field representing the buy amount of that resource
+	 * @param total The text field representing the buy total of that resource
+	 * @param cargo The text field representing the cargo of that resource
+	 */
 	private void incrementBuyGood(Text item, Text amt, Text total, Text cargo) {
 		buyMap.put(item.getText(), buyMap.get(item.getText()) + 1);
 		amt.setText("" + buyMap.get(item.getText()));
@@ -313,6 +346,14 @@ public class NewMarketController implements Initializable {
 		setTotals();
     }
 	
+	/**
+	 * Decreases the resource in its map and updates appropriate amount, total,
+	 * cargo text fields
+	 * @param item The text field representing the resource
+	 * @param amt The text field representing the buy amount of that resource
+	 * @param total The text field representing the buy total of that resource
+	 * @param cargo The text field representing the cargo of that resource
+	 */
 	private void decrementBuyGood(Text item, Text amt, Text total, Text cargo) {
 		if ((buyMap.get(item.getText()) - 1) >= 0 || (cargoMap.get(item.getText()) - 1) >= 0) {
 			buyMap.put(item.getText(), buyMap.get(item.getText()) - 1);
@@ -324,6 +365,14 @@ public class NewMarketController implements Initializable {
 		}
 	}
 	
+	/**
+	 * Increases the resource in its map and updates appropriate amount, total,
+	 * cargo text fields
+	 * @param item The text field representing the resource
+	 * @param amt The text field representing the sell amount of that resource
+	 * @param total The text field representing the sell total of that resource
+	 * @param cargo The text field representing the cargo of that resource
+	 */
 	private void incrementSellGood(Text item, Text amt, Text total, Text cargo) {
 		if ((cargoMap.get(item.getText()) - 1) >= 0) {
 			sellMap.put(item.getText(), sellMap.get(item.getText()) + 1);
@@ -335,6 +384,14 @@ public class NewMarketController implements Initializable {
 		}
     }
 	
+	/**
+	 * Decreases the resource in its map and updates appropriate amount, total,
+	 * cargo text fields
+	 * @param item The text field representing the resource
+	 * @param amt The text field representing the sell amount of that resource
+	 * @param total The text field representing the sell total of that resource
+	 * @param cargo The text field representing the cargo of that resource
+	 */
 	private void decrementSellGood(Text item, Text amt, Text total, Text cargo) {
 		if ((sellMap.get(item.getText()) - 1) >= 0) {
 			sellMap.put(item.getText(), sellMap.get(item.getText()) - 1);

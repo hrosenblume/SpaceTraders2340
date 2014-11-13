@@ -3,6 +3,12 @@ package application;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Creates a shipyard that determines which ships you can buy on the current
+ * planet
+ * @author Naman
+ *
+ */
 public class Shipyard {
 	Planet currentPlanet;
 	ArrayList<Ship> availableShips = new ArrayList<>();

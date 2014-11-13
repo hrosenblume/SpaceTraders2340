@@ -36,6 +36,11 @@ public class EncounterController implements Initializable {
 		lastPlanet = lp;
 		nextPlanet= np;
 	}
+	/**
+	 * Closes the window
+	 * @param event okayButton click
+	 * @throws IOException
+	 */
 	@FXML
 	private void buttonOK(ActionEvent event) throws IOException {
 		Stage stage = (Stage) okayButton.getScene().getWindow();
