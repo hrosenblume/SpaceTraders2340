@@ -11,58 +11,64 @@ import javafx.stage.Stage;
 
 /**
  * Runs the game.
- * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil Vora
+ * 
+ * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil
+ *         Vora
  */
 public class Main extends Application {
 
-	private Stage primaryStage;
+    private Stage primaryStage;
     private BorderPane rootLayout;
-	
-	@Override
-	public void start(Stage primaryStage) {
-		this.primaryStage = primaryStage;
+
+    @Override
+    public void start(Stage primaryStage) {
+        this.primaryStage = primaryStage;
         this.primaryStage.setTitle("SpaceTraders");
-        
-		initRootLayout();
-		showTitleScreen();
-	}
-	
-	/**
-	 * Creates the root layout for other windows to be displayed in.
-	 */
-	private void initRootLayout() {
-		try {
+
+        initRootLayout();
+        showTitleScreen();
+    }
+
+    /**
+     * Creates the root layout for other windows to be displayed in.
+     */
+    private void initRootLayout() {
+        try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("../view/RootLayout.fxml"));
+            loader.setLocation(Main.class
+                    .getResource("../view/RootLayout.fxml"));
             rootLayout = (BorderPane) loader.load();
-            
+
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
-	}
+    }
 
-	/**
-	 * Display the title screen.
-	 */
-	public void showTitleScreen() {
-		try {
+    /**
+     * Display the title screen.
+     */
+    public void showTitleScreen() {
+        try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("../view/TitleScreen.fxml"));
+            loader.setLocation(Main.class
+                    .getResource("../view/TitleScreen.fxml"));
             AnchorPane personOverview = (AnchorPane) loader.load();
             rootLayout.setCenter(personOverview);
         } catch (IOException e) {
             e.printStackTrace();
         }
-	}
+    }
 
-	/**
-	 * Runs the program.
-	 * @param args command line arguments (unused)
-	 */
-	public static void main(String[] args) {
-		launch(args);
-	}
+    /**
+     * Runs the program.
+     * 
+     * @param args
+     *            command line arguments (unused)
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
