@@ -38,10 +38,10 @@ public class Marketplace {
 				price += ((planet.planetTechInteger - r.minTechProduceLevel)
 						* r.techLevelRampUp);
 				price += myGen.nextInt(r.variance);
-				if (r.equals(r.highProduceResource)) {
+				if (r.name.equals(r.highProduceResource)) {
 					price *= 0.5; // this resource is cheap
 				}
-				if (r.equals(r.highDemandResource)) {
+				if (r.name.equals(r.highDemandResource)) {
 					price *= 1.5; // this resource is expensive
 				}
 				sellableResources.put(name, price);
@@ -53,10 +53,10 @@ public class Marketplace {
 				price += ((planet.planetTechInteger - r.minTechProduceLevel)
 						* r.techLevelRampUp);
 				price += myGen.nextInt(r.variance);
-				if (r.equals(r.highProduceResource)) {
+				if (r.name.equals(r.highProduceResource)) {
 					r.currentBuyPrice *= 0.5; // this resource is cheap
 				}
-				if (r.equals(r.highDemandResource)) {
+				if (r.name.equals(r.highDemandResource)) {
 					r.currentBuyPrice *= 1.5; // this resource is expensive
 				}
 				buyableResources.put(name, price);
