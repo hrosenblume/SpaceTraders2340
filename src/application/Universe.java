@@ -28,8 +28,20 @@ public class Universe {
 	 * Sets the player
 	 * @param p Player
 	 */
+<<<<<<< HEAD
 	public void setPlayer(Player p) {
 		this.player = p;
+=======
+	public Universe() {
+		for (int x = 0; x < universe.length; x++) {
+			Planet p = new Planet();
+			universe[x] = p;
+		}
+	}
+
+	public static void setPlayer(Player p) {
+		Universe.player = p;
+>>>>>>> b89c8ee1468cfa51dcb4be26ae8c3b84404678dc
 	}
 =======
     /**

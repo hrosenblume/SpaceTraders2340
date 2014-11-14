@@ -223,10 +223,19 @@ public class PlanetController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+<<<<<<< HEAD
         planetName.setText(currentPlanet.name);
         planetInfo.setText(this.getInfo());
         if (currentPlanet != null) {
             shipButton.setDisable(currentPlanet.getTechLevel() < 4);
         }
     }
+=======
+    	if (currentPlanet != null) {
+    		planetName.setText(currentPlanet.name);
+    		planetInfo.setText(this.getInfo());
+    		shipButton.setDisable(currentPlanet.getTechLevel() < 4);
+    	}
+    }  
+>>>>>>> b89c8ee1468cfa51dcb4be26ae8c3b84404678dc
 }
