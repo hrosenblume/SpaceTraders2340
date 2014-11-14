@@ -1,3 +1,4 @@
+/*
 package application;
 
 import java.util.Random;
@@ -208,3 +209,4 @@ public class Goods {
 		System.out.println("Used Space: " + getUsed() + "/" + CARGOSIZE);
 	}
 }
+*/
