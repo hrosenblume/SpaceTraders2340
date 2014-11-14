@@ -36,8 +36,8 @@ public class Planet {
                     "WARLIKE" };
 
     static int planetCount = 0;
-    static ArrayList<Point> usedPlanetLocations = new ArrayList<Point>();
-    private Random myGen = new Random();
+    static ArrayList<Point> usedPL = new ArrayList<Point>();
+    private final Random myGen = new Random();
 
     Marketplace marketplace;
 
@@ -63,16 +63,16 @@ public class Planet {
         boolean doAgain = false;
         Point planetLoc;
         do {
-            int x = myGen.nextInt(150);
-            int y = myGen.nextInt(100);
+            final int x = myGen.nextInt(150);
+            final int y = myGen.nextInt(100);
             planetLoc = new Point(x, y);
-            for (int i = 0; i < usedPlanetLocations.size(); i++) {
-                if (usedPlanetLocations.get(i).equals(planetLoc)) {
+            for (int i = 0; i < usedPL.size(); i++) {
+                if (usedPL.get(i).equals(planetLoc)) {
                     doAgain = true;
                 }
             }
         } while (doAgain);
-        usedPlanetLocations.add(planetLoc);
+        usedPL.add(planetLoc);
         planetLocation = planetLoc;
         planetCount++;
     }
@@ -116,7 +116,8 @@ public class Planet {
      */
     public String[] getNearbyPlanets() {
         // Universe.getNearbyPlanets(this);
-        return null;
+        final String[] str = null;
+        return str;
     }
 
     /**
@@ -134,11 +135,11 @@ public class Planet {
      * @param other the planet to calculate the distance to.
      * @return the distance between the two planets.
      */
-    public double calculateDistance(Planet other) {
-        double y =
+    public double calculateDistance(final Planet other) {
+        final double y =
                 Math.pow((this.planetLocation.getY() - other.planetLocation
                         .getY()), 2);
-        double x =
+        final double x =
                 Math.pow((this.planetLocation.getX() - other.planetLocation
                         .getX()), 2);
         return Math.sqrt(x + y);
