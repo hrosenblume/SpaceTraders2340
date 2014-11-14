@@ -72,7 +72,6 @@ public class NearbyPlanetController implements Initializable {
         }
     }
 
-<<<<<<< HEAD
 	/**
 	 * Opens the Planet window from the appropriate planet chosen
 	 * @param event go button for planet
@@ -98,39 +97,6 @@ public class NearbyPlanetController implements Initializable {
 			stage = new Stage();
 			stage.setScene(new Scene(root, 500, 500));
 			stage.show();
-=======
-    /**
-     * Opens the Planet window from the appropriate planet chosen
-     * 
-     * @param event
-     *            go button for planet
-     * @throws IOException
-     */
-    @FXML
-    private void go(ActionEvent event) throws IOException {
-        Button clickedBtn = (Button) event.getSource(); // btn clicked
-        Planet p = plans[Integer.parseInt(clickedBtn.getId().substring(2)) - 1];
-        int distance =
-                (int) p.calculateDistance(PlanetController.currentPlanet);
-        if (distance > Universe.player.getFuel()) {
-            System.out.println("NO");
-        } else {
-            Universe.player.removeFuel(distance);
-            Planet lastPlanet = PlanetController.currentPlanet;
-            PlanetController.setPlanet(p);
-            Planet nextPlanet = PlanetController.currentPlanet;
-            EncounterController.setPlanets(lastPlanet, nextPlanet);
-            Stage stage = (Stage) clickedBtn.getScene().getWindow();
-            stage.close();
-            // for testing purposes, it puts you on a random planet when you
-            // start the game
-            Parent root =
-                    FXMLLoader.load(getClass().getResource(
-                            "../view/PlanetDisplay.fxml"));
-            stage = new Stage();
-            stage.setScene(new Scene(root, 500, 500));
-            stage.show();
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
 
             root =
                     FXMLLoader.load(getClass().getResource(

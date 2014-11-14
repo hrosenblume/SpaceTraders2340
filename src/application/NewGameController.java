@@ -37,184 +37,106 @@ public class NewGameController implements Initializable {
 
     /**
      * Increases pilotSkillLabel
-<<<<<<< HEAD
      * @param event pilotUp click
-=======
-     * 
-     * @param event
-     *            pilotUp click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void increasePilot(ActionEvent event) throws IOException {
         incrementSkill(pilotSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Decreases pilotSkillLabel
      * @param event pilotDown click
-=======
-
-    /**
-     * Decreases pilotSkillLabel
-     * 
-     * @param event
-     *            pilotDown click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void decreasePilot(ActionEvent event) throws IOException {
         decrementSkill(pilotSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Increases fighterSkillLabel
      * @param event fighterUp click
-=======
-
-    /**
-     * Increases fighterSkillLabel
-     * 
-     * @param event
-     *            fighterUp click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void increaseFighter(ActionEvent event) throws IOException {
         incrementSkill(fighterSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Decreases fighterSkillLabel
      * @param event fighterDown click
-=======
-
-    /**
-     * Decreases fighterSkillLabel
-     * 
-     * @param event
-     *            fighterDown click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void decreaseFighter(ActionEvent event) throws IOException {
         decrementSkill(fighterSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Increases traderSkillLabel
      * @param event traderUp click
-=======
-
-    /**
-     * Increases traderSkillLabel
-     * 
-     * @param event
-     *            traderUp click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void increaseTrader(ActionEvent event) throws IOException {
         incrementSkill(traderSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Decreases traderSkillLabel
      * @param event traderDown click
-=======
-
-    /**
-     * Decreases traderSkillLabel
-     * 
-     * @param event
-     *            traderDown click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void decreaseTrader(ActionEvent event) throws IOException {
         decrementSkill(traderSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Increases engineerSkillLabel
      * @param event engineerUp click
-=======
-
-    /**
-     * Increases engineerSkillLabel
-     * 
-     * @param event
-     *            engineerUp click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void increaseEngineer(ActionEvent event) throws IOException {
         incrementSkill(engineerSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Decreases engineerSkillLabel
      * @param event engineerDown click
-=======
-
-    /**
-     * Decreases engineerSkillLabel
-     * 
-     * @param event
-     *            engineerDown click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void decreaseEngineer(ActionEvent event) throws IOException {
         decrementSkill(engineerSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Increases investorSkillLabel
      * @param event investorUp click
-=======
-
-    /**
-     * Increases investorSkillLabel
-     * 
-     * @param event
-     *            investorUp click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
     private void increaseInvestor(ActionEvent event) throws IOException {
         incrementSkill(investorSkillLabel);
     }
-<<<<<<< HEAD
+
     
     /**
      * Decreases investorSkillLabel
      * @param event investorDown click
-=======
-
-    /**
-     * Decreases investorSkillLabel
-     * 
-     * @param event
-     *            investorDown click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
@@ -263,13 +185,8 @@ public class NewGameController implements Initializable {
 
     /**
      * Closes New Game screen
-<<<<<<< HEAD
+
      * @param event cancelButton click
-=======
-     * 
-     * @param event
-     *            cancelButton click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
@@ -277,19 +194,11 @@ public class NewGameController implements Initializable {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
-<<<<<<< HEAD
+
     
     /**
      * Opens window for first Planet display
      * @param event playButton click
-=======
-
-    /**
-     * Opens window for first Planet display
-     * 
-     * @param event
-     *            playButton click
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      * @throws IOException
      */
     @FXML
@@ -357,16 +266,7 @@ public class NewGameController implements Initializable {
      */
     private Universe createUniverse() {
         Universe universe = new Universe();
-
-        /*
-         * // for testing System.out.println(universe);
-         * System.out.println("------"); System.out.println("Current uni: " +
-         * universe.universe[0]); for (Planet p:
-         * universe.getNearbyPlanets(universe.universe[0])) {
-         * System.out.println(p); }
-         * //System.out.println(universe.getNearbyPlanets
-         * (universe.universe[2]));
-         */return universe;
+        return universe;
     }
 
     @Override
@@ -401,7 +301,7 @@ public class NewGameController implements Initializable {
                 System.out.println(e);
             }
 
-<<<<<<< HEAD
+
     		//end of testing block
     	}
     }  
@@ -409,33 +309,15 @@ public class NewGameController implements Initializable {
     /**
      * Returns the static player variable
      * @return player 
-=======
-            // end of testing block
-        }
-    }
-
-    /**
-     * Returns the static player variable
-     * 
-     * @return player
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      */
     public static Player getPlayer() {
         return player;
     }
-<<<<<<< HEAD
+
     
     /**
      * Sets the player variable in the NewGameController
      * @param aPlayer player variable
-=======
-
-    /**
-     * Sets the player variable in the NewGameController
-     * 
-     * @param aPlayer
-     *            player variable
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
      */
     public static void setPlayer(Player aPlayer) {
         player = aPlayer;

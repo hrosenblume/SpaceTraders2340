@@ -29,7 +29,6 @@ public class EncounterController implements Initializable {
     private Text planetToPlanet, randomEvent, encounterResult, fuelLeft;
     static Planet lastPlanet, nextPlanet;
 
-<<<<<<< HEAD
 	/**
 	 * Sets the planets the player is traveling between.
 	 * @param lp the planet the player is traveling from.
@@ -55,41 +54,6 @@ public class EncounterController implements Initializable {
 	private void updateTravelInfo() {
 		planetToPlanet.setText(lastPlanet.getName() + " --> " + nextPlanet.getName());
 	}
-=======
-    /**
-     * Sets the planets the player is traveling between.
-     * 
-     * @param lp
-     *            the planet the player is traveling from.
-     * @param np
-     *            the planet the player is traveling to.
-     */
-    public static void setPlanets(Planet lp, Planet np) {
-        lastPlanet = lp;
-        nextPlanet = np;
-    }
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
-
-    /**
-     * Closes the window
-     * 
-     * @param event
-     *            okayButton click
-     * @throws IOException
-     */
-    @FXML
-    private void buttonOK(ActionEvent event) throws IOException {
-        Stage stage = (Stage) okayButton.getScene().getWindow();
-        stage.close();
-    }
-
-    /**
-     * Updates the travel label.
-     */
-    private void updateTravelInfo() {
-        planetToPlanet.setText(lastPlanet.getName() + " --> "
-                + nextPlanet.getName());
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
