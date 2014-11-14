@@ -128,10 +128,10 @@ public class PlanetController implements Initializable {
     // find method that happens when all fxml elements are loaded
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        planetName.setText(currentPlanet.name);
-        planetInfo.setText(this.getInfo());
-        if (currentPlanet != null) {
+        // TODO        
+    	if (currentPlanet != null) {
+    		planetName.setText(currentPlanet.name);
+    		planetInfo.setText(this.getInfo());
             shipButton.setDisable(currentPlanet.getTechLevel() < 4);
         }
     }

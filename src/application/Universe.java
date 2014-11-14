@@ -27,8 +27,8 @@ public class Universe {
      * Sets the static player variable
      * @param p player
      */
-    public void setPlayer(Player p) {
-		this.player = p;
+    public static void setPlayer(Player p) {
+		Universe.player = p;
 	}
 
     /**
