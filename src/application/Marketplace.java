@@ -1,6 +1,7 @@
 package application;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.Map.Entry;
 
@@ -11,11 +12,11 @@ import java.util.Map.Entry;
  */
 public class Marketplace {
 
-	Planet planet;
-	private Random myGen = new Random();
+	private final transient Planet planet;
+	private final transient Random myGen = new Random();
 	
-	HashMap<String, Integer> sellableResources = new HashMap<>();
-	HashMap<String, Integer> buyableResources = new HashMap<>();
+	private final transient Map<String, Integer> sellableResources = new HashMap<>();
+	private final transient Map<String, Integer> buyableResources = new HashMap<>();
 	
 	/**
 	 * Constructs a Marketplace.
@@ -31,34 +32,34 @@ public class Marketplace {
 	 * Populates the resource HashMaps with their prices.
 	 */
 	void fillMaps() {
-		for(Entry<String, Resource> entry : Resource.resources.entrySet()) {
-			String name = entry.getKey();
-			Resource r = entry.getValue();
-			if (isSellable(r)) {
-				int price = r.basePrice;
-				price += ((planet.planetTechInteger - r.minTechProduceLevel)
-						* r.techLevelRampUp);
-				price += myGen.nextInt(r.variance);
-				if (r.name.equals(r.highProduceResource)) {
+		for(final Entry<String, Resource> entry : Resource.resources.entrySet()) {
+			final String name = entry.getKey();
+			Resource res = entry.getValue();
+			if (isSellable(res)) {
+				int price = res.basePrice;
+				price += (planet.planetTechInteger - res.minTechProduceLevel)
+						* res.techLevelRampUp;
+				price += myGen.nextInt(res.variance);
+				if (res.name.equals(res.highProduceResource)) {
 					price *= 0.5; // this resource is cheap
 				}
-				if (r.name.equals(r.highDemandResource)) {
+				if (res.name.equals(res.highDemandResource)) {
 					price *= 1.5; // this resource is expensive
 				}
 				sellableResources.put(name, price);
 			} else {
 				sellableResources.put(name, -1);
 			}
-			if (isBuyable(r)) {
-				int price = r.basePrice;
-				price += ((planet.planetTechInteger - r.minTechProduceLevel)
-						* r.techLevelRampUp);
-				price += myGen.nextInt(r.variance);
-				if (r.name.equals(r.highProduceResource)) {
-					r.currentBuyPrice *= 0.5; // this resource is cheap
+			if (isBuyable(res)) {
+				int price = res.basePrice;
+				price += (planet.planetTechInteger - res.minTechProduceLevel)
+						* res.techLevelRampUp;
+				price += myGen.nextInt(res.variance);
+				if (res.name.equals(res.highProduceResource)) {
+					res.currentBuyPrice *= 0.5; // this resource is cheap
 				}
-				if (r.name.equals(r.highDemandResource)) {
-					r.currentBuyPrice *= 1.5; // this resource is expensive
+				if (res.name.equals(res.highDemandResource)) {
+					res.currentBuyPrice *= 1.5; // this resource is expensive
 				}
 				buyableResources.put(name, price);
 			} else {
@@ -74,8 +75,8 @@ public class Marketplace {
 	 * @param r the resource to get the price for
 	 * @return the price if it can be sold on this planet, -1 if it cannot
 	 */
-	public int getSellPrice(String r) {
-		return sellableResources.get(r);
+	public int getSellPrice(final String res) {
+		return sellableResources.get(res);
 	}
 	
 	/**
@@ -83,8 +84,8 @@ public class Marketplace {
 	 * @param r the resource to get the price for
 	 * @return the price if it can be bought on this planet, -1 if it cannot
 	 */
-	public int getBuyPrice(String r) {
-		return buyableResources.get(r);
+	public int getBuyPrice(final String res) {
+		return buyableResources.get(res);
 	}
 	
 	/**
@@ -92,8 +93,8 @@ public class Marketplace {
 	 * @param r the resource to potentially buy.
 	 * @return true if the resource can be bought, false otherwise.
 	 */
-	private boolean isBuyable(Resource r) {
-		return r.minTechProduceLevel <= planet.planetTechInteger;
+	private boolean isBuyable(final Resource res) {
+		return res.minTechProduceLevel <= planet.planetTechInteger;
 	}
 	
 	/**
@@ -101,8 +102,8 @@ public class Marketplace {
 	 * @param r the resource to potentially sell.
 	 * @return true if the resource can be sold, false otherwise.
 	 */
-	private boolean isSellable(Resource r) {
-		return r.minTechUseLevel <= planet.planetTechInteger;
+	private boolean isSellable(final Resource res) {
+		return res.minTechUseLevel <= planet.planetTechInteger;
 	}
 	
 	public Planet getPlanet() {
