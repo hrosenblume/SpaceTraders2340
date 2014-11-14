@@ -6,10 +6,6 @@ import java.util.HashMap;
 /**
  * Creates a shipyard that determines which ships you can buy on the current
  * planet
-<<<<<<< HEAD
-=======
- * 
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
  * @author Naman
  *
  */
@@ -20,8 +16,7 @@ public class Shipyard {
     /**
      * Constructor for a ShipYard
      * 
-     * @param p
-     *            current planet
+     * @param p current planet
      */
     public Shipyard(Planet p) {
         currentPlanet = p;
@@ -31,8 +26,7 @@ public class Shipyard {
     /**
      * Picks the ships to add to the current planet's shipyard
      * 
-     * @param p
-     *            current planet
+     * @param p current planet
      * @return picked ships
      */
     private ArrayList<Ship> pickShips(Planet p) {

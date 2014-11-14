@@ -4,10 +4,6 @@ import java.util.HashMap;
 
 /**
  * Represents all purchasable ships and their appropriate items
-<<<<<<< HEAD
-=======
- * 
->>>>>>> a6dd8ed23bf473ebe66d10204bc2583aa9f18a79
  * @author Naman
  *
  */
@@ -24,30 +20,18 @@ public class Ship {
     /**
      * Constructor for a ship
      * 
-     * @param name
-     *            name of ship
-     * @param cargoBay
-     *            how much cargo it can hold
-     * @param weaponSlots
-     *            how many weapon slots
-     * @param shieldSlots
-     *            how many shield slots
-     * @param gadgetSlots
-     *            how many gadget slots
-     * @param crew
-     *            size of crew
-     * @param fuel
-     *            how much fuel it can hold
-     * @param minTechLevel
-     *            minimum tech level required to buy
-     * @param fuelCost
-     *            cost of fuel with this
-     * @param price
-     *            full price
-     * @param hullStrength
-     *            strength of hull
-     * @param repairCost
-     *            cost to repair
+     * @param name name of ship
+     * @param cargoBay how much cargo it can hold
+     * @param weaponSlots how many weapon slots
+     * @param shieldSlots how many shield slots
+     * @param gadgetSlots how many gadget slots
+     * @param crew size of crew
+     * @param fuel how much fuel it can hold
+     * @param minTechLevel minimum tech level required to buy
+     * @param fuelCost cost of fuel with this
+     * @param price full price
+     * @param hullStrength strength of hull
+     * @param repairCost cost to repair
      */
     public Ship(String name, int cargoBay, int weaponSlots, int shieldSlots,
             int gadgetSlots, int crew, int fuel, int minTechLevel,
@@ -87,8 +71,7 @@ public class Ship {
     /**
      * Adds a weapon to the ship.
      * 
-     * @param weapon
-     *            the weapon to add.
+     * @param weapon the weapon to add.
      */
     public void addWeapon(String weapon) {
         Integer count = weapons.get(weapon);
@@ -102,8 +85,7 @@ public class Ship {
     /**
      * Adds a shield to the ship.
      * 
-     * @param shield
-     *            the shield to add.
+     * @param shield the shield to add.
      */
     public void addShield(String shield) {
         Integer count = shields.get(shield);
@@ -117,8 +99,7 @@ public class Ship {
     /**
      * Adds a gadget to the ship.
      * 
-     * @param gadget
-     *            the gadget to add.
+     * @param gadget the gadget to add.
      */
     public void addGadget(String gadget) {
         if (gadget.equals("cargo")) {

@@ -8,7 +8,7 @@ import java.util.Random;
  * Represents a visitable planet with various attributes.
  * 
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil
- *         Vora
+ * Vora
  */
 public class Planet {
 
@@ -131,8 +131,7 @@ public class Planet {
     /**
      * Calculates the distance between this planet and another.
      * 
-     * @param other
-     *            the planet to calculate the distance to.
+     * @param other the planet to calculate the distance to.
      * @return the distance between the two planets.
      */
     public double calculateDistance(Planet other) {

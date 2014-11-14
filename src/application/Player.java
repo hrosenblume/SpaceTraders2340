@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Represents the in-game character.
  * 
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil
- *         Vora
+ * Vora
  */
 public class Player {
     private int pilotSkillLevel, fighterSkillLevel, traderSkillLevel,
@@ -18,18 +18,12 @@ public class Player {
     /**
      * Constructs a new player.
      * 
-     * @param name
-     *            the player's name
-     * @param pilot
-     *            the number of pilot points the player has.
-     * @param fighter
-     *            the number of fighter points the player has.
-     * @param trader
-     *            the number of trader points the player has.
-     * @param engineer
-     *            the number of engineer points the player has.
-     * @param investor
-     *            the number of investor points the player has.
+     * @param name the player's name
+     * @param pilot the number of pilot points the player has.
+     * @param fighter the number of fighter points the player has.
+     * @param trader the number of trader points the player has.
+     * @param engineer the number of engineer points the player has.
+     * @param investor the number of investor points the player has.
      */
     public Player(String name, int pilot, int fighter, int trader,
             int engineer, int investor) {
@@ -109,8 +103,7 @@ public class Player {
     /**
      * Adds fuel to the player's tank
      * 
-     * @param fuel
-     *            amount to add
+     * @param fuel amount to add
      */
     public void addFuel(int fuel) {
         this.fuel += fuel;
@@ -210,8 +203,7 @@ public class Player {
     /**
      * Sets the player ship
      * 
-     * @param ship
-     *            is the ship to set the player's ship to
+     * @param ship is the ship to set the player's ship to
      */
     public void setShip(Ship ship) {
         this.ship = ship;

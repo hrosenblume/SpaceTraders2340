@@ -18,14 +18,10 @@ public class Item {
     /**
      * Constructs an item.
      * 
-     * @param name
-     *            the name of the item.
-     * @param type
-     *            the type (weapon/shield/gadget) it is
-     * @param price
-     *            the cost in the market
-     * @param minTechLevel
-     *            the minimum tech level to purchase this item at
+     * @param name the name of the item.
+     * @param type the type (weapon/shield/gadget) it is
+     * @param price the cost in the market
+     * @param minTechLevel the minimum tech level to purchase this item at
      */
     public Item(String name, String type, int price, int minTechLevel) {
         this.name = name;

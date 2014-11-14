@@ -91,8 +91,7 @@ public class NewMarketController implements Initializable {
     /**
      * Sets the current planet to trade on.
      * 
-     * @param p
-     *            the planet to trade on.
+     * @param p the planet to trade on.
      */
     public static void setPlanet(Planet p) {
         currentPlanet = p;
@@ -374,8 +373,7 @@ public class NewMarketController implements Initializable {
     /**
      * Closes the MarketPlace window
      * 
-     * @param event
-     *            cancelButton click
+     * @param event cancelButton click
      * @throws IOException
      */
     @FXML
@@ -387,8 +385,7 @@ public class NewMarketController implements Initializable {
     /**
      * Updates player's money and cargo and closes MarketPlace window
      * 
-     * @param event
-     *            checkoutButton click
+     * @param event checkoutButton click
      * @throws IOException
      */
     @FXML
@@ -411,14 +408,10 @@ public class NewMarketController implements Initializable {
      * Increases the resource in its map and updates appropriate amount, total,
      * cargo text fields
      * 
-     * @param item
-     *            The text field representing the resource
-     * @param amt
-     *            The text field representing the buy amount of that resource
-     * @param total
-     *            The text field representing the buy total of that resource
-     * @param cargo
-     *            The text field representing the cargo of that resource
+     * @param item The text field representing the resource
+     * @param amt The text field representing the buy amount of that resource
+     * @param total The text field representing the buy total of that resource
+     * @param cargo The text field representing the cargo of that resource
      */
     private void incrementBuyGood(Text item, Text amt, Text total, Text cargo) {
         buyMap.put(item.getText(), buyMap.get(item.getText()) + 1);
@@ -434,14 +427,10 @@ public class NewMarketController implements Initializable {
      * Decreases the resource in its map and updates appropriate amount, total,
      * cargo text fields
      * 
-     * @param item
-     *            The text field representing the resource
-     * @param amt
-     *            The text field representing the buy amount of that resource
-     * @param total
-     *            The text field representing the buy total of that resource
-     * @param cargo
-     *            The text field representing the cargo of that resource
+     * @param item The text field representing the resource
+     * @param amt The text field representing the buy amount of that resource
+     * @param total The text field representing the buy total of that resource
+     * @param cargo The text field representing the cargo of that resource
      */
     private void decrementBuyGood(Text item, Text amt, Text total, Text cargo) {
         if ((buyMap.get(item.getText()) - 1) >= 0
@@ -460,14 +449,10 @@ public class NewMarketController implements Initializable {
      * Increases the resource in its map and updates appropriate amount, total,
      * cargo text fields
      * 
-     * @param item
-     *            The text field representing the resource
-     * @param amt
-     *            The text field representing the sell amount of that resource
-     * @param total
-     *            The text field representing the sell total of that resource
-     * @param cargo
-     *            The text field representing the cargo of that resource
+     * @param item The text field representing the resource
+     * @param amt The text field representing the sell amount of that resource
+     * @param total The text field representing the sell total of that resource
+     * @param cargo The text field representing the cargo of that resource
      */
     private void incrementSellGood(Text item, Text amt, Text total, Text cargo) {
         if ((cargoMap.get(item.getText()) - 1) >= 0) {
@@ -485,14 +470,10 @@ public class NewMarketController implements Initializable {
      * Decreases the resource in its map and updates appropriate amount, total,
      * cargo text fields
      * 
-     * @param item
-     *            The text field representing the resource
-     * @param amt
-     *            The text field representing the sell amount of that resource
-     * @param total
-     *            The text field representing the sell total of that resource
-     * @param cargo
-     *            The text field representing the cargo of that resource
+     * @param item The text field representing the resource
+     * @param amt The text field representing the sell amount of that resource
+     * @param total The text field representing the sell total of that resource
+     * @param cargo The text field representing the cargo of that resource
      */
     private void decrementSellGood(Text item, Text amt, Text total, Text cargo) {
         if ((sellMap.get(item.getText()) - 1) >= 0) {

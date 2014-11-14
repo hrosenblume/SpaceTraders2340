@@ -18,8 +18,8 @@ import javafx.stage.Stage;
 /**
  * Manages the character creation dialog.
  * 
- * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil
- *         Vora
+ * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil 
+ * Vora
  */
 public class NewGameController implements Initializable {
     @FXML
@@ -147,8 +147,7 @@ public class NewGameController implements Initializable {
     /**
      * Increases a skill (if possible).
      * 
-     * @param thisLabel
-     *            the skill to be incremented.
+     * @param thisLabel the skill to be incremented.
      */
     private void incrementSkill(Text thisLabel) {
         if (counter > 0) {
@@ -165,8 +164,7 @@ public class NewGameController implements Initializable {
     /**
      * Decreases a skill (if possible).
      * 
-     * @param thisLabel
-     *            the skill to be decremented.
+     * @param thisLabel the skill to be decremented.
      */
     private void decrementSkill(Text thisLabel) {
         if (counter < 30) {

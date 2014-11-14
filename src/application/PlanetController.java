@@ -19,7 +19,7 @@ import javafx.stage.Stage;
  * Manages the character creation dialog.
  * 
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil
- *         Vora
+ * Vora
  */
 public class PlanetController implements Initializable {
     static Planet currentPlanet;
@@ -62,8 +62,7 @@ public class PlanetController implements Initializable {
     /**
      * Helper method that puts a qualitative name on an integer level
      * 
-     * @param level
-     *            an quantitative representation of police/pirate presence
+     * @param level an quantitative representation of police/pirate presence
      * @return a String describing the level
      */
     private String infoHelper(int level) {
@@ -79,8 +78,7 @@ public class PlanetController implements Initializable {
     /**
      * Opens a MarketPlace window for the current planet
      * 
-     * @param event
-     *            mpButton click
+     * @param event mpButton click
      * @throws IOException
      */
     @FXML
@@ -97,8 +95,7 @@ public class PlanetController implements Initializable {
     /**
      * Opens a NearbyPlanet window for the current planet
      * 
-     * @param event
-     *            travelButton click
+     * @param event travelButton click
      * @throws IOException
      */
     @FXML
@@ -114,8 +111,7 @@ public class PlanetController implements Initializable {
     /**
      * Opens a Shipyard window for the current planet
      * 
-     * @param event
-     *            shipButton
+     * @param event shipButton
      * @throws IOException
      */
     @FXML

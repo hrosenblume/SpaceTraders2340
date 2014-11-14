@@ -6,7 +6,7 @@ import java.util.HashMap;
  * Represents the in-game Universe that contains every visitable planet.
  * 
  * @author Hunter Rosenblume, Naman Shah, Stephen Song, Bhavesh Suhagia, Pranil
- *         Vora
+ * Vora
  *
  */
 public class Universe {
@@ -23,6 +23,10 @@ public class Universe {
         }
     }
     
+    /**
+     * Sets the static player variable
+     * @param p player
+     */
     public void setPlayer(Player p) {
 		this.player = p;
 	}
@@ -41,8 +45,7 @@ public class Universe {
     /**
      * Sorts the universe based on distance from planet p
      * 
-     * @param p
-     *            current planet
+     * @param p current planet
      * @return sorted universe array
      */
     public static Planet[] getNearbyPlanets(Planet p) {
@@ -52,10 +55,8 @@ public class Universe {
     /**
      * Sorts array of planets based on distance from current planet
      * 
-     * @param ar
-     *            array of Planets
-     * @param p
-     *            current planet
+     * @param ar array of Planets
+     * @param p current planet
      * @return sorted array
      */
     private static Planet[] bubbleSort(Planet ar[], Planet p) {
