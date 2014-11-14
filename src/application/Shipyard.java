@@ -29,7 +29,7 @@ public class Shipyard {
      * @param p current planet
      * @return picked ships
      */
-    private ArrayList<Ship> pickShips(Planet p) {
+    public ArrayList<Ship> pickShips(Planet p) {
         ArrayList<Ship> ships = new ArrayList<>();
         String[] names = { "flea", "gnat", "firefly", "mosquito", "bumblebee" };
         HashMap<String, Ship> allShips = Ship.generateAllShips();
