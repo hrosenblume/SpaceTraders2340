@@ -26,7 +26,7 @@ public class PlanetController implements Initializable {
     @FXML
     private Text planetName, planetInfo;
     @FXML
-    private Button mpButton, travelButton, shipButton;
+    private Button mpButton, travelButton, shipButton, bankButton;
     
     /**
      * Sets the current Planet
@@ -107,7 +107,15 @@ public class PlanetController implements Initializable {
         newStage.setScene(new Scene(root, 700, 700));
         newStage.show();
     }
-
+    @FXML
+    private void onPressBank(ActionEvent event) throws IOException {
+        Parent root =
+                FXMLLoader.load(getClass().getResource(
+                        "../view/BankDisplay.fxml"));
+        Stage newStage = new Stage();
+        newStage.setScene(new Scene(root, 700, 700));
+        newStage.show();
+    }
     /**
      * Opens a Shipyard window for the current planet
      * 

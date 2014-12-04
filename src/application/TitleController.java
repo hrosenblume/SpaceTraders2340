@@ -41,7 +41,11 @@ public class TitleController implements Initializable {
         Parent root =
                 FXMLLoader.load(getClass().getResource("../view/NewGame.fxml"));
         stage = new Stage();
-        stage.setScene(new Scene(root, 800, 600));
+        Scene scene = new Scene(root, 800, 600);
+        scene.getStylesheets().add(Main.class.
+        		getResource("../application/application.css").
+        		toExternalForm());
+        stage.setScene(scene);
         stage.show();
     }
 

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BankAccountController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="15.0" layoutY="7.0" text="Bank Account" underline="true">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="84.0" text="Deposit Amount">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="133.0" text="Withdraw Amount">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="depositTextField" layoutX="202.0" layoutY="85.0" promptText="Enter a number" />
+            <TextField fx:id="withdrawTextField" layoutX="202.0" layoutY="134.0" promptText="Enter a number" />
+            <Button fx:id="depositBtn" layoutX="380.0" layoutY="85.0" mnemonicParsing="false" onAction="#deposit" text="Deposit" />
+            <Button fx:id="withdrawBtn" layoutX="375.0" layoutY="134.0" mnemonicParsing="false" onAction="#withdraw" text="Withdraw" />
+            <Label fx:id="bankBalance" layoutX="382.0" layoutY="20.0" text="Bank Balance:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="13.0" layoutY="353.0" prefHeight="3.0" prefWidth="571.0" />
+            <Separator layoutX="15.0" layoutY="184.0" prefHeight="3.0" prefWidth="571.0" />
+            <Label fx:id="currMoney" layoutX="386.0" layoutY="360.0" text="Current Money:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="183.0" text="Loan" underline="true">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="254.0" text="Loan Amount">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="loanTextField" layoutX="202.0" layoutY="255.0" promptText="Enter a number" />
+            <Button fx:id="loanBtn" layoutX="380.0" layoutY="255.0" mnemonicParsing="false" onAction="#getLoan" text="Loan" />
+            <Label layoutX="177.0" layoutY="310.0" text="Interest Rate is currently at 6%.">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="currLoan" layoutX="388.0" layoutY="196.0" text="Current Loan:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="payLoanBtn" layoutX="30.0" layoutY="307.0" mnemonicParsing="false" onAction="#payLoan" text="Pay Off Your Loan" />
+            <Button fx:id="exitBtn" layoutX="32.0" layoutY="364.0" mnemonicParsing="false" onAction="#quit" prefHeight="25.0" prefWidth="82.0" text="Exit" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
