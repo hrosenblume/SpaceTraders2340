@@ -15,7 +15,7 @@ public class BankAccountController implements Initializable {
 
 	private Player player = Universe.player;
 
-	private Button deposit, withdraw, loan, payLoan, exit;
+	private Button depositBtn, withdrawBtn, loanBtn, payLoanBtn, exitBtn;
 	private Text bankBalance, currLoan, currMoney;
 	private TextField depositTextField, withdrawTextField, loanTextField;
 	@Override
@@ -30,17 +30,17 @@ public class BankAccountController implements Initializable {
 	
 	private void enforceBalance() {
 		if (player.getAccount().getBalance() <= 0) {
-			withdraw.setDisable(true);
+			withdrawBtn.setDisable(true);
 		}
 		if (player.getMoney() <= 0) {
-			deposit.setDisable(true);
+			depositBtn.setDisable(true);
 		}
 		if (player.getAccount().hasLoan()) {
-			loan.setDisable(true);
-			payLoan.setDisable(false);
+			loanBtn.setDisable(true);
+			payLoanBtn.setDisable(false);
 		} else {
-			payLoan.setDisable(true);
-			loan.setDisable(false);
+			payLoanBtn.setDisable(true);
+			loanBtn.setDisable(false);
 		}
 	}
 	
@@ -52,5 +52,15 @@ public class BankAccountController implements Initializable {
         bankBalance.setText("Bank Balance: " + player.getAccount().getBalance());
         currMoney.setText("Current Money: " + player.getMoney());
         enforceBalance();
+	}
+	
+	private void withdraw(ActionEvent event) throws IOException {
+	    Button clickedBtn = (Button) event.getSource();
+	    int amt = Integer.parseInt(withdrawTextField.getText());
+	    player.getAccount().withdraw(amt);
+	    player.setMoney(player.getMoney() + amt);
+	    bankBalance.setText("Bank Balance: " + player.getAccount().getBalance());
+	    currMoney.setText("Current Money: " + player.getMoney());
+	    enforceBalance();
 	}
 }
