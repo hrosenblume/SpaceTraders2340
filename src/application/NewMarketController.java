@@ -361,6 +361,7 @@ public class NewMarketController implements Initializable {
         playerMoney.setText("" + Universe.player.getMoney());
         setLabels();
         setPrices();
+        maxCargo.setText("" + Universe.player.getShip().getCargobay());
         update();
     }
 

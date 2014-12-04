@@ -81,6 +81,10 @@ public class Ship {
             weapons.put(weapon, count + 1);
         }
     }
+    
+    public int getCargobay() {
+    	return cargoBay;
+    }
 
     /**
      * Adds a shield to the ship.
