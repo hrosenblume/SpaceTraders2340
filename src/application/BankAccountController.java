@@ -1,11 +1,9 @@
 package application;
 
+import java.awt.TextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import com.sun.org.apache.xerces.internal.dom.DeferredProcessingInstructionImpl;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,6 +17,7 @@ public class BankAccountController implements Initializable {
 
 	private Button deposit, withdraw, loan, payLoan, exit;
 	private Text bankBalance, currLoan, currMoney;
+	private TextField depositTextField, withdrawTextField, loanTextField;
 	@Override
 	
 	public void initialize(URL url, ResourceBundle rb) {
@@ -47,6 +46,11 @@ public class BankAccountController implements Initializable {
 	
 	private void deposit(ActionEvent event) throws IOException {
 		Button clickedBtn = (Button) event.getSource();
-		double amt = depositTF.getText();
+		int amt = Integer.parseInt(depositTextField.getText());
+		player.getAccount().deposit(amt);
+		player.setMoney(player.getMoney() - amt);
+        bankBalance.setText("Bank Balance: " + player.getAccount().getBalance());
+        currMoney.setText("Current Money: " + player.getMoney());
+        enforceBalance();
 	}
 }

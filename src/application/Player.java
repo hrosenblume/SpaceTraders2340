@@ -14,6 +14,7 @@ public class Player {
     Ship ship;
     private String name;
     private HashMap<String, Integer> cargo = new HashMap<String, Integer>();
+    private BankAccount account = new BankAccount(name, 0, false);
 
     /**
      * Constructs a new player.
@@ -207,5 +208,13 @@ public class Player {
      */
     public void setShip(Ship ship) {
         this.ship = ship;
+    }
+    
+    /**
+     * Gets the player's bank account
+     * @return account
+     */
+    public BankAccount getAccount() {
+        return account;
     }
 }

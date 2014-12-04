@@ -2,10 +2,10 @@ package application;
 
 public class BankAccount {
 	private String name;
-	private double balance;
+	private int balance;
 	private boolean loaned;
-	private double loanAmount = 0;
-	private final static double interest = 6;
+	private int loanAmount = 0;
+	private final static int interest = 6;
 	
 	public BankAccount(String name, double balance, boolean loaned) {
 		name = this.name;
@@ -13,13 +13,13 @@ public class BankAccount {
 		loaned = false;
 	}
 	
-	public void deposit(double amt) {
+	public void deposit(int amt) {
 		if (amt > 0) {
 			balance += amt;
 		}
 	}
 	
-	public void withdraw(double amt) {
+	public void withdraw(int amt) {
 		if (amt > balance) {
 			return;
 		} else {
@@ -27,7 +27,7 @@ public class BankAccount {
 		}
 	}
 	
-	public void loan(double amt) {
+	public void loan(int amt) {
 		if(!loaned) {
 			if (amt > 0 && amt <= balance/2) {
 				balance += amt;
@@ -37,7 +37,7 @@ public class BankAccount {
 		}
 	}
 	
-	private double chargeInterest(double amt) {
+	private int chargeInterest(int amt) {
 		return amt*interest;
 	}
 	
@@ -50,7 +50,7 @@ public class BankAccount {
 		return name;
 	}
 	
-	public double getBalance() {
+	public int getBalance() {
 		return balance;
 	}
 	
@@ -58,7 +58,7 @@ public class BankAccount {
 		return loaned;
 	}
 	
-	public double getLoanAmount() {
+	public int getLoanAmount() {
 		return loanAmount;
 	}
 }
