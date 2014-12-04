@@ -14,7 +14,7 @@ public class Player {
     Ship ship;
     private String name;
     private HashMap<String, Integer> cargo = new HashMap<String, Integer>();
-    private BankAccount account = new BankAccount(name, 0, false);
+    private BankAccount account;
 
     /**
      * Constructs a new player.
@@ -49,6 +49,8 @@ public class Player {
         cargo.put("Machines", 0);
         cargo.put("Narcotics", 0);
         cargo.put("Robots", 0);
+        
+        account = new BankAccount(name, 0, false);
     }
     
     /**
@@ -75,6 +77,7 @@ public class Player {
         this.money = money;
         this.cargo = cargo;
 
+        account = new BankAccount(name, 0, false);
     }
     
     /**

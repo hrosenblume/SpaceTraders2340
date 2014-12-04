@@ -7,7 +7,7 @@ public class BankAccount {
 	private int loanAmount = 0;
 	private final static int interest = 6;
 	
-	public BankAccount(String name, double balance, boolean loaned) {
+	public BankAccount(String name, int balance, boolean loaned) {
 		name = this.name;
 		balance = this.balance;
 		loaned = false;
@@ -29,20 +29,20 @@ public class BankAccount {
 	
 	public void loan(int amt) {
 		if(!loaned) {
-			if (amt > 0 && amt <= balance/2) {
-				balance += amt;
-				loaned = true;
-			}
+			balance += amt;
+			loaned = true;
 			loanAmount = amt;
 		}
 	}
 	
-	private int chargeInterest(int amt) {
-		return amt*interest;
+	public int chargeInterest(int amt) {
+		double result = amt*((double) interest / 100);
+		return (int) result;
 	}
 	
 	public void payloan() {
 		balance -= loanAmount + chargeInterest(loanAmount);
+		loanAmount = 0;
 		loaned = false;
 	}
 	
