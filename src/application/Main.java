@@ -1,13 +1,19 @@
 package application;
 
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.media.AudioClip;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 /**
  * Runs the game.
@@ -24,7 +30,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("SpaceTraders");
-
+        Media media = new Media(Paths.get("SpaceTraders.mp3").toUri().toString());
+        MediaPlayer backgroundMusicPlayer = new MediaPlayer(media);
+        backgroundMusicPlayer.setAutoPlay(true);
+        backgroundMusicPlayer.setVolume(1.0);
+        backgroundMusicPlayer.setCycleCount(50);
+        backgroundMusicPlayer.play();
         initRootLayout();
         showTitleScreen();
     }
