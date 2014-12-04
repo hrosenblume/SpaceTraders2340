@@ -27,6 +27,12 @@ public class Item {
         this.name = name;
         this.type = type;
         this.price = price;
+        if (type.equals("weapon") || type.equals("shield")) {
+        	this.price *= 1 - (Universe.player.getFighter() / 100.0);
+        } else if (type.equals("gadget")) {
+        	this.price *= 1 - (Universe.player.getEngineer() / 100.0);
+        }
+
         this.minTechLevel = minTechLevel;
     }
 

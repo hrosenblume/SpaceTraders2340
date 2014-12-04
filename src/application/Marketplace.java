@@ -46,6 +46,19 @@ public class Marketplace {
 				if (res.name.equals(res.highDemandResource)) {
 					price *= 1.5; // this resource is expensive
 				}
+				if (res.name.equals("Water") || res.name.equals("Fur")
+						|| res.name.equals("Food") || res.name.equals("Ore")) {
+					price *= 1 + (Universe.player.getTrader() / 100.0);
+				}
+				if (res.name.equals("Firearms")) {
+					price *= 1 + (Universe.player.getFighter() / 100.0);
+				}
+				if (res.name.equals("Robots") || res.name.equals("Machine")
+						|| res.name.equals("Games")
+						|| res.name.equals("Medicine")
+						|| res.name.equals("Narcotics")) {
+					price *= 1 + (Universe.player.getInvestor() / 100.0);
+				}
 				sellableResources.put(name, price);
 			} else {
 				sellableResources.put(name, -1);
@@ -60,6 +73,19 @@ public class Marketplace {
 				}
 				if (res.name.equals(res.highDemandResource)) {
 					res.currentBuyPrice *= 1.5; // this resource is expensive
+				}
+				if (res.name.equals("Water") || res.name.equals("Fur")
+						|| res.name.equals("Food") || res.name.equals("Ore")) {
+					price *= 1 - (Universe.player.getTrader() / 100.0);
+				}
+				if (res.name.equals("Firearms")) {
+					price *= 1 - (Universe.player.getFighter() / 100.0);
+				}
+				if (res.name.equals("Robots") || res.name.equals("Machine")
+						|| res.name.equals("Games")
+						|| res.name.equals("Medicine")
+						|| res.name.equals("Narcotics")) {
+					price *= 1 - (Universe.player.getInvestor() / 100.0);
 				}
 				buyableResources.put(name, price);
 			} else {

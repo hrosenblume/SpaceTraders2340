@@ -21,6 +21,7 @@ public class ShipyardController implements Initializable {
 
     private Player player = Universe.player;
     private static Planet currentPlanet;
+    private boolean adjusted = false;
 
     @FXML
     private Button buyFlea, buyGnat, buyFirefly, buyMosquito, buyBumblebee,
@@ -35,59 +36,94 @@ public class ShipyardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         currShip.setText("Current Ship: " + player.getShip().name);
+        if (!adjusted) {
+        	adjustPrices();
+        }
+        setLabels();
         enforcePrices();
         enforceTechLevel(currentPlanet.getTechLevel());
         enforceSlots();
     }
 
- 
+    /**
+     * Set the prices of each ship based on the player's pilot level
+     */
+    private void adjustPrices() {
+    	for (Ship s: Ship.ships.values()) {
+    		s.price *= (1 - (Universe.player.getPilot() / 100.0));
+    		Ship.ships.put(s.name, s);
+    	}
+    	adjusted = true;
+    }
+    
+    /**
+     * Sets up appropriate labels for the prices
+     */
+    private void setLabels() {
+    	buyFlea.setText("Purchase: " + Ship.ships.get("flea").price);
+    	buyGnat.setText("Purchase: " + Ship.ships.get("gnat").price);
+    	buyFirefly.setText("Purchase: " + Ship.ships.get("firefly").price);
+    	buyMosquito.setText("Purchase: " + Ship.ships.get("mosquito").price);
+    	buyBumblebee.setText("Purchase: " + Ship.ships.get("bumblebee").price);
+    	buyPulse.setText("Purchase: " + Item.items.get("pulse").getPrice());
+    	buyBeam.setText("Purchase: " + Item.items.get("beam").getPrice());
+    	buyMilitary.setText("Purchase: " + Item.items.get("military").getPrice());
+    	buyEnergy.setText("Purchase: " + Item.items.get("energy").getPrice());
+    	buyReflective.setText("Purchase: " + Item.items.get("reflective").getPrice());
+    	buyCargo.setText("Purchase: " + Item.items.get("cargo").getPrice());
+    	buyNav.setText("Purchase: " + Item.items.get("nav").getPrice());
+    	buyRepair.setText("Purchase: " + Item.items.get("repair").getPrice());
+    	buyTarget.setText("Purchase: " + Item.items.get("target").getPrice());
+    	buyCloak.setText("Purchase: " + Item.items.get("cloak").getPrice());
+    }
+    
 	/**
 	 * Enables and disables buttons according to prices.
 	 */
 	private void enforcePrices() {
-		if (player.getMoney() < 2000) {
+		if (player.getMoney() < 2000 * (1 - (Universe.player.getPilot() / 100.0))) {
 			buyFlea.setDisable(true);
 		}
-		if (player.getMoney() < 10000) {
+		if (player.getMoney() < 10000 * (1 - (Universe.player.getPilot() / 100.0))) {
 			buyGnat.setDisable(true);
 		}
-		if (player.getMoney() < 25000) {
+		if (player.getMoney() < 25000 * (1 - (Universe.player.getPilot() / 100.0))) {
 			buyFirefly.setDisable(true);
 		}
-		if (player.getMoney() < 30000) {
+		if (player.getMoney() < 30000 * (1 - (Universe.player.getPilot() / 100.0))) {
 			buyMosquito.setDisable(true);
 		}
-		if (player.getMoney() < 60000) {
+		if (player.getMoney() < 60000 * (1 - (Universe.player.getPilot() / 100.0))) {
 			buyBumblebee.setDisable(true);
 		}
-		if (player.getMoney() < 5000) {
+		if (player.getMoney() < 5000 * (1 - (Universe.player.getFighter() / 100.0))) {
 			buyPulse.setDisable(true);
 		}
-		if (player.getMoney() < 10000) {
+		if (player.getMoney() < 10000 * (1 - (Universe.player.getFighter() / 100.0))) {
 			buyBeam.setDisable(true);
 		}
-		if (player.getMoney() < 25000) {
+		if (player.getMoney() < 25000 * (1 - (Universe.player.getFighter() / 100.0))) {
 			buyMilitary.setDisable(true);
 		}
-		if (player.getMoney() < 10000) {
+		if (player.getMoney() < 10000 * (1 - (Universe.player.getFighter() / 100.0))) {
 			buyEnergy.setDisable(true);
 		}
-		if (player.getMoney() < 20000) {
+		if (player.getMoney() < 20000 * (1 - (Universe.player.getFighter() / 100.0))) {
 			buyReflective.setDisable(true);
 		}
-		if (player.getMoney() < 5000) {
+		if (player.getMoney() < 5000 * (1 - (Universe.player.getEngineer() / 100.0))) {
 			buyCargo.setDisable(true);
 		}
-		if (player.getMoney() < 15000) {
+		if (player.getMoney() < 15000 * (1 - (Universe.player.getEngineer() / 100.0))) {
 			buyNav.setDisable(true);
 		}
-		if (player.getMoney() < 15000) {
+		if (player.getMoney() < 15000 * (1 - (Universe.player.getEngineer() / 100.0))) {
 			buyRepair.setDisable(true);
 		}
-		if (player.getMoney() < 15000) {
+		if (player.getMoney() < 15000 * (1 - (Universe.player.getEngineer() / 100.0))) {
 			buyTarget.setDisable(true);
 		}
-		if (player.getMoney() < 30000) {
+		if (player.getMoney() < 30000 * (1 - (Universe.player.getEngineer() / 100.0))) {
 			buyCloak.setDisable(true);
 		}
 	}
