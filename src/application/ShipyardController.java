@@ -21,7 +21,7 @@ public class ShipyardController implements Initializable {
 
     private Player player = Universe.player;
     private static Planet currentPlanet;
-    private boolean adjusted = false;
+    private static boolean adjusted = false;
 
     @FXML
     private Button buyFlea, buyGnat, buyFirefly, buyMosquito, buyBumblebee,
