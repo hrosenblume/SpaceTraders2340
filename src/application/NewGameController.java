@@ -205,8 +205,8 @@ public class NewGameController implements Initializable {
         // player = createPlayer(); // creates player in model
         // }
         player = createPlayer();
-        Universe universe = createUniverse();
-        universe.setPlayer(player);
+        Universe universe = createUniverse(player);
+        //universe.setPlayer(player);
 
         Parent root =
                 FXMLLoader.load(getClass().getResource(
@@ -264,6 +264,17 @@ public class NewGameController implements Initializable {
      */
     private Universe createUniverse() {
         Universe universe = new Universe();
+        return universe;
+    }
+    
+    /**
+     * Generates the playable Universe.
+     * 
+     * @param player the player.
+     * @return the created Universe.
+     */
+    private Universe createUniverse(Player player) {
+        Universe universe = new Universe(player);
         return universe;
     }
 

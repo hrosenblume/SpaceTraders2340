@@ -55,7 +55,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyFlea" mnemonicParsing="false" onAction="#buyShip" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Flea: 2000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Flea" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="2">
@@ -67,7 +67,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gnat: 10000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Gnat" GridPane.halignment="CENTER" />
                               <Button fx:id="buyGnat" mnemonicParsing="false" onAction="#buyShip" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
@@ -80,7 +80,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Firefly: 25000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Firefly" GridPane.halignment="CENTER" />
                               <Button fx:id="buyFirefly" mnemonicParsing="false" onAction="#buyShip" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
@@ -93,7 +93,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mosquito: 30000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mosquito" GridPane.halignment="CENTER" />
                               <Button fx:id="buyMosquito" mnemonicParsing="false" onAction="#buyShip" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
@@ -106,7 +106,7 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bumblebee: 60000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bumblebee" GridPane.halignment="CENTER" />
                               <Button fx:id="buyBumblebee" mnemonicParsing="false" onAction="#buyShip" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
@@ -145,7 +145,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyPulse" mnemonicParsing="false" onAction="#buyWeapon" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pulse Laser: 5000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pulse Laser" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="2">
@@ -158,7 +158,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyBeam" mnemonicParsing="false" onAction="#buyWeapon" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Beam Laser: 10000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Beam Laser" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="3">
@@ -171,7 +171,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyMilitary" mnemonicParsing="false" onAction="#buyWeapon" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Military Laser: 25000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Military Laser" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="4">
@@ -184,7 +184,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyEnergy" mnemonicParsing="false" onAction="#buyShield" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Energy Shield: 10000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Energy Shield" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="5">
@@ -197,7 +197,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyReflective" mnemonicParsing="false" onAction="#buyShield" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Reflective: 20000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Reflective" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="6">
@@ -210,7 +210,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyCargo" mnemonicParsing="false" onAction="#buyGadget" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="+5 Cargo Bays: 5000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="+5 Cargo Bays" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="7">
@@ -223,7 +223,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyNav" mnemonicParsing="false" onAction="#buyGadget" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Navigation System: 15000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Navigation System" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="8">
@@ -236,7 +236,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyRepair" mnemonicParsing="false" onAction="#buyGadget" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Auto-Repair: 15000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Auto-Repair" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                         <GridPane GridPane.rowIndex="9">
@@ -249,7 +249,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyTarget" mnemonicParsing="false" onAction="#buyGadget" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Targeting System: 15000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Targeting System" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                          <GridPane GridPane.rowIndex="10">
@@ -262,7 +262,7 @@
                           </rowConstraints>
                            <children>
                               <Button fx:id="buyCloak" mnemonicParsing="false" onAction="#buyGadget" text="Purchase" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cloaking Device: 30000" GridPane.halignment="CENTER" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cloaking Device" GridPane.halignment="CENTER" />
                            </children>
                         </GridPane>
                      </children>

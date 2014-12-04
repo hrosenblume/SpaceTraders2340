@@ -23,6 +23,14 @@ public class Universe {
         }
     }
     
+    public Universe(Player player) {
+    	this.player = player;
+    	for (int x = 0; x < universe.length; x++) {
+            Planet p = new Planet();
+            universe[x] = p;
+        }
+    }
+    
     /**
      * Sets the static player variable
      * @param p player
